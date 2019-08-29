@@ -18,9 +18,4 @@ public class GitCloner {
             ge.printStackTrace();
         }
     }
-
-    public static void main(String[] args) {
-        GitCloner g = new GitCloner();
-        g.clonePlaylists();
-    }
 }

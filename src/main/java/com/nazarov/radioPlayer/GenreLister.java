@@ -7,18 +7,16 @@ public class GenreLister {
 
     AudioPlayer audioPlayer = new AudioPlayer();
 
-    private URL url;
-   // static int urlNumber =0;
     static int ambientUrlNumber = 0;
     static int jazzUrlNumber = 0;
     static int tranceUrlNumber = 0;
     static int rockUrlNumber = 0;
     static int otherUrlNumber = 0;
-    private Thread ambientThread;
-    private Thread jazzThread;
-    private Thread tranceThread;
-    private Thread rockThread;
-    private Thread otherThread;
+    private Thread ambientThread = new Thread();
+    private Thread jazzThread = new Thread();
+    private Thread tranceThread = new Thread();
+    private Thread rockThread = new Thread();
+    private Thread otherThread = new Thread();
     private Thread logoambientThread;
     private Thread logojazzThread;
     private Thread logotranceThread;
@@ -36,12 +34,12 @@ public class GenreLister {
             audioPlayer.playR(UrlMaker.logoURL(5));
         });
         logoambientThread.start();
-//        try {
-//            sleep(3000);
-//        } catch (InterruptedException ie) {
-//            ie.printStackTrace();
-//        }
-//        logoambientThread.stop();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+        logoambientThread.stop();
     }
 
     public void ambient(int urlNumber) {
@@ -109,9 +107,9 @@ public class GenreLister {
         otherThread.start();
     }
 
-    public void nextStation() {
+     public void nextStation() {
 
-        if (ambientThread.isAlive()) {
+         if (ambientThread.isAlive()) {
             ambientThread.stop();
             ambientUrlNumber++;
             int maxUrlNumber = UrlMaker.getPlaylistSize();
@@ -120,7 +118,7 @@ public class GenreLister {
             }
             ambient(ambientUrlNumber);
             System.out.println("AMBI " + ambientUrlNumber);
-        } else
+        }
         if(jazzThread.isAlive()) {
             jazzThread.stop();
             jazzUrlNumber++;
@@ -140,7 +138,6 @@ public class GenreLister {
             }
             trance(tranceUrlNumber);
             System.out.println("TRANCE " + tranceUrlNumber);
-
         }
         if (rockThread.isAlive()) {
             rockThread.stop();
@@ -150,7 +147,7 @@ public class GenreLister {
                 rockUrlNumber = 0;
             }
             rock(rockUrlNumber);
-           System.out.println("ROCK " + rockUrlNumber);
+           System.out.println("RETRO " + rockUrlNumber);
         }
         if (otherThread.isAlive()) {
             otherThread.stop();
@@ -188,4 +185,5 @@ public class GenreLister {
             otherThread.stop();
            }
     }
+
 }

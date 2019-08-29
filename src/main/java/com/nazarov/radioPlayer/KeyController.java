@@ -13,7 +13,7 @@ public class KeyController implements NativeKeyListener {
 
     public void nativeKeyReleased(NativeKeyEvent e) {
 
-        System.out.println("Key Released: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
+      //  System.out.println("Key Released: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
         if (e.getKeyCode() == NativeKeyEvent.VC_1) {
             System.out.println("Ambient");
             genreLister.killR();
@@ -30,7 +30,7 @@ public class KeyController implements NativeKeyListener {
             genreLister.trance(0);
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_4) {
-            System.out.println("Rock");
+            System.out.println("Retro");
             genreLister.killR();
             genreLister.rock(0);
         }
@@ -40,7 +40,6 @@ public class KeyController implements NativeKeyListener {
             genreLister.other(0);
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_6) {
-            System.out.println("NextStation");
             //   genreLister.killR();
             genreLister.nextStation();
         }
