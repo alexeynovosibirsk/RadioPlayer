@@ -1,12 +1,7 @@
-package com.nazarov.webradioplayer;
+package com.nazarov.radioPlayer;
 
-import com.nazarov.webradioplayer.playlist.UrlMaker;
-
-import java.io.File;
-import java.net.MalformedURLException;
+import com.nazarov.radioPlayer.playlist.UrlMaker;
 import java.net.URL;
-
-import static java.lang.Thread.sleep;
 
 public class GenreLister {
 
@@ -193,14 +188,4 @@ public class GenreLister {
             otherThread.stop();
            }
     }
-
-    public static void main(String[] args) {
-        GenreLister genreLister = new GenreLister();
-        genreLister.jazz(0);
-    }
-
-
-
-
-
 }

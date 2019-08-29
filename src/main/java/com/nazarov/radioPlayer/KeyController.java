@@ -1,4 +1,4 @@
-package com.nazarov.webradioplayer;
+package com.nazarov.radioPlayer;
 
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
@@ -11,18 +11,6 @@ public class KeyController implements NativeKeyListener {
 
     GenreLister genreLister = new GenreLister();
 
-    public void nativeKeyPressed(NativeKeyEvent e) {
-        System.out.println("Key Pressed: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
-
-        if (e.getKeyCode() == NativeKeyEvent.VC_ESCAPE) { // DO NOT FORGET TO REMOVE!!!
-            try {
-                GlobalScreen.unregisterNativeHook();
-            } catch (NativeHookException e1) {
-                e1.printStackTrace();
-            }
-        }
-    }
-
     public void nativeKeyReleased(NativeKeyEvent e) {
 
         System.out.println("Key Released: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
@@ -31,7 +19,6 @@ public class KeyController implements NativeKeyListener {
             genreLister.killR();
             genreLister.ambient(0);
         }
-
         if (e.getKeyCode() == NativeKeyEvent.VC_2) {
             System.out.println("Jazz");
             genreLister.killR();
@@ -57,35 +44,13 @@ public class KeyController implements NativeKeyListener {
             //   genreLister.killR();
             genreLister.nextStation();
         }
-        if (e.getKeyCode() == NativeKeyEvent.VC_7) {
-            System.out.println("Check");
-          }
-        if (e.getKeyCode() == NativeKeyEvent.VC_8) {
-            System.out.println("Check");
-        }
         if (e.getKeyCode() == NativeKeyEvent.VC_9) {
             System.out.println("Shutdown");
             System.exit(0);
         }
     }
 
-    public void nativeKeyTyped(NativeKeyEvent e) {
-        // System.out.println("Key Typed: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
-    }
+    public void nativeKeyTyped(NativeKeyEvent e) { }
 
-    public static void main(String[] args) {
-
-        try {
-            GlobalScreen.registerNativeHook();
-        }
-        catch (NativeHookException ex) {
-            System.err.println("There was a problem registering the native hook.");
-            System.err.println(ex.getMessage());
-            System.exit(1);
-        }
-        Logger logger = Logger.getLogger(GlobalScreen.class.getPackage().getName());
-        logger.setLevel(Level.WARNING);
-
-        GlobalScreen.addNativeKeyListener(new KeyController());
-    }
+    public void nativeKeyPressed(NativeKeyEvent e) { }
 }

@@ -1,15 +1,14 @@
-package com.nazarov.webradioplayer;
+package com.nazarov.radioPlayer;
 
-import com.nazarov.webradioplayer.playlist.GitCloner;
+import com.nazarov.radioPlayer.playlist.*;
+
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import com.nazarov.webradioplayer.playlist.*;
 
 @SpringBootApplication
 public class RadioApplication {
@@ -39,12 +38,6 @@ public class RadioApplication {
         GenreLister genreLister = new GenreLister();
         genreLister.logoHello();
 
-
-
         GlobalScreen.addNativeKeyListener(new KeyController());
-
-
-
     }
-
 }

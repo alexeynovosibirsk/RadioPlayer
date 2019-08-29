@@ -1,4 +1,4 @@
-package com.nazarov.webradioplayer.playlist;
+package com.nazarov.radioPlayer.playlist;
 
 import java.io.BufferedReader;
 import java.io.File;

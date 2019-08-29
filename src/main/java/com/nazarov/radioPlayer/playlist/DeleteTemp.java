@@ -1,4 +1,4 @@
-package com.nazarov.webradioplayer.playlist;
+package com.nazarov.radioPlayer.playlist;
 
 import org.apache.tomcat.util.http.fileupload.FileUtils;
 import java.io.File;
