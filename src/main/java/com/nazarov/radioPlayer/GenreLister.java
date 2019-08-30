@@ -4,7 +4,7 @@ import com.nazarov.radioPlayer.playlist.UrlMaker;
 import java.net.URL;
 
 public class GenreLister {
-1
+
     AudioPlayer audioPlayer = new AudioPlayer();
 
     static int ambientUrlNumber = 0;
