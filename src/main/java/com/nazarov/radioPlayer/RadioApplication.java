@@ -1,5 +1,7 @@
 package com.nazarov.radioPlayer;
 
+import com.nazarov.radioPlayer.audio.StationSwitcher;
+import com.nazarov.radioPlayer.controller.KeyController;
 import com.nazarov.radioPlayer.playlist.*;
 
 import org.jnativehook.GlobalScreen;
@@ -35,8 +37,8 @@ public class RadioApplication {
         GitCloner g = new GitCloner();
         g.clonePlaylists();
 
-        GenreLister genreLister = new GenreLister();
-        genreLister.logoHello();
+        StationSwitcher stationSwitcher = new StationSwitcher();
+        stationSwitcher.logoHello();
 
         GlobalScreen.addNativeKeyListener(new KeyController());
     }

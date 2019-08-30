@@ -1,52 +1,55 @@
-package com.nazarov.radioPlayer;
+package com.nazarov.radioPlayer.controller;
 
-import org.jnativehook.GlobalScreen;
-import org.jnativehook.NativeHookException;
+import com.nazarov.radioPlayer.audio.StationSwitcher;
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class KeyController implements NativeKeyListener {
 
-    GenreLister genreLister = new GenreLister();
+    StationSwitcher stationSwitcher = new StationSwitcher();
 
     public void nativeKeyReleased(NativeKeyEvent e) {
 
       //  System.out.println("Key Released: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
         if (e.getKeyCode() == NativeKeyEvent.VC_1) {
             System.out.println("Ambient");
-            genreLister.killR();
-            genreLister.ambient(0);
+            stationSwitcher.setS("playlists/ambient.txt");
+            stationSwitcher.setNumIndex(0);
+            stationSwitcher.playRadio(0);
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_2) {
             System.out.println("Jazz");
-            genreLister.killR();
-            genreLister.jazz(0);
+            stationSwitcher.setS("playlists/jazz.txt");
+            stationSwitcher.setNumIndex(1);
+            stationSwitcher.playRadio(0);
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_3) {
             System.out.println("Trance");
-            genreLister.killR();
-            genreLister.trance(0);
+            stationSwitcher.setS("playlists/trance.txt");
+            stationSwitcher.setNumIndex(2);
+            stationSwitcher.playRadio(0);
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_4) {
             System.out.println("Retro");
-            genreLister.killR();
-            genreLister.rock(0);
+            stationSwitcher.setS("playlists/retro.txt");
+            stationSwitcher.setNumIndex(3);
+            stationSwitcher.playRadio(0);
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_5) {
             System.out.println("Other");
-            genreLister.killR();
-            genreLister.other(0);
+            stationSwitcher.setS("playlists/other.txt");
+            stationSwitcher.setNumIndex(4);
+            stationSwitcher.playRadio(0);
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_6) {
             //   genreLister.killR();
-            genreLister.nextStation();
+            stationSwitcher.nextStation();
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_9) {
             System.out.println("Shutdown");
             System.exit(0);
         }
+
     }
 
     public void nativeKeyTyped(NativeKeyEvent e) { }
