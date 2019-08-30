@@ -1,51 +1,0 @@
-
-Csquid:S1602H",Remove useless curly braces around statement(ùòš³
-isquid:S2142'"FEither re-interrupt this method or rethrow the "InterruptedException".(è®ã¶øÿÿÿÿ8¾‚ææÍ-
-Msquid:S2696"6Make the enclosing method "static" or remove this set.(ø¤™©
-Ssquid:S2696‰"6Make the enclosing method "static" or remove this set.(¿Õ¶úÿÿÿÿ
-Csquid:S1602;",Remove useless curly braces around statement(‘©¿Ó
-Ssquid:CallToDeprecatedMethodq",Remove this use of "stop"; it is deprecated.(‚¦‡"
-Zsquid:CallToDeprecatedMethod°",Remove this use of "stop"; it is deprecated.(¸šÃÎúÿÿÿÿ
-ysquid:S1450"]Remove the "logojazzThread" field and declare it as a local variable in the relevant methods.(¼°¸™ûÿÿÿÿ
-Tsquid:CallToDeprecatedMethod­",Remove this use of "stop"; it is deprecated.(‚¦‡"
-Usquid:CallToDeprecatedMethod™",Remove this use of "stop"; it is deprecated.(ı®‚Í
-Usquid:CallToDeprecatedMethod¶",Remove this use of "stop"; it is deprecated.(«î¼ 
-Ssquid:S2696ª"6Make the enclosing method "static" or remove this set.(¼Õ´ şÿÿÿÿ
-Asquid:S1148("#Use a logger to log this exception.(Ç’Çê8¾‚ææÍ-
-Usquid:CallToDeprecatedMethod…",Remove this use of "stop"; it is deprecated.(Ş½Šü
-Ssquid:S2696†"6Make the enclosing method "static" or remove this set.(¬¥Âşşÿÿÿÿ
-Nsquid:S2696§"6Make the enclosing method "static" or remove this set.(ø¤™©
-U
-squid:S106‚"9Replace this use of System.out or System.err by a logger.(ğ²®üÿÿÿÿ
-zsquid:S1450"^Remove the "logootherThread" field and declare it as a local variable in the relevant methods.(ŞºÇ–şÿÿÿÿ
-Msquid:S2696u"6Make the enclosing method "static" or remove this set.(İ©æ¡
-O
-squid:S106x"9Replace this use of System.out or System.err by a logger.(ó™˜ß
-Ysquid:UselessImportCheck")Remove this unused import 'java.net.URL'.(ñìÁ„üÿÿÿÿ8¦™ æÍ-
-Msquid:S2696r"6Make the enclosing method "static" or remove this set.(¶“ƒ¦
-{squid:S1450"_Remove the "logotranceThread" field and declare it as a local variable in the relevant methods.(òÔ‚†şÿÿÿÿ
-Usquid:CallToDeprecatedMethod¹",Remove this use of "stop"; it is deprecated.(ı®‚Í
-Nsquid:S2696š"6Make the enclosing method "static" or remove this set.(ÒÒÚ
-Hsquid:S1602b",Remove useless curly braces around statement(®‰›íşÿÿÿÿ
-[squid:CallToDeprecatedMethod*",Remove this use of "stop"; it is deprecated.(¨ñÆ8ŞıØæÍ-
-Ssquid:S2696"6Make the enclosing method "static" or remove this set.(¼Õ´ şÿÿÿÿ
-Nsquid:S2696¦"6Make the enclosing method "static" or remove this set.(İ©æ¡
-qsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—Š‰s
-P
-squid:S106–"9Replace this use of System.out or System.err by a logger.(Ù£§»
-Ysquid:CallToDeprecatedMethod{",Remove this use of "stop"; it is deprecated.(¸šÃÎúÿÿÿÿ
-Usquid:CallToDeprecatedMethod",Remove this use of "stop"; it is deprecated.(«î¼ 
-Csquid:S1602.",Remove useless curly braces around statement(À÷×Ë
-Nsquid:S2696"6Make the enclosing method "static" or remove this set.(‹¨Ï«
-Ssquid:S2696¨"6Make the enclosing method "static" or remove this set.(¿Õ¶úÿÿÿÿ
-Hsquid:S1602U",Remove useless curly braces around statement(µÅıµüÿÿÿÿ
-Nsquid:S2696©"6Make the enclosing method "static" or remove this set.(˜Ï³
-tsquid:S1450"]Remove the "logorockThread" field and declare it as a local variable in the relevant methods.(ùÄ™ı
-Rsquid:S2696|"6Make the enclosing method "static" or remove this set.(¾İ„Åûÿÿÿÿ
-P
-squid:S106 "9Replace this use of System.out or System.err by a logger.(Òèö¤
-U
-squid:S106Œ"9Replace this use of System.out or System.err by a logger.(×óûˆøÿÿÿÿ
-Nsquid:S2696“"6Make the enclosing method "static" or remove this set.(˜Ï³
-Csquid:S1602!",Remove useless curly braces around statement(À÷×Ë
-Usquid:CallToDeprecatedMethod³",Remove this use of "stop"; it is deprecated.(Ş½Šü
