@@ -42,8 +42,10 @@ public class KeyController implements NativeKeyListener {
             stationSwitcher.playRadio(0);
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_6) {
-            //   genreLister.killR();
             stationSwitcher.nextStation();
+        }
+        if (e.getKeyCode() == NativeKeyEvent.VC_7) {
+            stationSwitcher.stopRadio();
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_9) {
             System.out.println("Shutdown");

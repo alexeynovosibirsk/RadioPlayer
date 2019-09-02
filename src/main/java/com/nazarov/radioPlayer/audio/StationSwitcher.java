@@ -27,7 +27,7 @@ public class StationSwitcher {
 
             audioPlayer.playR(UrlMaker.logoURL(numIndex));
 
-            musicThread.stop();
+            stopRadio();
 
             musicThread = new Thread(() -> {
 
@@ -41,7 +41,7 @@ public class StationSwitcher {
 
     public void nextStation() {
 
-        musicThread.stop();
+        stopRadio();
 
         uniurlNumber++;
 
@@ -53,5 +53,9 @@ public class StationSwitcher {
         }
 
         playRadio(uniurlNumber);
+    }
+
+    public void stopRadio() {
+        musicThread.stop();
     }
 }
