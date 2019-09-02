@@ -15,7 +15,7 @@ public class UrlMaker {
     private static  File file;
     private static  URL url;
 
-    public static List<String> getPlaylist() {
+    public static List<String> playlistBuilder() {
 
         List<String>  playlist = new ArrayList<>();
 
@@ -42,9 +42,9 @@ public class UrlMaker {
         return playlist;
     }
 
-    public static URL getUrl(int number) {
+    public static URL makeUrl(int number) {
 
-        List<String>  playlist = getPlaylist();
+        List<String>  playlist = playlistBuilder();
 
         int playlistSize = playlist.size();
 
@@ -69,7 +69,7 @@ public class UrlMaker {
     }
 
     public static int getPlaylistSize() {
-        List<String> playlist = getPlaylist();
+        List<String> playlist = playlistBuilder();
 
         int playlistSize = playlist.size() - 1;
 
