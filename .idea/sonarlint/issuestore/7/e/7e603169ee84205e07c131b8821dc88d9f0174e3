@@ -1,0 +1,6 @@
+
+Ssquid:S26964"6Make the enclosing method "static" or remove this set.(›Ê½A8Ã›†Î-
+[squid:CallToDeprecatedMethod,",Remove this use of "stop"; it is deprecated.(Éí¥Î8‹¤”†Î-
+Tsquid:S2696."6Make the enclosing method "static" or remove this set.(‘Êõã8øñ™†Î-
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(İî¢—şÿÿÿÿ
+[squid:CallToDeprecatedMethod",Remove this use of "stop"; it is deprecated.(Éí¥Î8‹Ş¦‡Î-

@@ -2,7 +2,6 @@ package com.nazarov.radioPlayer.audio;
 
 import com.nazarov.radioPlayer.playlist.UrlMaker;
 
-
 public class StationSwitcher  extends Thread {
 
     AudioPlayer audioPlayer = new AudioPlayer();
@@ -11,6 +10,7 @@ public class StationSwitcher  extends Thread {
     private static int uniurlNumber = 0;
     private int numIndex;
     private String s;
+    private volatile boolean  stopMusic;
 
     public void setS(String s) {
         this.s = s;
@@ -31,15 +31,16 @@ public class StationSwitcher  extends Thread {
 
         audioPlayer.playR(UrlMaker.logoURL(numIndex));
 
-        musicThread = new Thread(() -> {
+        UrlMaker.setFile(s);
 
-            UrlMaker.setFile(s);
+            musicThread = new Thread(() -> {
 
-            audioPlayer.playR(UrlMaker.makeUrl(uniurlNumber));
-        });
+                    audioPlayer.playR(UrlMaker.makeUrl(uniurlNumber));
+                });
 
         musicThread.start();
     }
+
 
     public void nextStation() {
 
@@ -58,6 +59,7 @@ public class StationSwitcher  extends Thread {
     }
 
     public void stopRadio() {
+
         musicThread.stop();
     }
 }

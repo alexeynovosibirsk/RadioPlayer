@@ -1,4 +1,4 @@
-package com.nazarov.radioPlayer;
+package com.nazarov.radioPlayer.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

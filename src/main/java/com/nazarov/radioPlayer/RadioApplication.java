@@ -5,12 +5,12 @@ import com.nazarov.radioPlayer.controller.KeyController;
 import com.nazarov.radioPlayer.playlist.*;
 
 import org.jnativehook.GlobalScreen;
-import org.jnativehook.NativeHookException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.jnativehook.NativeHookException;
 
 @SpringBootApplication
 public class RadioApplication {
