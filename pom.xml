@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>TestJar</groupId>
+    <groupId>RadioPlayer</groupId>
     <artifactId>webRadio</artifactId>
     <version>0.1</version>
-    <name>TestBoot</name>
-    <description>Hello Spring Boot</description>
+    <name>radio</name>
+    <description>Just i-radio player</description>
     <packaging>jar</packaging>
 
     <properties>
@@ -59,9 +59,7 @@
             <version>3.0.1</version>
             <scope>provided</scope>
         </dependency>
-
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -74,8 +72,5 @@
                 <version>9.4.14.v20181114</version>
             </plugin-->
         </plugins>
-
     </build>
-
-
 </project>

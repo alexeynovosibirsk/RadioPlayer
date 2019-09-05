@@ -15,6 +15,7 @@ public class DeleteTemp {
     public void del(String fileName) {
 
         Path rootPath = Paths.get(fileName);
+        System.out.println("Delete temporary directory:");
 try {
     Files.walk(rootPath)
             .sorted(Comparator.reverseOrder())
@@ -22,13 +23,9 @@ try {
             .peek(System.out::println)
             .forEach(File::delete);
 } catch (IOException e) {
-    e.printStackTrace();
+   // e.printStackTrace();
+    System.out.println("No temp directory for deleting...");
 }
 
-    }
-
-    public static void main(String[] args) {
-        DeleteTemp d = new DeleteTemp();
-        d.del("playlists");
     }
 }

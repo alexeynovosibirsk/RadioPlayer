@@ -36,6 +36,8 @@ public class RadioApplication {
         GitCloner g = new GitCloner();
         g.clonePlaylists();
 
+        System.out.println("----- webRadio is ready! -----");
+
         StationSwitcher stationSwitcher = new StationSwitcher();
         stationSwitcher.logoHello();
 

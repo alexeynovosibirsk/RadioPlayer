@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff48a7db-b616-4751-8332-84b5a7c63a01" name="Default Changelist" comment="" />
+    <list default="true" id="ff48a7db-b616-4751-8332-84b5a7c63a01" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/RadioPlayer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RadioPlayer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nazarov/radioPlayer/RadioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nazarov/radioPlayer/RadioApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nazarov/radioPlayer/playlist/DeleteTemp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nazarov/radioPlayer/playlist/DeleteTemp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/sounds/ambient.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/sounds/hello.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/sounds/jazz.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/sounds/other.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/sounds/retro.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/sounds/trance.mp3" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +135,7 @@
       <updated>1567592122717</updated>
       <workItem from="1567592126696" duration="1094000" />
       <workItem from="1567593278184" duration="18333000" />
+      <workItem from="1567670177886" duration="2160000" />
     </task>
     <servers />
   </component>
@@ -132,7 +147,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
