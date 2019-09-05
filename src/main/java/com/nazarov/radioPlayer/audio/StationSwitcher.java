@@ -1,13 +1,17 @@
 package com.nazarov.radioPlayer.audio;
 
+import com.nazarov.radioPlayer.playlist.FilePlayList;
 import com.nazarov.radioPlayer.playlist.UrlMaker;
+
+import java.util.concurrent.TimeUnit;
 
 public class StationSwitcher  extends Thread {
 
-    AudioPlayer audioPlayer = new AudioPlayer();
+    UrlPlayer urlPlayer = new UrlPlayer();
+    FilePlayer filePlayer = new FilePlayer();
 
     private Thread musicThread = new Thread();
-    private static int uniurlNumber = 0;
+    private static int urlNumber = 0;
     private int numIndex;
     private String s;
     private volatile boolean  stopMusic;
@@ -22,20 +26,20 @@ public class StationSwitcher  extends Thread {
 
     public void logoHello() {
 
-           audioPlayer.playR(UrlMaker.logoURL(5));
+        filePlayer.play(FilePlayList.logoList(5));
     }
 
-    public void playRadio(int uniurlNumber) {
+    public void playRadio(int urlNumber) {
 
         stopRadio();
 
-        audioPlayer.playR(UrlMaker.logoURL(numIndex));
+        filePlayer.play(FilePlayList.logoList(numIndex));  // playing logo file "genre"
 
-        UrlMaker.setFile(s);
+        UrlMaker.setFile(s);                               // set playlist
 
             musicThread = new Thread(() -> {
 
-                    audioPlayer.playR(UrlMaker.makeUrl(uniurlNumber));
+                    urlPlayer.playR(UrlMaker.makeUrl(urlNumber));
                 });
 
         musicThread.start();
@@ -46,20 +50,22 @@ public class StationSwitcher  extends Thread {
 
         stopRadio();
 
-        uniurlNumber++;
+        urlNumber++;
 
         int maxUrlNumber = UrlMaker.getPlaylistSize();
 
-        if (uniurlNumber > maxUrlNumber) {
+        if (urlNumber > maxUrlNumber) {
 
-                uniurlNumber = 0;
+                urlNumber = 0;
         }
 
-        playRadio(uniurlNumber);
+        filePlayer.play(FilePlayList.logoList(6));   // playing logo "Next station"
+
+        playRadio(urlNumber);
     }
 
     public void stopRadio() {
 
-        musicThread.stop();
+         musicThread.stop();
     }
 }

@@ -1,16 +1,23 @@
 package com.nazarov.radioPlayer.playlist;
 
-import org.apache.tomcat.util.http.fileupload.FileUtils;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Comparator;
 
 public class DeleteTemp {
 
     public void del(String fileName) {
 
-        File file = new File(fileName);
+        Path rootPath = Paths.get(fileName);
         try {
-            FileUtils.deleteDirectory(file);
+            Files.walk(rootPath)
+                    .sorted(Comparator.reverseOrder())
+                    .map(Path::toFile)
+                    .peek(System.out::println)
+                    .forEach(File::delete);
         } catch (IOException e) {
             e.printStackTrace();
         }

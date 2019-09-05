@@ -3,7 +3,6 @@ package com.nazarov.radioPlayer;
 import com.nazarov.radioPlayer.audio.StationSwitcher;
 import com.nazarov.radioPlayer.controller.KeyController;
 import com.nazarov.radioPlayer.playlist.*;
-
 import org.jnativehook.GlobalScreen;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
