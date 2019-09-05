@@ -1,12 +1,16 @@
 package com.nazarov.radioPlayer.controller;
 
 import com.nazarov.radioPlayer.audio.StationSwitcher;
+import com.nazarov.radioPlayer.audio.VolumeControl;
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
 
 public class KeyController implements NativeKeyListener {
 
     StationSwitcher stationSwitcher = new StationSwitcher();
+    VolumeControl volumeControl = new VolumeControl();
+
+
 
     public void nativeKeyReleased(NativeKeyEvent e) {
 
@@ -50,6 +54,12 @@ public class KeyController implements NativeKeyListener {
         if (e.getKeyCode() == NativeKeyEvent.VC_9) {
             System.out.println("Shutdown");
             System.exit(0);
+        }
+        if (e.getKeyCode() == NativeKeyEvent.VC_MINUS) {
+            volumeControl.volDown();
+        }
+        if (e.getKeyCode() == NativeKeyEvent.VC_SLASH) {
+            volumeControl.volUp();
         }
 
     }
