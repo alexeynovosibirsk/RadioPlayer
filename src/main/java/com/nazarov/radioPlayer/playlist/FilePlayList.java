@@ -8,7 +8,7 @@ public class FilePlayList {
     private static  File file;
 
     public static File logoList(int numIndex) {
-        String s = "sounds/";
+        String s = "classes/sounds/";
 
         ArrayList<String> arrLogo = new ArrayList<>();
         arrLogo.add(s + "ambient.mp3");

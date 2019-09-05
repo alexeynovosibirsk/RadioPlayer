@@ -1,4 +1,4 @@
 
+osquid:S1450"SRemove the "file" field and declare it as a local variable in the relevant methods.(ƒîéÏüÿÿÿÿ
 rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸ŒË
-vsquid:S1450"SRemove the "file" field and declare it as a local variable in the relevant methods.(ƒîéÏüÿÿÿÿ8¢ÚÍ®Ï-
 Vsquid:S1118":Add a private constructor to hide the implicit public one.(Ù„™ãüÿÿÿÿ

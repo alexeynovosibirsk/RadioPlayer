@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>webRadio</groupId>
+
+    <groupId>TestJar</groupId>
     <artifactId>webRadio</artifactId>
-    <name>radio</name>
     <version>0.1</version>
-    <description>Web Radio Player</description>
+    <name>TestBoot</name>
+    <description>Hello Spring Boot</description>
     <packaging>jar</packaging>
 
     <properties>
@@ -16,7 +19,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-       <version>2.1.6.RELEASE</version>
+        <version>2.1.6.RELEASE</version>
     </parent>
 
     <dependencies>
@@ -30,16 +33,11 @@
                 </exclusion>
             </exclusions-->
         </dependency>
-        <!-- Use Jetty instead ПРОТЕСТИРОВАТЬ КАЖДЫЙ:-->
-        <!-- dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jetty</artifactId>
-        </dependency -->
-        <!--plugin>
-               <groupId>org.eclipse.jetty</groupId>
-               <artifactId>jetty-maven-plugin</artifactId>
-               <version>9.4.14.v20181114</version>
-           </plugin-->
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>com.googlecode.soundlibs</groupId>
             <artifactId>jlayer</artifactId>
@@ -61,6 +59,23 @@
             <version>3.0.1</version>
             <scope>provided</scope>
         </dependency>
+
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!--plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.14.v20181114</version>
+            </plugin-->
+        </plugins>
+
+    </build>
+
 
 </project>

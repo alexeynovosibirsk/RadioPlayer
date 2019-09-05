@@ -3,8 +3,6 @@ package com.nazarov.radioPlayer.audio;
 import com.nazarov.radioPlayer.playlist.FilePlayList;
 import com.nazarov.radioPlayer.playlist.UrlMaker;
 
-import java.util.concurrent.TimeUnit;
-
 public class StationSwitcher  extends Thread {
 
     UrlPlayer urlPlayer = new UrlPlayer();

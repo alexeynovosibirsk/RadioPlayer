@@ -1,10 +1,10 @@
 com/nazarov/radioPlayer/audio/UrlPlayer.class
-com/nazarov/radioPlayer/audio/StationSwitcher.class
 com/nazarov/radioPlayer/controller/KeyController.class
 com/nazarov/radioPlayer/playlist/GitCloner.class
 com/nazarov/radioPlayer/playlist/UrlMaker.class
-com/nazarov/radioPlayer/controller/WebController.class
 com/nazarov/radioPlayer/playlist/FilePlayList.class
 com/nazarov/radioPlayer/RadioApplication.class
 com/nazarov/radioPlayer/audio/FilePlayer.class
+com/nazarov/radioPlayer/audio/StationSwitcher.class
+com/nazarov/radioPlayer/controller/WebController.class
 com/nazarov/radioPlayer/playlist/DeleteTemp.class

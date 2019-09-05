@@ -1,6 +1,6 @@
 
-?squid:S1148"#Use a logger to log this exception.(üÑôìşÿÿÿÿ
-Asquid:S1148"#Use a logger to log this exception.(óÂŠ8ò‹ü­Ï-
-Ysquid:UselessImportCheck")Remove this unused import 'java.net.URL'.(ñìÁ„üÿÿÿÿ8÷¿ç­Ï-
+:squid:S1148"#Use a logger to log this exception.(óÂŠ
 ?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(İî¢—şÿÿÿÿ
+Rsquid:UselessImportCheck")Remove this unused import 'java.net.URL'.(ñìÁ„üÿÿÿÿ
+Fsquid:S1148"#Use a logger to log this exception.(üÑôìşÿÿÿÿ8¯²÷Ğ-

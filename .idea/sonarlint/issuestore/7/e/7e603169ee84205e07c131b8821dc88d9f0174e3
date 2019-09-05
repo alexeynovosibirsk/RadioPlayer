@@ -1,9 +1,8 @@
 
-Tsquid:S2696;"6Make the enclosing method "static" or remove this set.(¡¸í™8œšŞ°Ï-
-csquid:S2134"@Don't extend "Thread", since the "run" method is not overridden.(™à†Ëüÿÿÿÿ8¤¿òÒÏ-
-[squid:CallToDeprecatedMethodE",Remove this use of "stop"; it is deprecated.(Éí¥Î8ê¦ôÒÏ-
-Tsquid:S26965"6Make the enclosing method "static" or remove this set.(óÎÃ 8œšŞ°Ï-
-Jsquid:S1602(",Remove useless curly braces around statement(åŸÏı8Ä®óÒÏ-
-esquid:UselessImportCheck":Remove this unused import 'java.util.concurrent.TimeUnit'.(Æ™ş8¤¿òÒÏ-
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(İî¢—şÿÿÿÿ
-Psquid:S1068"-Remove this unused "stopMusic" private field.(ú—˜¯øÿÿÿÿ8£ßßĞÏ-
+\squid:S2134"@Don't extend "Thread", since the "run" method is not overridden.(™à†Ëüÿÿÿÿ
+Csquid:S1602&",Remove useless curly braces around statement(åŸÏı
+Msquid:S26963"6Make the enclosing method "static" or remove this set.(óÎÃ 
+Msquid:S26969"6Make the enclosing method "static" or remove this set.(¡¸í™
+Tsquid:CallToDeprecatedMethodC",Remove this use of "stop"; it is deprecated.(Éí¥Î
+Isquid:S1068"-Remove this unused "stopMusic" private field.(ú—˜¯øÿÿÿÿ

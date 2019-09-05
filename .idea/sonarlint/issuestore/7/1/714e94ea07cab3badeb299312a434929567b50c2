@@ -1,28 +1,28 @@
 
-:squid:S1148I"#Use a logger to log this exception.(Ç’Çê
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¬‘ÙŸùÿÿÿÿ
-Zsquid:S3752v">Add a "method" parameter to this "@RequestMapping" annotation.(¨ÖªÜúÿÿÿÿ
-Qsquid:S3725}":Replace this with a call to the "toFile().exists()" method(ðÙ¡é
-:squid:S11485"#Use a logger to log this exception.(Ç’Çê
-Qsquid:S3725-":Replace this with a call to the "toFile().exists()" method(ðÙ¡é
-;squid:S1148…"#Use a logger to log this exception.(Ç’Çê
-gsquid:CommentedOutCodeLinek"<This block of commented-out lines of code should be removed.(¬‘ÙŸùÿÿÿÿ
-Usquid:S3752b">Add a "method" parameter to this "@RequestMapping" annotation.(‘¦¢ÿ
-Usquid:S3752N">Add a "method" parameter to this "@RequestMapping" annotation.(’¦Ôà
-:squid:S1148q"#Use a logger to log this exception.(Ç’Çê
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¬‘ÙŸùÿÿÿÿ
-gsquid:CommentedOutCodeLineW"<This block of commented-out lines of code should be removed.(¬‘ÙŸùÿÿÿÿ
-msquid:S1192"QDefine a constant instead of duplicating this literal "/WEB-INF/sounds/" 6 times.(ŽØÁÈüÿÿÿÿ
-Zsquid:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(¯‰Îñøÿÿÿÿ
-wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹É®‡úÿÿÿÿ
 bsquid:S1192"KDefine a constant instead of duplicating this literal "audio/mpeg" 6 times.(„„£¡
-Qsquid:S3725A":Replace this with a call to the "toFile().exists()" method(ðÙ¡é
+msquid:S1192"QDefine a constant instead of duplicating this literal "/WEB-INF/sounds/" 6 times.(ŽØÁÈüÿÿÿÿ
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹É®‡úÿÿÿÿ
+:squid:S1148!"#Use a logger to log this exception.(Ç’Çê
+:squid:S11485"#Use a logger to log this exception.(Ç’Çê
+:squid:S1148I"#Use a logger to log this exception.(Ç’Çê
+:squid:S1148]"#Use a logger to log this exception.(Ç’Çê
+:squid:S1148q"#Use a logger to log this exception.(Ç’Çê
+;squid:S1148…"#Use a logger to log this exception.(Ç’Çê
+Zsquid:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(¯‰Îñøÿÿÿÿ
 Zsquid:S3752&">Add a "method" parameter to this "@RequestMapping" annotation.(ÔÞñùÿÿÿÿ
 Tsquid:S3752:">Add a "method" parameter to this "@RequestMapping" annotation.(’ŸÝ
-:squid:S1148!"#Use a logger to log this exception.(Ç’Çê
-:squid:S1148]"#Use a logger to log this exception.(Ç’Çê
-Qsquid:S3725U":Replace this with a call to the "toFile().exists()" method(ðÙ¡é
-gsquid:CommentedOutCodeLineC"<This block of commented-out lines of code should be removed.(¬‘ÙŸùÿÿÿÿ
-Qsquid:S3725i":Replace this with a call to the "toFile().exists()" method(ðÙ¡é
-gsquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(¬‘ÙŸùÿÿÿÿ
+Usquid:S3752N">Add a "method" parameter to this "@RequestMapping" annotation.(’¦Ôà
+Usquid:S3752b">Add a "method" parameter to this "@RequestMapping" annotation.(‘¦¢ÿ
+Zsquid:S3752v">Add a "method" parameter to this "@RequestMapping" annotation.(¨ÖªÜúÿÿÿÿ
 Qsquid:S3725":Replace this with a call to the "toFile().exists()" method(ðÙ¡é
+Qsquid:S3725-":Replace this with a call to the "toFile().exists()" method(ðÙ¡é
+Qsquid:S3725A":Replace this with a call to the "toFile().exists()" method(ðÙ¡é
+Qsquid:S3725U":Replace this with a call to the "toFile().exists()" method(ðÙ¡é
+Qsquid:S3725i":Replace this with a call to the "toFile().exists()" method(ðÙ¡é
+Qsquid:S3725}":Replace this with a call to the "toFile().exists()" method(ðÙ¡é
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¬‘ÙŸùÿÿÿÿ
+gsquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(¬‘ÙŸùÿÿÿÿ
+gsquid:CommentedOutCodeLineC"<This block of commented-out lines of code should be removed.(¬‘ÙŸùÿÿÿÿ
+gsquid:CommentedOutCodeLineW"<This block of commented-out lines of code should be removed.(¬‘ÙŸùÿÿÿÿ
+gsquid:CommentedOutCodeLinek"<This block of commented-out lines of code should be removed.(¬‘ÙŸùÿÿÿÿ
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¬‘ÙŸùÿÿÿÿ
