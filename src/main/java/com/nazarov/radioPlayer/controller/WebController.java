@@ -15,11 +15,6 @@ import java.nio.file.Paths;
 @RequestMapping(path="/logo")
 public class WebController implements WebMvcConfigurer {
 
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
-        return "greeting";
-    }
 
     @RequestMapping("/ambient")
     public void logoAmbient(HttpServletRequest request,
@@ -41,107 +36,7 @@ public class WebController implements WebMvcConfigurer {
         }
     }
 
-    @RequestMapping("/jazz")
-    public void logoJazz(HttpServletRequest request,
-                         HttpServletResponse response
-    ) throws ServletException, IOException {
-        String fileName = "jazz.mp3";
-        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/sounds/");
-        Path file = Paths.get(dataDirectory, fileName);
-        if (Files.exists(file)) {
-            response.setContentType("audio/mpeg");
-            //  response.addHeader("Content-Disposition", "attachment; filename="+fileName);
-
-            try {
-                Files.copy(file, response.getOutputStream());
-                response.getOutputStream().flush();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        }
-    }
-
-    @RequestMapping("/trance")
-    public void logoTrance(HttpServletRequest request,
-                           HttpServletResponse response
-    ) throws ServletException, IOException {
-        String fileName = "trance.mp3";
-        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/sounds/");
-        Path file = Paths.get(dataDirectory, fileName);
-        if (Files.exists(file)) {
-            response.setContentType("audio/mpeg");
-            //  response.addHeader("Content-Disposition", "attachment; filename="+fileName);
-
-            try {
-                Files.copy(file, response.getOutputStream());
-                response.getOutputStream().flush();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        }
-    }
-
-    @RequestMapping("/rock")
-    public void logoRock(HttpServletRequest request,
-                         HttpServletResponse response
-    ) throws ServletException, IOException {
-        String fileName = "retro.mp3";
-        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/sounds/");
-        Path file = Paths.get(dataDirectory, fileName);
-        if (Files.exists(file)) {
-            response.setContentType("audio/mpeg");
-            //  response.addHeader("Content-Disposition", "attachment; filename="+fileName);
-
-            try {
-                Files.copy(file, response.getOutputStream());
-                response.getOutputStream().flush();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        }
-    }
-
-    @RequestMapping("/other")
-    public void logoOther(HttpServletRequest request,
-                          HttpServletResponse response
-    ) throws ServletException, IOException {
-        String fileName = "other.mp3";
-        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/sounds/");
-        Path file = Paths.get(dataDirectory, fileName);
-        if (Files.exists(file)) {
-            response.setContentType("audio/mpeg");
-            //  response.addHeader("Content-Disposition", "attachment; filename="+fileName);
-
-            try {
-                Files.copy(file, response.getOutputStream());
-                response.getOutputStream().flush();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        }
-    }
-
-    @RequestMapping("/hello")
-    public void logoHello(HttpServletRequest request,
-                          HttpServletResponse response
-    ) throws ServletException, IOException {
-        String fileName = "hello.mp3";
-        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/sounds/");
-        Path file = Paths.get(dataDirectory, fileName);
-        if (Files.exists(file)) {
-            response.setContentType("audio/mpeg");
-            //  response.addHeader("Content-Disposition", "attachment; filename="+fileName);
-
-            try {
-                Files.copy(file, response.getOutputStream());
-                response.getOutputStream().flush();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        }
-    }
 }
-
 
 
 
