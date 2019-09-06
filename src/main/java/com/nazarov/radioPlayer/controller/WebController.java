@@ -15,6 +15,12 @@ import java.nio.file.Paths;
 @RequestMapping(path="/logo")
 public class WebController implements WebMvcConfigurer {
 
+    @GetMapping("/greeting")
+    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "greeting";
+    }
+
     @RequestMapping("/ambient")
     public void logoAmbient(HttpServletRequest request,
                             HttpServletResponse response

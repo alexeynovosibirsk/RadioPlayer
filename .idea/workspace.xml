@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ff48a7db-b616-4751-8332-84b5a7c63a01" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nazarov/radioPlayer/TODO" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nazarov/radioPlayer/controller/KeyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nazarov/radioPlayer/controller/KeyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nazarov/radioPlayer/controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nazarov/radioPlayer/controller/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/student.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nazarov/radioPlayer/controller/KeyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nazarov/radioPlayer/controller/KeyController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -26,6 +28,7 @@
   <component name="ProjectId" id="1QMt789vSM7tH5urm94BYzEbHrl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -140,7 +143,8 @@
       <updated>1567592122717</updated>
       <workItem from="1567592126696" duration="1094000" />
       <workItem from="1567593278184" duration="18333000" />
-      <workItem from="1567670177886" duration="9218000" />
+      <workItem from="1567670177886" duration="14709000" />
+      <workItem from="1567749251064" duration="5488000" />
     </task>
     <servers />
   </component>

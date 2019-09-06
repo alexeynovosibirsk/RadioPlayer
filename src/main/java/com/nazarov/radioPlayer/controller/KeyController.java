@@ -14,7 +14,7 @@ public class KeyController implements NativeKeyListener {
 
     public void nativeKeyReleased(NativeKeyEvent e) {
 
-      //  System.out.println("Key Released: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
+        System.out.println("Key Released: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
         if (e.getKeyCode() == NativeKeyEvent.VC_1) {
             System.out.println("Ambient");
             stationSwitcher.setS("playlists/ambient.txt");
@@ -58,10 +58,9 @@ public class KeyController implements NativeKeyListener {
         if (e.getKeyCode() == NativeKeyEvent.VC_MINUS) {
             volumeControl.volDown();
         }
-        if (e.getKeyCode() == NativeKeyEvent.VC_SLASH) {
+        if (e.getKeyCode() == NativeKeyEvent.VC_EQUALS) {
             volumeControl.volUp();
         }
-
     }
 
     public void nativeKeyTyped(NativeKeyEvent e) { }
