@@ -9,6 +9,7 @@ public class KeyController implements NativeKeyListener {
 
     StationSwitcher stationSwitcher = new StationSwitcher();
     VolumeControl volumeControl = new VolumeControl();
+    PowerControl powerControl = new PowerControl();
 
 
 
@@ -52,13 +53,13 @@ public class KeyController implements NativeKeyListener {
             stationSwitcher.stopRadio();
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_9) {
-            System.out.println("Shutdown");
+            powerControl.powerOff();
             System.exit(0);
         }
-        if (e.getKeyCode() == NativeKeyEvent.VC_MINUS) {
+        if (e.getKeyCode() == NativeKeyEvent.VC_PRINTSCREEN) {
             volumeControl.volDown();
         }
-        if (e.getKeyCode() == NativeKeyEvent.VC_EQUALS) {
+        if (e.getKeyCode() == NativeKeyEvent.VC_SLASH) {
             volumeControl.volUp();
         }
     }

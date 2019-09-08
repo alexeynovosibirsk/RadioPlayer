@@ -15,3 +15,5 @@ s
 Csrc/main/java/com/nazarov/radioPlayer/controller/KeyController.java,6/c/6c64e70ec4aea52813fc10ee0a8c9ea81b2f6e9d
 p
 @src/main/java/com/nazarov/radioPlayer/playlist/FilePlayList.java,8/c/8ce4e1fa9b7a67fd68e5f9cc5aa589dc73c6109e
+n
+>src/main/java/com/nazarov/radioPlayer/audio/VolumeControl.java,c/c/cc5bc8c30b75ef3e91456c589e768d0ac8d86664
