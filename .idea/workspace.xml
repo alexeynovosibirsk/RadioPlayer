@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff48a7db-b616-4751-8332-84b5a7c63a01" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/c/6c64e70ec4aea52813fc10ee0a8c9ea81b2f6e9d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/c/6c64e70ec4aea52813fc10ee0a8c9ea81b2f6e9d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/714e94ea07cab3badeb299312a434929567b50c2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/714e94ea07cab3badeb299312a434929567b50c2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e603169ee84205e07c131b8821dc88d9f0174e3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e603169ee84205e07c131b8821dc88d9f0174e3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8ce4e1fa9b7a67fd68e5f9cc5aa589dc73c6109e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8ce4e1fa9b7a67fd68e5f9cc5aa589dc73c6109e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a0b4c4cb00234079254a27e651f1c3a4c6133813" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a0b4c4cb00234079254a27e651f1c3a4c6133813" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nazarov/radioPlayer/controller/KeyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nazarov/radioPlayer/controller/KeyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nazarov/radioPlayer/controller/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nazarov/radioPlayer/controller/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/student.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nazarov/radioPlayer/controller/KeyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nazarov/radioPlayer/controller/KeyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nazarov/radioPlayer/controller/WebController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nazarov/radioPlayer/controller/WebController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +147,8 @@
       <workItem from="1567592126696" duration="1094000" />
       <workItem from="1567593278184" duration="18333000" />
       <workItem from="1567670177886" duration="14709000" />
-      <workItem from="1567749251064" duration="5488000" />
+      <workItem from="1567749251064" duration="6832000" />
+      <workItem from="1567995830457" duration="880000" />
     </task>
     <servers />
   </component>
