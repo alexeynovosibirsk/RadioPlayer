@@ -6,14 +6,28 @@ import java.io.File;
 
 public class GitCloner {
 
+    private File file;
+    private String uri;
+
+    public void setFile(String s) {
+
+        File file = new File(s);
+        this.file = file;
+    }
+
+    public void setUri(String uri) {
+        this.uri = uri;
+    }
+
     public void clonePlaylists() {
 
-        File file = new File("playlists/");
         try {
+
             Git git = Git.cloneRepository()
-                    .setURI("https://github.com/nixoved/webRadioPlayerPlaylists")
+                    .setURI(uri)
                     .setDirectory(file)
                     .call();
+
         } catch (GitAPIException ge) {
             ge.printStackTrace();
         }

@@ -11,56 +11,39 @@ public class KeyController implements NativeKeyListener {
     VolumeControl volumeControl = new VolumeControl();
     PowerControl powerControl = new PowerControl();
 
-
-
     public void nativeKeyReleased(NativeKeyEvent e) {
 
         System.out.println("Key Released: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
         if (e.getKeyCode() == NativeKeyEvent.VC_1) {
-            System.out.println("Ambient");
-            stationSwitcher.setS("playlists/ambient.txt");
-            stationSwitcher.setNumIndex(0);
-            stationSwitcher.playRadio(0);
+           stationSwitcher.ambient();
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_2) {
-            System.out.println("Jazz");
-            stationSwitcher.setS("playlists/jazz.txt");
-            stationSwitcher.setNumIndex(1);
-            stationSwitcher.playRadio(0);
+            stationSwitcher.jazz();
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_3) {
-            System.out.println("Trance");
-            stationSwitcher.setS("playlists/trance.txt");
-            stationSwitcher.setNumIndex(2);
-            stationSwitcher.playRadio(0);
+            stationSwitcher.trance();
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_4) {
-            System.out.println("Retro");
-            stationSwitcher.setS("playlists/retro.txt");
-            stationSwitcher.setNumIndex(3);
-            stationSwitcher.playRadio(0);
+            stationSwitcher.retro();
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_5) {
-            System.out.println("Other");
-            stationSwitcher.setS("playlists/other.txt");
-            stationSwitcher.setNumIndex(4);
-            stationSwitcher.playRadio(0);
+            stationSwitcher.other();
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_6) {
             stationSwitcher.nextStation();
         }
-        if (e.getKeyCode() == NativeKeyEvent.VC_7) {
+        if (e.getKeyCode() == NativeKeyEvent.VC_9) {
             stationSwitcher.stopRadio();
         }
-        if (e.getKeyCode() == NativeKeyEvent.VC_9) {
-            powerControl.powerOff();
-            System.exit(0);
+        if (e.getKeyCode() == NativeKeyEvent.VC_0) {
+         //   powerControl.powerOff();
+           // System.exit(0);
         }
-        if (e.getKeyCode() == NativeKeyEvent.VC_PRINTSCREEN) {
-            volumeControl.volDown();
+        if (e.getKeyCode() == NativeKeyEvent.VC_7) {
+            volumeControl.volumeUp();
         }
-        if (e.getKeyCode() == NativeKeyEvent.VC_SLASH) {
-            volumeControl.volUp();
+        if (e.getKeyCode() == NativeKeyEvent.VC_8) {
+            volumeControl.volumeDn();
         }
     }
 

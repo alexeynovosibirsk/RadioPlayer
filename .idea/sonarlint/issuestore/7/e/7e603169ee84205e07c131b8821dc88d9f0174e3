@@ -1,8 +1,0 @@
-
-Msquid:S26969"6Make the enclosing method "static" or remove this set.(¡¸í™
-wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ýî¢—þÿÿÿÿ
-Csquid:S1602&",Remove useless curly braces around statement(åŸÏý
-Isquid:S1068"-Remove this unused "stopMusic" private field.(ú—˜¯øÿÿÿÿ
-Tsquid:CallToDeprecatedMethodC",Remove this use of "stop"; it is deprecated.(Éí¥Î
-Msquid:S26963"6Make the enclosing method "static" or remove this set.(óÎÃ 
-\squid:S2134"@Don't extend "Thread", since the "run" method is not overridden.(™à†Ëüÿÿÿÿ

@@ -15,7 +15,20 @@ public class UrlMaker {
     private static  File file;
     private static  URL url;
 
-    public static List<String> playlistBuilder() {
+    public static void setFile(String s) {
+
+        file = new File(s);
+    }
+
+    public static int getPlaylistSize() {
+        List<String> playlist = playlistBuilder();
+
+        int playlistSize = playlist.size() - 1;
+
+        return playlistSize;
+    }
+
+    private static List<String> playlistBuilder() {
 
         List<String>  playlist = new ArrayList<>();
 
@@ -60,38 +73,6 @@ public class UrlMaker {
 
         System.out.println("TotalStations: " + playlistSize + " | Current: " + number + " | url: " + url);
 
-        return url;
-    }
-
-    public static void setFile(String s) {
-
-        file = new File(s);
-    }
-
-    public static int getPlaylistSize() {
-        List<String> playlist = playlistBuilder();
-
-        int playlistSize = playlist.size() - 1;
-
-        return playlistSize;
-    }
-
-    public static URL logoURL(int numIndex) {
-
-        ArrayList<String> arrLogo = new ArrayList<>();
-        arrLogo.add("http://localhost:8080/logo/ambient");
-        arrLogo.add("http://localhost:8080/logo/jazz");
-        arrLogo.add("http://localhost:8080/logo/trance");
-        arrLogo.add("http://localhost:8080/logo/rock");
-        arrLogo.add("http://localhost:8080/logo/other");
-        arrLogo.add("http://localhost:8080/logo/hello");
-
-        try {
-
-           url = new URL(arrLogo.get(numIndex));
-        } catch (MalformedURLException em2) {
-            em2.printStackTrace();
-        }
         return url;
     }
 }

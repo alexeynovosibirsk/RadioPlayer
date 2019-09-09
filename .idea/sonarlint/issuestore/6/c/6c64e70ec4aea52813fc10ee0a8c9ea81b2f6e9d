@@ -1,38 +1,0 @@
-
-<<<<<<< HEAD
-T
-squid:S106%"9Replace this use of System.out or System.err by a logger.(ƒžÊåûÿÿÿÿ
-O
-squid:S106+"9Replace this use of System.out or System.err by a logger.(³„—Ñ
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(ÎÓ’Íúÿÿÿÿ
-N
-squid:S106"9Replace this use of System.out or System.err by a logger.(¿Ùàk
-˜squid:S1186B"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(„ØÐÍ
-T
-squid:S1067"9Replace this use of System.out or System.err by a logger.(÷Ú¢Ïÿÿÿÿÿ
-squid:S1186D"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(„®‹¾üÿÿÿÿ
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(©Ë¿ƒùÿÿÿÿ
-wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹É®‡úÿÿÿÿ
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(‰Ëðáüÿÿÿÿ8øÈ©Ð-
-=======
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(‰Ëðáüÿÿÿÿ8×Þ÷¹Ð-
-squid:S1186D"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(„®‹¾üÿÿÿÿ
-˜squid:S1186B"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(„ØÐÍ
-wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹É®‡úÿÿÿÿ
-N
-squid:S106"9Replace this use of System.out or System.err by a logger.(¿Ùàk
-O
-squid:S106+"9Replace this use of System.out or System.err by a logger.(³„—Ñ
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(ÎÓ’Íúÿÿÿÿ
-T
-squid:S106%"9Replace this use of System.out or System.err by a logger.(ƒžÊåûÿÿÿÿ
-T
-squid:S1067"9Replace this use of System.out or System.err by a logger.(÷Ú¢Ïÿÿÿÿÿ
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(©Ë¿ƒùÿÿÿÿ
->>>>>>> d8a0a035d4a680311e1ac1c4b667c6d3a23da617

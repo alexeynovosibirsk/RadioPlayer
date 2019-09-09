@@ -1,29 +1,29 @@
 package com.nazarov.radioPlayer.audio;
 
+import com.nazarov.radioPlayer.playlist.FilePlayList;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.advanced.AdvancedPlayer;
-
 import java.io.*;
-import java.net.URL;
 
 public class FilePlayer {
 
-    public void play(File file) {
-
+    private void play(InputStream is) {
 
         try {
-            InputStream is = new FileInputStream(file);
-
 
             AdvancedPlayer advancedPlayer = new AdvancedPlayer(is);
             advancedPlayer.play();
 
-        } catch (FileNotFoundException fe) {
-            fe.printStackTrace();
         } catch (JavaLayerException j) {
             j.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
+
+    public void logoPlayer(int numIndex) {
+
+        play(FilePlayList.logoList(numIndex));
+    }
+
+
+
 }

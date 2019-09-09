@@ -1,8 +1,0 @@
-
-Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8¯êÂßÏ-
-gsquid:UselessImportCheck"<Remove this unused import 'org.eclipse.jgit.util.FileUtils'.(ã¥Íˆ8ƒ€ÀßÏ-
-V
-squid:S106"9Replace this use of System.out or System.err by a logger.(ßˆ±ö8ƒ€ÀßÏ-
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸ŒË
-gsquid:S2095"DUse try-with-resources or close this "Stream" in a "finally" clause.(ËªÂ’üÿÿÿÿ8ƒ€ÀßÏ-
-?squid:S3864"!Remove this use of "Stream.peek".(ßˆ±ö8ƒ€ÀßÏ-

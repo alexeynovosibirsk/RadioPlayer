@@ -1,6 +1,6 @@
 package com.nazarov.radioPlayer;
 
-import com.nazarov.radioPlayer.audio.StationSwitcher;
+import com.nazarov.radioPlayer.audio.FilePlayer;
 import com.nazarov.radioPlayer.controller.KeyController;
 import com.nazarov.radioPlayer.playlist.*;
 import org.jnativehook.GlobalScreen;
@@ -34,12 +34,15 @@ public class RadioApplication {
         deleteTemp.del("playlists");
 
         GitCloner g = new GitCloner();
+        g.setFile("playlists/");
+        g.setUri("https://github.com/nixoved/webRadioPlayerPlaylists");
         g.clonePlaylists();
 
         System.out.println("----- webRadio is ready! -----");
 
-        StationSwitcher stationSwitcher = new StationSwitcher();
-        stationSwitcher.logoHello();
+        FilePlayer filePlayer = new FilePlayer();
+        filePlayer.logoPlayer(5);
+
 
         GlobalScreen.addNativeKeyListener(new KeyController());
     }

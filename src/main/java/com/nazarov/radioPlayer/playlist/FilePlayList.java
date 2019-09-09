@@ -1,16 +1,20 @@
 package com.nazarov.radioPlayer.playlist;
 
-import java.io.File;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import java.io.*;
 import java.util.ArrayList;
 
 public class FilePlayList {
 
-    private static  File file;
+    private static InputStream is;
 
-    public static File logoList(int numIndex) {
-        String s = "classes/sounds/";
+    public static InputStream logoList(int numIndex)  {
+
+        String s = "sounds/";
 
         ArrayList<String> arrLogo = new ArrayList<>();
+
         arrLogo.add(s + "ambient.mp3");
         arrLogo.add(s + "jazz.mp3");
         arrLogo.add(s + "trance.mp3");
@@ -19,8 +23,16 @@ public class FilePlayList {
         arrLogo.add(s + "hello.mp3");
         arrLogo.add(s + "next.mp3");
 
-        file = new File(arrLogo.get(numIndex));
+        Resource resource = new ClassPathResource(arrLogo.get(numIndex));
 
-        return file;
+        try {
+
+            is = resource.getInputStream();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return is;
     }
 }

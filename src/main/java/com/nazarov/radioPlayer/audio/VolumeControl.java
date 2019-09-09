@@ -4,44 +4,38 @@ import java.io.IOException;
 
 public class VolumeControl {
 
-    public void volUp() {
-        Runtime run = Runtime.getRuntime();
-        Process p = null;
-        String cmd = "amixer -D pulse set Master 10%+";
-        try {
-            p = run.exec(cmd);
-            p.getErrorStream();
-            p.waitFor();
+    public void volumeUp() {
 
-
-        } catch (InterruptedException ie) {
-            ie.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("ERROR.RUNNING.CMD");
-
-        } finally {
-            p.destroy();
-        }
+        volLvl("+");
     }
-    public void volDown() {
-        Runtime run = Runtime.getRuntime();
-        Process p = null;
-        String cmd = "amixer -D pulse set Master 10%-";
-        try {
-            p = run.exec(cmd);
-            p.getErrorStream();
-            p.waitFor();
 
+    public void volumeDn() {
+
+        volLvl("-");
+
+    }
+
+    private void volLvl(String sign) {
+
+        Runtime run = Runtime.getRuntime();
+        Process process = null;
+        String cmd = "amixer -D pulse set Master 10%" + sign;
+
+        try {
+
+            process = run.exec(cmd);
+            process.getErrorStream();
+            process.waitFor();
 
         } catch (InterruptedException ie) {
             ie.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("ERROR.RUNNING.CMD");
+            System.out.println("Bash command ERROR");
 
         } finally {
-            p.destroy();
+
+            process.destroy();
         }
     }
 }
