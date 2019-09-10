@@ -3,9 +3,14 @@ package com.nazarov.radioPlayer.audio;
 import com.nazarov.radioPlayer.playlist.FilePlayList;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.advanced.AdvancedPlayer;
-import java.io.*;
+import java.io.InputStream;
 
 public class FilePlayer {
+
+    public void logoPlayer(int numIndex) {
+
+        play(FilePlayList.logoList(numIndex));
+    }
 
     private void play(InputStream is) {
 
@@ -18,12 +23,4 @@ public class FilePlayer {
             j.printStackTrace();
         }
     }
-
-    public void logoPlayer(int numIndex) {
-
-        play(FilePlayList.logoList(numIndex));
-    }
-
-
-
 }

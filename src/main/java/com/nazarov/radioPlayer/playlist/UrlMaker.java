@@ -12,28 +12,43 @@ import java.util.List;
 
 public class UrlMaker {
 
-    private static  File file;
+    private static  File filelist;
     private static  URL url;
+    private static int playlistsize;
+    private static int number;
 
-    public static void setFile(String s) {
+    public static void setFilelist(String s) {
 
-        file = new File(s);
+        filelist = new File(s);
+    }
+
+    public static void setNumber(int localnumber) {
+
+         number = localnumber;
     }
 
     public static int getPlaylistSize() {
-        List<String> playlist = playlistBuilder();
 
-        int playlistSize = playlist.size() - 1;
+        urlMaker();
 
-        return playlistSize;
+        return playlistsize;
     }
 
-    private static List<String> playlistBuilder() {
+    public static URL getUrl() {
 
-        List<String>  playlist = new ArrayList<>();
+        urlMaker();
 
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(file));
+        System.out.println("TotalStations: " + playlistsize + " | Current: " + number + " | url: " + url);
+
+        return url;
+
+    }
+
+    private static void urlMaker() {
+
+        List<String> playlist = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(filelist))) {
 
             String line = "";
 
@@ -44,35 +59,21 @@ public class UrlMaker {
                 playlist.add(line);
             }
 
-            br.close();
             playlist.removeAll(Collections.singleton(null));
+
             playlist.removeAll(Collections.singleton(""));
 
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return playlist;
-    }
-
-    public static URL makeUrl(int number) {
-
-        List<String>  playlist = playlistBuilder();
-
-        int playlistSize = playlist.size();
-
-        if (number > (playlistSize -1 )) {
-            number = 0;
-        }
+        playlistsize = playlist.size() - 1;
 
         try {
             url = new URL(playlist.get(number));
+
         } catch (MalformedURLException em) {
             em.printStackTrace();
         }
-
-        System.out.println("TotalStations: " + playlistSize + " | Current: " + number + " | url: " + url);
-
-        return url;
     }
 }
