@@ -36,8 +36,8 @@ public class KeyController implements NativeKeyListener {
             stationSwitcher.stopRadio();
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_0) {
-         //   powerControl.powerOff();
-           // System.exit(0);
+            powerControl.powerOff();
+            System.exit(0);
         }
         if (e.getKeyCode() == NativeKeyEvent.VC_7) {
             volumeControl.volumeUp();

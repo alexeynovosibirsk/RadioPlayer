@@ -19,7 +19,7 @@ public class VolumeControl {
 
         Runtime run = Runtime.getRuntime();
         Process process = null;
-        String cmd = "amixer -D pulse set Master 10%" + sign;
+        String cmd = "amixer sset Master 5%" + sign;
 
         try {
 
