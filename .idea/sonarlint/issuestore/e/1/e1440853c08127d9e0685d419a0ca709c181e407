@@ -1,0 +1,7 @@
+
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ýî¢—þÿÿÿÿ
+Tsquid:S26965"6Make the enclosing method "static" or remove this set.(¡¸í™8úÙÏÑÑ-
+Tsquid:CallToDeprecatedMethod?",Remove this use of "stop"; it is deprecated.(Éí¥Î
+Msquid:S2696/"6Make the enclosing method "static" or remove this set.(óÎÃ 
+\squid:S2134"@Don't extend "Thread", since the "run" method is not overridden.(½·¢Šùÿÿÿÿ
+Csquid:S1602#",Remove useless curly braces around statement(åŸÏý

@@ -1,0 +1,178 @@
+# Inner keyboard
+#########################################
+ESCAPE      Ambient                     0
+5           Jazz                        1
+6           Trance                      2
+7           Retro                       3
+8           Variable                    4
+9                                       5
+MINUS       Next                        6
+EQUALS                                  7
+BACKQUOTE   Volume Up                   8
+1           Volume Down                 9
+3           Stop (Like mute)            10
+L           Shutdown                    11
+##########################################
+
+# Settings for remote keyboard
+##########################################
+HOME        Ambient                     12
+UP          Jazz                        13
+PAGE_UP     Trance                      14
+LEFT        Retro                       15
+CLEAR       Variable                    16
+RIGHT                                   17
+BACKSPACE   Next                        18
+SLASH       Volume Up                   19
+PRINTSCREEN Volume Down                 20
+DOWN        Stop (Like mute)            21
+END         Shutdown                    22
+PAGE_DOWN
+INSERT
+DELETE
+ENTER
+##########################################
+
+
+#############################
+# List of the available keys:
+        # ESCAPE
+        # F1
+        # F2
+        # F3
+        # F4
+        # F5
+        # F6
+        # F7
+        # F8
+        # F9
+        # F10
+        # F11
+        # F12
+        # F13
+        # F14
+        # F15
+        # F16
+        # F17
+        # F18
+        # F19
+        # F20
+        # F21
+        # F22
+        # F23
+        # F24
+        # BACKQUOTE
+        # 1
+        # 2
+        # 3
+        # 4
+        # 5
+        # 6
+        # 7
+        # 8
+        # 9
+        # 0
+        # MINUS
+        # EQUALS
+        # BACKSPACE
+        # TAB
+        # CAPS_LOCK
+        # A
+        # B
+        # C
+        # D
+        # E
+        # F
+        # G
+        # H
+        # I
+        # J
+        # K
+        # L
+        # M
+        # N
+        # O
+        # P
+        # Q
+        # R
+        # S
+        # T
+        # U
+        # V
+        # W
+        # X
+        # Y
+        # Z
+        # OPEN_BRACKET
+        # CLOSE_BRACKET
+        # BACK_SLASH
+        # SEMICOLON
+        # QUOTE
+        # ENTER
+        # COMMA
+        # PERIOD
+        # SLASH
+        # SPACE
+        # PRINTSCREEN
+        # SCROLL_LOCK
+        # PAUSE
+        # INSERT
+        # DELETE
+        # HOME
+        # END
+        # PAGE_UP
+        # PAGE_DOWN
+        # UP
+        # LEFT
+        # CLEAR
+        # RIGHT
+        # DOWN
+        # NUM_LOCK
+        # SEPARATOR
+        # SHIFT
+        # CONTROL
+        # ALT
+        # META
+        # CONTEXT_MENU
+        # POWER
+        # SLEEP
+        # WAKE
+        # MEDIA_PLAY
+        # MEDIA_STOP
+        # MEDIA_PREVIOUS
+        # MEDIA_NEXT
+        # MEDIA_SELECT
+        # MEDIA_EJECT
+        # VOLUME_MUTE
+        # VOLUME_UP
+        # VOLUME_DOWN
+        # APP_MAIL
+        # APP_CALCULATOR
+        # APP_MUSIC
+        # APP_PICTURES
+        # BROWSER_SEARCH
+        # BROWSER_HOME
+        # BROWSER_BACK
+        # BROWSER_FORWARD
+        # BROWSER_STOP
+        # BROWSER_REFRESH
+        # BROWSER_FAVORITES
+        # KATAKANA
+        # UNDERSCORE
+        # FURIGANA
+        # KANJI
+        # HIRAGANA
+        # YEN
+        # SUN_HELP
+        # SUN_STOP
+        # SUN_PROPS
+        # SUN_FRONT
+        # SUN_OPEN
+        # SUN_FIND
+        # SUN_AGAIN
+        # SUN_UNDO
+        # SUN_COPY
+        # SUN_INSERT
+        # SUN_CUT
+        # UNDEFINED
+

@@ -16,6 +16,7 @@ public class GitCloner {
     }
 
     public void setUri(String uri) {
+
         this.uri = uri;
     }
 

@@ -1,8 +1,8 @@
-package com.nazarov.radioPlayer.controller;
+package com.nazarov.radioPlayer.osdependent;
 
 import java.io.IOException;
 
-public class PowerControl {
+public class PowerOff {
 
     public void powerOff() {
 
