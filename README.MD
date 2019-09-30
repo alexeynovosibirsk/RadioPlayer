@@ -1,3 +1,5 @@
+TODO: Sleep mode must be added!
+
 Install to Debian 10:
 
 1. install minimum system
@@ -20,3 +22,5 @@ install wifi driver:
 - sudo dkms build 8188eu/1.0
 - sudo dkms install 8188eu/1.0
 - sudo modprobe 8188eu
+
+
