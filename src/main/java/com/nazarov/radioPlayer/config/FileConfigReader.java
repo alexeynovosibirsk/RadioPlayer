@@ -14,6 +14,9 @@ public class FileConfigReader {
     private Map<String, Integer> mapKey = new HashMap<>();
 
     public Integer getKeyCode(int i) {
+
+        System.out.println(keyCode.get(i));
+
         return keyCode.get(i);
     }
 
@@ -48,7 +51,7 @@ public class FileConfigReader {
 
                 if(next.equals("#")) continue;
 
-                if (next.isEmpty()) break;
+              //  if (next.isEmpty()) break;
 
                 listString.add(prefix + next);
             }

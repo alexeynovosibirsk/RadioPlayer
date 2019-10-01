@@ -97,83 +97,70 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
     }
 
 
-    @RequestMapping(value = "/user", method = RequestMethod.GET)
-    public ModelAndView handleRequest(HttpServletRequest request,
-                                      HttpServletResponse response) throws Exception {
-        ModelAndView mav = new ModelAndView("user");
-
-
-
-
-        return mav;
-    }
-
-
-//    @PostMapping("/user")
-//    public String saveJob(@RequestParam(value = "accept") Boolean accept) {
-//        StationSwitcher stationSwitcher = new StationSwitcher();
-//
-//        if (accept) {
-//            //   myClass.method1();
-//            stationSwitcher.jazz();
-//        }
-//        return "haha";
-//    }
-
-//    @RequestMapping(value = "/user", method = RequestMethod.POST)
-//    public String handlePost(@RequestParam String action) {
-//        StationSwitcher stationSwitcher = new StationSwitcher();
-//        if (action.equals("save")) {
-//           stationSwitcher.jazz();
-//
-//        }
-//        return "user";
+//    @RequestMapping(value = "/user", method = RequestMethod.GET)
+//    public ModelAndView handleRequest(HttpServletRequest request,
+//                                      HttpServletResponse response) throws Exception {
+//        ModelAndView mav = new ModelAndView("user");
+//        return mav;
 //    }
 
 
-
-
-
-//    @Override
-//    @RequestMapping(value = "/user")
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        StationSwitcher stationSwitcher = new StationSwitcher();
-//
-//        if (request.getParameter("button1") != null) {
-//         //   myClass.method1();
-//            stationSwitcher.jazz();
-//        } else if (request.getParameter("button2") != null) {
-//        //    myClass.method2();
-//        } else if (request.getParameter("button3") != null) {
-//        //    myClass.method3();
-//        } else {
-//            // ???
-//        }
-//
-//        request.getRequestDispatcher("/WEB-INF/main.jsp").forward(request, response);
-//    }
-
-    @RequestMapping(value = "/form", method = RequestMethod.GET)
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
     public ModelAndView showEmployeeForm() {
 
-        // Add the command object to the modelview
-        ModelAndView mv = new ModelAndView("employee");
-       // mv.addObject("employee");
+        ModelAndView mv = new ModelAndView("index");
+        mv.addObject("index");
 
-//        // Add the payments modes to model for <form:radiotbuttons>
-//        mv.addObject("paymentModes", paymentModes);
 
         return mv;
     }
+    StationSwitcher stationSwitcher = new StationSwitcher();
+    VolumeControl volumeControl = new VolumeControl();
+    PowerOff powerOff = new PowerOff();
 
-    @RequestMapping(value = "/user", method = RequestMethod.POST)
-    public String submitForm(Model model) {
-
-  //      model.addAttribute("employee");
-        return "success";
-
+    @RequestMapping(value = "/webRadioPlayer", method = RequestMethod.GET)
+    public ModelAndView webRadioPlayer()  {
+        ModelAndView mav = new ModelAndView("webRadioPlayer");
+        //stationSwitcher.ambient();
+        return mav;
     }
 
+    @RequestMapping(value = "/webRadioPlayer", method = RequestMethod.POST)
+
+    public ModelAndView buttons(@RequestParam(value = "action", required = true) String action){
+
+        if (action.equals("Ambient")) {
+            stationSwitcher.ambient();
+        }
+        if (action.equals("Jazz")) {
+            stationSwitcher.jazz();
+        }
+        if (action.equals("Trance")) {
+            stationSwitcher.trance();
+        }
+        if (action.equals("Retro")) {
+            stationSwitcher.retro();
+        }
+        if (action.equals("Variable")) {
+            stationSwitcher.other();
+        }
+        if (action.equals("Next_Station")) {
+            stationSwitcher.nextStation();
+        }
+        if (action.equals("Volume_+")) {
+            volumeControl.volumeUp();
+        }
+        if (action.equals("Volume_-")) {
+            volumeControl.volumeDn();
+        }
+        if (action.equals("Mute")) {
+            stationSwitcher.stopRadio();
+        }
+        if (action.equals("Shutdown")) {
+           powerOff.powerOff();
+        }
+        return webRadioPlayer();
+    }
 }
 
 

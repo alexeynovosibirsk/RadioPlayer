@@ -1,4 +1,5 @@
-# Inner keyboard
+# Inner keyboard aka X7
+# Key       Action   Num in KeyController
 #########################################
 ESCAPE      Ambient                     0
 5           Jazz                        1
@@ -13,8 +14,8 @@ BACKQUOTE   Volume Up                   8
 3           Stop (Like mute)            10
 L           Shutdown                    11
 ##########################################
-
-# Settings for remote keyboard
+# Settings for remote keyboard aka Numpad
+# Key       Action    Num in KeyController
 ##########################################
 HOME        Ambient                     12
 UP          Jazz                        13
@@ -32,9 +33,6 @@ INSERT
 DELETE
 ENTER
 ##########################################
-
-
-#############################
 # List of the available keys:
         # ESCAPE
         # F1
@@ -175,4 +173,4 @@ ENTER
         # SUN_INSERT
         # SUN_CUT
         # UNDEFINED
-
+################################

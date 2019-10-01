@@ -1,19 +1,0 @@
-
-isquid:UselessImportCheck">Remove this unused import 'java.util.logging.SimpleFormatter'.(ÇöÁ8õïÂÔ-
-V
-squid:S106&"9Replace this use of System.out or System.err by a logger.(æÀ–³8£È£ìÔ-
-Fsquid:S1148;"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ƒ–”ÃÔ-
-isquid:CommentedOutCodeLine9"<This block of commented-out lines of code should be removed.(„Éâ¨8€ÿÌÃÔ-
-isquid:UselessImportCheck
-"9Remove this unused import 'org.springframework.ui.Model'.(ê†ıÿÿÿÿ8õïÂÔ-
-ƒsquid:UselessImportCheck"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8õïÂÔ-
-nsquid:CommentedOutCodeLine>"<This block of commented-out lines of code should be removed.(ƒ”Ãçÿÿÿÿÿ8Ø¨©ìÔ-
-Vsquid:S18548"8Remove this useless assignment to local variable "list".(Ò˜š8Ø¨©ìÔ-
-Wsquid:UselessImportCheck"-Remove this unused import 'org.slf4j.Logger'.(íØ®68õïÂÔ-
-_squid:UselessImportCheck"4Remove this unused import 'org.slf4j.LoggerFactory'.(–ÿÚŞ8õïÂÔ-
-vsquid:UselessImportCheck	"FRemove this unused import 'org.springframework.stereotype.Controller'.(øŠ—Öùÿÿÿÿ8õïÂÔ-
-Gsquid:S14814")Remove this unused "list" local variable.(Çîğá8Ø¨©ìÔ-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(®äì‰úÿÿÿÿ8Ã¿ŠÄÔ-
-isquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(»ÔÒ8©œªìÔ-
-isquid:CommentedOutCodeLineF"<This block of commented-out lines of code should be removed.(¡¬¸Ô8°ı‡ÄÔ-
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(šÏ¶

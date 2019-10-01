@@ -19,6 +19,8 @@ public class KeyController implements NativeKeyListener {
     PowerOff powerOff = new PowerOff();
     FileConfigReader fileConfigReader = new FileConfigReader();
 
+
+
     public void nativeKeyReleased(NativeKeyEvent e) {
 
         fileConfigReader.mapperKeys();
@@ -59,7 +61,7 @@ public class KeyController implements NativeKeyListener {
             stationSwitcher.stopRadio();
         }
         if (e.getKeyCode() == fileConfigReader.getKeyCode(11)) {
-            powerOff.powerOff();
+//            powerOff.powerOff();
         }
         /* ------------------- Remote keyboard ----------------- */
         if (e.getKeyCode() == fileConfigReader.getKeyCode(12)) {
@@ -93,7 +95,7 @@ public class KeyController implements NativeKeyListener {
             stationSwitcher.stopRadio();
         }
         if (e.getKeyCode() == fileConfigReader.getKeyCode(22)) {
-            powerOff.powerOff();
+//            powerOff.powerOff();
         }
         if (e.getKeyCode() == fileConfigReader.getKeyCode(23)) {
 

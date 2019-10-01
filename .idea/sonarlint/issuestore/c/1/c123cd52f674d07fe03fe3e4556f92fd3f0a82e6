@@ -1,0 +1,5 @@
+
+Fsquid:S11488"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8†±÷‡Ø-
+{
+squid:S135-"YReduce the total number of break and continue statements in this loop to use at most one.(Ç½Œâýÿÿÿÿ8È›‰‹Ø-
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(û ‘»ùÿÿÿÿ
