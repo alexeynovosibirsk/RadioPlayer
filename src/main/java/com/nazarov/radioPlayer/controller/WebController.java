@@ -75,7 +75,74 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         }
     }
 
-
+    @RequestMapping("/css")
+    public void background(HttpServletRequest request,
+                          HttpServletResponse response
+    ) {
+        String fileName = "buttons.css";
+        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/static/");
+        Path file = Paths.get(dataDirectory, fileName);
+        if (Files.exists(file)) {
+            response.setContentType("text/css");
+        }
+        try {
+            Files.copy(file, response.getOutputStream());
+            response.getOutputStream().flush();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+    @RequestMapping("/bgr_blue")
+    public void background1(HttpServletRequest request,
+                           HttpServletResponse response
+    ) {
+        String fileName = "bgr_blue.jpg";
+        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/static/images/");
+        Path file = Paths.get(dataDirectory, fileName);
+        if (Files.exists(file)) {
+            response.setContentType("image/jpg");
+        }
+        try {
+            Files.copy(file, response.getOutputStream());
+            response.getOutputStream().flush();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+    @RequestMapping("/bgr_blue1")
+    public void background2(HttpServletRequest request,
+                            HttpServletResponse response
+    ) {
+        String fileName = "bgr_blue1.jpg";
+        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/static/images/");
+        Path file = Paths.get(dataDirectory, fileName);
+        if (Files.exists(file)) {
+            response.setContentType("image/jpg");
+        }
+        try {
+            Files.copy(file, response.getOutputStream());
+            response.getOutputStream().flush();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+    @RequestMapping("/bgr_metall.jpg")
+    public void background3(HttpServletRequest request,
+                            HttpServletResponse response
+    ) {
+        String fileName = "bgr_metall.jpg";
+        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/static/images/");
+        Path file = Paths.get(dataDirectory, fileName);
+        if (Files.exists(file)) {
+            response.setContentType("image/jpg");
+        }
+        try {
+            Files.copy(file, response.getOutputStream());
+            response.getOutputStream().flush();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
     @RequestMapping("/ambient")
     public void logoAmbient(HttpServletRequest request,
                             HttpServletResponse response
@@ -147,10 +214,10 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         if (action.equals("Next_Station")) {
             stationSwitcher.nextStation();
         }
-        if (action.equals("Volume_+")) {
+        if (action.equals("Volume_up")) {
             volumeControl.volumeUp();
         }
-        if (action.equals("Volume_-")) {
+        if (action.equals("Volume_dn")) {
             volumeControl.volumeDn();
         }
         if (action.equals("Mute")) {
