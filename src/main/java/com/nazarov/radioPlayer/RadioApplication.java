@@ -14,7 +14,7 @@ import com.nazarov.radioPlayer.playlist.*;
 @SpringBootApplication
 public class RadioApplication  {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
 
         String playlistDirectory = "playlists";
         String githubUrl = "https://github.com/nixoved/webRadioPlayerPlaylists";
@@ -41,7 +41,12 @@ public class RadioApplication  {
         g.setUri(githubUrl);
         g.clonePlaylists();
 
+
+
         System.out.println("----- webRadio is ready! -----");
+
+
+
 
         FilePlayer filePlayer = new FilePlayer();
         filePlayer.logoPlayer(5);

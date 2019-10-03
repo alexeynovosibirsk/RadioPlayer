@@ -2,7 +2,7 @@
 
 body {
   text-align: center;
-  background: #3a3a3a;
+  background: #889faa;
 }
 
 p {
@@ -28,7 +28,7 @@ button {
 }
 .volume .button {
   color: blue;
-  background: #3a3a3a;
+  background: black;
 }
 .volume .button {
   display: inline-block;
@@ -51,7 +51,7 @@ button {
 }
 .genre button {
   color: green;
-  background: #3a3a3a;
+  background: black;
 }
 .genre .button {
   display: inline-block;
@@ -74,7 +74,7 @@ button {
 }
 .next button {
   color: #7a9214;
-  background: #3a3a3a;
+  background: black;
 }
 .next .button {
   display: inline-block;
@@ -97,7 +97,7 @@ button {
 }
 .mute button {
   color: #8b8891;
-  background: #3a3a3a;
+  background: black;
 }
 .mute .button {
   display: inline-block;
@@ -120,7 +120,7 @@ button {
 }
 .shutdown button {
   color: #9c0700;
-  background: #3a3a3a;
+  background: black;
 }
 .shutdown .button {
   display: inline-block;

@@ -23,6 +23,16 @@ public class WebConfig extends WebMvcConfigurerAdapter{
         return viewResolver;
     }
 
+    @Bean
+    ViewResolver jpgResolver() {
+        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+        viewResolver.setPrefix("/WEB-INF/static/images/");
+        viewResolver.setSuffix(".png");
+        viewResolver.setOrder(1);
+        return viewResolver;
+    }
+
+
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();

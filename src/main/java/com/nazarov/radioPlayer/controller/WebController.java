@@ -4,12 +4,8 @@ import com.nazarov.radioPlayer.audio.StationSwitcher;
 import com.nazarov.radioPlayer.osdependent.PowerOff;
 import com.nazarov.radioPlayer.osdependent.VolumeControl;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.support.SessionStatus;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -21,180 +17,34 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.ui.ModelMap;
 
 @Controller
 @RequestMapping(path="/")
 public class WebController extends HttpServlet implements WebMvcConfigurer {
 
-
-    @RequestMapping(method = RequestMethod.GET)
-    public String viewMain(ModelMap model) {
-        //  model.addAttribute("hello", "IHHAA!");
-        return "index";
-    }
-
-    @RequestMapping(value = "/a", method = RequestMethod.GET)
-    public ModelAndView appSettings() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("main");
-        return modelAndView;
-    }
-
-
-    @RequestMapping("/banner")
-    public void bannerJpg(HttpServletRequest request,
-                          HttpServletResponse response
-    ) {
-        String fileName = "banner.jpg";
-        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/static/");
-        Path file = Paths.get(dataDirectory, fileName);
-        if (Files.exists(file)) {
-            response.setContentType("image/jpg");
-        }
-        try {
-            Files.copy(file, response.getOutputStream());
-            response.getOutputStream().flush();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
-
-    @RequestMapping("/css")
-    public void background(HttpServletRequest request,
-                          HttpServletResponse response
-    ) {
-        String fileName = "buttons.css";
-        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/static/");
-        Path file = Paths.get(dataDirectory, fileName);
-        if (Files.exists(file)) {
-            response.setContentType("text/css");
-        }
-        try {
-            Files.copy(file, response.getOutputStream());
-            response.getOutputStream().flush();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
-    @RequestMapping("/bgr_blue")
-    public void background1(HttpServletRequest request,
-                           HttpServletResponse response
-    ) {
-        String fileName = "bgr_blue.jpg";
-        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/static/images/");
-        Path file = Paths.get(dataDirectory, fileName);
-        if (Files.exists(file)) {
-            response.setContentType("image/jpg");
-        }
-        try {
-            Files.copy(file, response.getOutputStream());
-            response.getOutputStream().flush();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
-    @RequestMapping("/bgr_blue1")
-    public void background2(HttpServletRequest request,
-                            HttpServletResponse response
-    ) {
-        String fileName = "bgr_blue1.jpg";
-        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/static/images/");
-        Path file = Paths.get(dataDirectory, fileName);
-        if (Files.exists(file)) {
-            response.setContentType("image/jpg");
-        }
-        try {
-            Files.copy(file, response.getOutputStream());
-            response.getOutputStream().flush();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
-    @RequestMapping("/bgr_metall.jpg")
-    public void background3(HttpServletRequest request,
-                            HttpServletResponse response
-    ) {
-        String fileName = "bgr_metall.jpg";
-        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/static/images/");
-        Path file = Paths.get(dataDirectory, fileName);
-        if (Files.exists(file)) {
-            response.setContentType("image/jpg");
-        }
-        try {
-            Files.copy(file, response.getOutputStream());
-            response.getOutputStream().flush();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
-    @RequestMapping("/ambient")
-    public void logoAmbient(HttpServletRequest request,
-                            HttpServletResponse response
-    ) throws ServletException, IOException {
-        String fileName = "ambient.mp3";
-        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/sounds/");
-        Path file = Paths.get(dataDirectory, fileName);
-        if (Files.exists(file)) {
-            response.setContentType("audio/mpeg");
-            //  response.addHeader("Content-Disposition", "attachment; filename="+fileName);
-
-            try {
-                Files.copy(file, response.getOutputStream());
-                response.getOutputStream().flush();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        }
-    }
-
-
-//    @RequestMapping(value = "/user", method = RequestMethod.GET)
-//    public ModelAndView handleRequest(HttpServletRequest request,
-//                                      HttpServletResponse response) throws Exception {
-//        ModelAndView mav = new ModelAndView("user");
-//        return mav;
-//    }
-
-
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
-    public ModelAndView showEmployeeForm() {
-
-        ModelAndView mv = new ModelAndView("index");
-        mv.addObject("index");
-
-
-        return mv;
-    }
     StationSwitcher stationSwitcher = new StationSwitcher();
     VolumeControl volumeControl = new VolumeControl();
     PowerOff powerOff = new PowerOff();
 
-    @RequestMapping(value = "/webRadioPlayer", method = RequestMethod.GET)
-    public ModelAndView webRadioPlayer()  {
+    @RequestMapping(method = RequestMethod.GET)
+    public ModelAndView webRadioPlayer() {
         ModelAndView mav = new ModelAndView("webRadioPlayer");
-        //stationSwitcher.ambient();
+mav.addObject("message", "IIIHAAAA!!");
         return mav;
     }
 
-    @RequestMapping(value = "/webRadioPlayer", method = RequestMethod.POST)
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
 
-    public ModelAndView buttons(@RequestParam(value = "action", required = true) String action){
+    public String printHello(ModelMap model) {
+        model.addAttribute("message", "Hello Spring MVC Framework!");
+        return "hello";
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+
+    public ModelAndView buttons(@RequestParam(value = "action", required = true) String action) {
 
         if (action.equals("Ambient")) {
             stationSwitcher.ambient();
@@ -224,19 +74,69 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
             stationSwitcher.stopRadio();
         }
         if (action.equals("Shutdown")) {
-           powerOff.powerOff();
+            powerOff.powerOff();
         }
+
         return webRadioPlayer();
     }
+
+    @RequestMapping("/banner")
+    public void bannerJpg(HttpServletRequest request,
+                          HttpServletResponse response
+    ) {
+        String fileName = "banner.png";
+        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/static/images/");
+        Path file = Paths.get(dataDirectory, fileName);
+        if (Files.exists(file)) {
+            response.setContentType("image/png");
+        }
+        try {
+            Files.copy(file, response.getOutputStream());
+            response.getOutputStream().flush();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    @RequestMapping("/css")
+    public void buttonsCss(HttpServletRequest request,
+                           HttpServletResponse response
+    ) {
+        String fileName = "buttons.css";
+        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/static/");
+        Path file = Paths.get(dataDirectory, fileName);
+        if (Files.exists(file)) {
+            response.setContentType("text/css");
+        }
+        try {
+            Files.copy(file, response.getOutputStream());
+            response.getOutputStream().flush();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    @RequestMapping("/bgr_metall.jpg")
+    public void background3(HttpServletRequest request,
+                            HttpServletResponse response
+    ) {
+        String fileName = "bgr_metall.jpg";
+        String dataDirectory = request.getServletContext().getRealPath("/WEB-INF/static/images/");
+        Path file = Paths.get(dataDirectory, fileName);
+        if (Files.exists(file)) {
+            response.setContentType("image/jpg");
+        }
+        try {
+            Files.copy(file, response.getOutputStream());
+            response.getOutputStream().flush();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    @RequestMapping(value = "/help", method = RequestMethod.GET)
+    public String help() {
+
+        return "help";
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
