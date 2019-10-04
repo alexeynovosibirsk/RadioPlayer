@@ -15,10 +15,6 @@ l
 <src/main/java/com/nazarov/radioPlayer/playlist/UrlMaker.java,a/2/a24ce8b597d4608e8a35ce8b8bbaa9175026ada0
 m
 =src/main/java/com/nazarov/radioPlayer/playlist/GitCloner.java,f/2/f269bf5bf636ac945390d365d52fd9573ba33c69
-T
-$src/main/webapp/WEB-INF/jsp/main.jsp,6/f/6f403f79e20c43a2cba066e00ddd388aad99d791
-U
-%src/main/webapp/WEB-INF/jsp/index.jsp,f/1/f16d1c46eaaabb105b651081f6c87e034b2028d2
 s
 Csrc/main/java/com/nazarov/radioPlayer/controller/WebController.java,7/1/714e94ea07cab3badeb299312a434929567b50c2
 k
@@ -27,7 +23,11 @@ k
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 t
 Dsrc/main/java/com/nazarov/radioPlayer/osdependent/VolumeControl.java,2/f/2f4168daf3b478f055c5b054ff10b4adb99e52c0
-E
-configfile/config.txt,0/8/086d1eed2c090179e8d55c8c93d1d2a65d0b8d0c
 r
 Bsrc/main/java/com/nazarov/radioPlayer/config/FileConfigReader.java,c/1/c123cd52f674d07fe03fe3e4556f92fd3f0a82e6
+^
+.src/main/webapp/WEB-INF/jsp/webRadioPlayer.jsp,4/f/4f8af6a8d93b4231f0a64c1bd7dd2e268db96e07
+T
+$src/main/webapp/WEB-INF/jsp/help.jsp,1/4/14dbc5583843a7f9728a641a00f1d7cc76137f68
+^
+.src/main/webapp/WEB-INF/static/css/buttons.css,e/9/e9752eeded8669e697bbe6d4daf7c93ffa916f5a

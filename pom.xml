@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>RadioPlayer</groupId>
-    <artifactId>webRadio</artifactId>
-    <version>0.2</version>
+    <artifactId>webRadioPlayer</artifactId>
+    <version>0.4</version>
     <name>radio</name>
     <description>Just i-radio player</description>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

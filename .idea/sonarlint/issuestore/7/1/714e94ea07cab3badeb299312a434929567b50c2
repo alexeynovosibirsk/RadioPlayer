@@ -1,43 +1,23 @@
 
-Nsquid:UselessImportCheck"Remove this duplicated import.(™˜”€ùÿÿÿÿ8Œ™àôÓ-
-_squid:S4488-"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Æøîç
-~squid:UselessImportCheck""SRemove this unused import 'org.springframework.web.bind.annotation.ModelAttribute'.(®ùæé8¯¾äÔ-
-isquid:UselessImportCheck"9Remove this unused import 'org.springframework.ui.Model'.(ê†ıÿÿÿÿ8­´ØíÔ-
-asquid:S3752N">Add a "method" parameter to this "@RequestMapping" annotation.(¯‰Îñøÿÿÿÿ8ÀñîÔ-
-Nsquid:UselessImportCheck!"Remove this duplicated import.(øŠ—Öùÿÿÿÿ8Œ™àôÓ-
-Nsquid:UselessImportCheck&"Remove this duplicated import.(ÊÁâºùÿÿÿÿ8Œ™àôÓ-
-nsquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(Œ°¸üÿÿÿÿ8’’ˆìÓ-
-jsquid:CommentedOutCodeLine’"<This block of commented-out lines of code should be removed.(Šê±Ë8ÀñîÔ-
-Esquid:S1989—"&Add a "try/catch" block for "forward".(Ó–Ù†8ÀñîÔ-
-ysquid:UselessImportCheck"IRemove this unused import 'com.nazarov.radioPlayer.osdependent.PowerOff'.(íØÒùÿÿÿÿ8ÚÑ¸Ô-
-\squid:S3752ˆ">Add a "method" parameter to this "@RequestMapping" annotation.(Õ‘†8ÀñîÔ-
-^squid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8‚¬”Ô-
-Xsquid:S3725B":Replace this with a call to the "toFile().exists()" method(ğÙ¡é8ÀñîÔ-
-~squid:UselessImportCheck"NRemove this unused import 'com.nazarov.radioPlayer.osdependent.VolumeControl'.(”©ßèÿÿÿÿÿ8ÚÑ¸Ô-
-fsquid:S4488c"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ä€¥¨8ÀñîÔ-
-Nsquid:UselessImportCheck%"Remove this duplicated import.(Ç¨ÿäûÿÿÿÿ8Œ™àôÓ-
+Ysquid:S3725‰":Replace this with a call to the "toFile().exists()" method(ğÙ¡é8ï¯ÜªÙ-
+vsquid:S2226;"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(•Ëƒó8ï¯ÜªÙ-
+Asquid:S11486"#Use a logger to log this exception.(Ç’Çê8ï¯ÜªÙ-
+ksquid:S4488@"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(–û‚ùÿÿÿÿ8ï¯ÜªÙ-
+gsquid:S4488”"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ş´éœ8ï¯ÜªÙ-
+asquid:S3752p">Add a "method" parameter to this "@RequestMapping" annotation.(ÑÒîøÿÿÿÿ8ï¯ÜªÙ-
+hsquid:S4488H"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(²‘·8ï¯ÜªÙ-
+lsquid:UselessImportCheck
+"<Remove this unused import 'org.springframework.ui.ModelMap'.(ÊÁâºùÿÿÿÿ8¶•©Ù-
+vsquid:S2226:"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(‰ïà¨8ï¯ÜªÙ-
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹É®‡úÿÿÿÿ
-Nsquid:UselessImportCheck"Remove this duplicated import.(¼è½Òşÿÿÿÿ8Œ™àôÓ-
-[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ø¢ìöÓ-
-[squid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ø¢ìöÓ-
-Asquid:S1148]"#Use a logger to log this exception.(Ç’Çê8ÀñîÔ-
-¯%squid:RedundantThrowsDeclarationCheckQ"wRemove the declaration of thrown exception 'javax.servlet.ServletException', as it cannot be thrown from method's body.(¶ÁÖ8ÀñîÔ-
-Isquid:UselessImportCheck"Remove this duplicated import.(÷‰îƒ8Œ™àôÓ-
-jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(À­ÜĞ8ÀñîÔ-
-_squid:S44883"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(øæºĞ
-Nsquid:UselessImportCheck"Remove this duplicated import.(Õë±Äøÿÿÿÿ8Œ™àôÓ-
-ysquid:UselessImportCheck	"IRemove this unused import 'org.springframework.validation.BindingResult'.(‹¶¸ùÿÿÿÿ8Î”ŒÔ-
-squid:UselessImportCheck"ORemove this unused import 'org.springframework.web.bind.support.SessionStatus'.(³×úÒøÿÿÿÿ8Î”ŒÔ-
-Xsquid:S3725U":Replace this with a call to the "toFile().exists()" method(ğÙ¡é8ÀñîÔ-
-9squid:S3751‰"Make this method "public".(‹¨¯¿8ÀñîÔ-
-Esquid:S1989—"&Add a "try/catch" block for "forward".(Ó–Ù†8ÀñîÔ-
-osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(˜ÿÍ±ûÿÿÿÿ8ÀñîÔ-
-£%squid:RedundantThrowsDeclarationChecke"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(À’>8Ó®îÔ-
-msquid:S4488w"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(•´ªÂÿÿÿÿÿ8âç›îÔ-
-asquid:S3752;">Add a "method" parameter to this "@RequestMapping" annotation.(İï±¨ùÿÿÿÿ8ÀñîÔ-
-Asquid:S1148I"#Use a logger to log this exception.(Ç’Çê8ÀñîÔ-
-nsquid:CommentedOutCodeLineW"<This block of commented-out lines of code should be removed.(¬‘ÙŸùÿÿÿÿ8ÀñîÔ-
-~squid:S1488f"[Immediately return this expression instead of assigning it to the temporary variable "mav".(…óÌÎıÿÿÿÿ8Ó®îÔ-
-dsquid:S00112e"FDefine and throw a dedicated exception instead of using a generic one.(À’>8ÀñîÔ-
-nsquid:CommentedOutCodeLinem"<This block of commented-out lines of code should be removed.(¼ƒ¡÷ÿÿÿÿÿ8ÈƒÌîÔ-
-nsquid:CommentedOutCodeLinep"<This block of commented-out lines of code should be removed.(ÌòÇÓúÿÿÿÿ8ÈƒÌîÔ-
+{squid:UselessImportCheck"KRemove this unused import 'org.apache.tomcat.util.http.fileupload.IOUtils'.(Åü¢óûÿÿÿÿ8ğøáªÙ-
+asquid:S3752(">Add a "method" parameter to this "@RequestMapping" annotation.(İï±¨ùÿÿÿÿ8ï¯ÜªÙ-
+ysquid:S1488B"[Immediately return this expression instead of assigning it to the temporary variable "mav".(Ã‹¬İ8ï¯ÜªÙ-
+Bsquid:S1148"#Use a logger to log this exception.(Ç’Çê8ï¯ÜªÙ-
+Xsquid:S3725/":Replace this with a call to the "toFile().exists()" method(ğÙ¡é8ï¯ÜªÙ-
+]squid:S3752‚">Add a "method" parameter to this "@RequestMapping" annotation.(—Ê·­8ï¯ÜªÙ-
+fsquid:UselessImportCheck";Remove this unused import 'javax.servlet.ServletException'.(Š‰™Œ8ï¯ÜªÙ-
+Asquid:S1148~"#Use a logger to log this exception.(Ç’Çê8ï¯ÜªÙ-
+vsquid:S2226<"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¡¥›¥8ï¯ÜªÙ-
+Xsquid:S3725w":Replace this with a call to the "toFile().exists()" method(ğÙ¡é8ï¯ÜªÙ-
+ksquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÇÊÜ¾ıÿÿÿÿ8Ÿ”æªÙ-

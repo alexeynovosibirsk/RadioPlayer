@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="webRadio:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>webRadio</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="webRadioPlayer-0.4.war">
+      <element id="artifact" artifact-name="webRadio:war exploded" />
+    </root>
+  </artifact>
+</component>
