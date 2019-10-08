@@ -37,16 +37,9 @@ public class RadioApplication  {
         deleteTemp.del(playlistDirectory);
 
         GitCloner g = new GitCloner();
-        g.setFile(playlistDirectory);
-        g.setUri(githubUrl);
-        g.clonePlaylists();
-
-
+        g.clonePlaylists(playlistDirectory, githubUrl);
 
         System.out.println("----- webRadio is ready! -----");
-
-
-
 
         FilePlayer filePlayer = new FilePlayer();
         filePlayer.logoPlayer(5);

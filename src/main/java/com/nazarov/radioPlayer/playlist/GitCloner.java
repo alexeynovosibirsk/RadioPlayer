@@ -6,21 +6,9 @@ import java.io.File;
 
 public class GitCloner {
 
-    private File file;
-    private String uri;
-
-    public void setFile(String s) {
+    public void clonePlaylists(String s, String uri) {
 
         File file = new File(s);
-        this.file = file;
-    }
-
-    public void setUri(String uri) {
-
-        this.uri = uri;
-    }
-
-    public void clonePlaylists() {
 
         try {
 

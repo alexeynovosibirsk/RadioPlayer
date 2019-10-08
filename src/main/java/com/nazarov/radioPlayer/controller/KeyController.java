@@ -4,13 +4,8 @@ import com.nazarov.radioPlayer.audio.StationSwitcher;
 import com.nazarov.radioPlayer.config.FileConfigReader;
 import com.nazarov.radioPlayer.osdependent.VolumeControl;
 import com.nazarov.radioPlayer.osdependent.PowerOff;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class KeyController implements NativeKeyListener {
 
@@ -18,8 +13,6 @@ public class KeyController implements NativeKeyListener {
     VolumeControl volumeControl = new VolumeControl();
     PowerOff powerOff = new PowerOff();
     FileConfigReader fileConfigReader = new FileConfigReader();
-
-
 
     public void nativeKeyReleased(NativeKeyEvent e) {
 
@@ -61,7 +54,7 @@ public class KeyController implements NativeKeyListener {
             stationSwitcher.stopRadio();
         }
         if (e.getKeyCode() == fileConfigReader.getKeyCode(11)) {
-//            powerOff.powerOff();
+            powerOff.powerOff();
         }
         /* ------------------- Remote keyboard ----------------- */
         if (e.getKeyCode() == fileConfigReader.getKeyCode(12)) {
@@ -95,7 +88,7 @@ public class KeyController implements NativeKeyListener {
             stationSwitcher.stopRadio();
         }
         if (e.getKeyCode() == fileConfigReader.getKeyCode(22)) {
-//            powerOff.powerOff();
+            powerOff.powerOff();
         }
         if (e.getKeyCode() == fileConfigReader.getKeyCode(23)) {
 

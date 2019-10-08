@@ -1,23 +1,29 @@
 
-Ysquid:S3725‰":Replace this with a call to the "toFile().exists()" method(ğÙ¡é8ï¯ÜªÙ-
-vsquid:S2226;"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(•Ëƒó8ï¯ÜªÙ-
-Asquid:S11486"#Use a logger to log this exception.(Ç’Çê8ï¯ÜªÙ-
-ksquid:S4488@"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(–û‚ùÿÿÿÿ8ï¯ÜªÙ-
-gsquid:S4488”"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ş´éœ8ï¯ÜªÙ-
-asquid:S3752p">Add a "method" parameter to this "@RequestMapping" annotation.(ÑÒîøÿÿÿÿ8ï¯ÜªÙ-
-hsquid:S4488H"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(²‘·8ï¯ÜªÙ-
-lsquid:UselessImportCheck
-"<Remove this unused import 'org.springframework.ui.ModelMap'.(ÊÁâºùÿÿÿÿ8¶•©Ù-
-vsquid:S2226:"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(‰ïà¨8ï¯ÜªÙ-
+†squid:UselessImportCheck"[Remove this unused import 'org.springframework.web.context.support.ServletContextResource'.(ÍûÈ8İ½«Ù-
+hsquid:S4488R"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(²‘·8ü“¬Ù-
+ysquid:S1488L"[Immediately return this expression instead of assigning it to the temporary variable "mav".(Ã‹¬İ8ü“¬Ù-
+]squid:S3752Œ">Add a "method" parameter to this "@RequestMapping" annotation.(—Ê·­8ü“¬Ù-
+vsquid:S2226E"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(•Ëƒó8ü“¬Ù-
+ksquid:S4488J"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(–û‚ùÿÿÿÿ8ü“¬Ù-
+lsquid:UselessImportCheck"<Remove this unused import 'org.springframework.ui.ModelMap'.(ÊÁâºùÿÿÿÿ8¶•©Ù-
+fsquid:UselessImportCheck";Remove this unused import 'javax.servlet.ServletException'.(Š‰™Œ8û“Ô¬Ù-
+~squid:UselessImportCheck"NRemove this unused import 'org.springframework.core.io.DefaultResourceLoader'.(îŸÓ¹üÿÿÿÿ8â•ø°Ù-
+lsquid:UselessImportCheck"ARemove this unused import 'org.springframework.core.io.Resource'.(¹ÒÁ8á—·±Ù-
+{squid:UselessImportCheck"KRemove this unused import 'org.apache.tomcat.util.http.fileupload.IOUtils'.(Åü¢óûÿÿÿÿ8á—·±Ù-
+Bsquid:S1148ˆ"#Use a logger to log this exception.(Ç’Çê8ü“¬Ù-
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹É®‡úÿÿÿÿ
-{squid:UselessImportCheck"KRemove this unused import 'org.apache.tomcat.util.http.fileupload.IOUtils'.(Åü¢óûÿÿÿÿ8ğøáªÙ-
-asquid:S3752(">Add a "method" parameter to this "@RequestMapping" annotation.(İï±¨ùÿÿÿÿ8ï¯ÜªÙ-
-ysquid:S1488B"[Immediately return this expression instead of assigning it to the temporary variable "mav".(Ã‹¬İ8ï¯ÜªÙ-
-Bsquid:S1148"#Use a logger to log this exception.(Ç’Çê8ï¯ÜªÙ-
-Xsquid:S3725/":Replace this with a call to the "toFile().exists()" method(ğÙ¡é8ï¯ÜªÙ-
-]squid:S3752‚">Add a "method" parameter to this "@RequestMapping" annotation.(—Ê·­8ï¯ÜªÙ-
-fsquid:UselessImportCheck";Remove this unused import 'javax.servlet.ServletException'.(Š‰™Œ8ï¯ÜªÙ-
-Asquid:S1148~"#Use a logger to log this exception.(Ç’Çê8ï¯ÜªÙ-
-vsquid:S2226<"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¡¥›¥8ï¯ÜªÙ-
-Xsquid:S3725w":Replace this with a call to the "toFile().exists()" method(ğÙ¡é8ï¯ÜªÙ-
-ksquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÇÊÜ¾ıÿÿÿÿ8Ÿ”æªÙ-
+fsquid:UselessImportCheck";Remove this unused import 'javax.servlet.http.HttpSession'.(í¨ô8û‡°Ù-
+vsquid:S2226F"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¡¥›¥8ü“¬Ù-
+Ysquid:S3725":Replace this with a call to the "toFile().exists()" method(ğÙ¡é8ü“¬Ù-
+esquid:S00112""FDefine and throw a dedicated exception instead of using a generic one.(Š§Îå8‚ÿ‰°Ù-
+asquid:S3752z">Add a "method" parameter to this "@RequestMapping" annotation.(ÑÒîøÿÿÿÿ8ü“¬Ù-
+vsquid:S2226D"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(‰ïà¨8ü“¬Ù-
+|squid:S2293-"YReplace the type specification in this constructor call with the diamond operator ("<>").(ì•ö§úÿÿÿÿ8‚ÿ‰°Ù-
+Asquid:S1148@"#Use a logger to log this exception.(Ç’Çê8ü“¬Ù-
+¤%squid:RedundantThrowsDeclarationCheck""lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(Š§Îå8‚ÿ‰°Ù-
+Bsquid:S1148š"#Use a logger to log this exception.(Ç’Çê8ü“¬Ù-
+Xsquid:S37259":Replace this with a call to the "toFile().exists()" method(ğÙ¡é8ü“¬Ù-
+gsquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ş´éœ8ü“¬Ù-
+fsquid:S4488!"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ì²ªÃ8‚ÿ‰°Ù-
+Ysquid:S3725“":Replace this with a call to the "toFile().exists()" method(ğÙ¡é8ü“¬Ù-
+asquid:S37522">Add a "method" parameter to this "@RequestMapping" annotation.(İï±¨ùÿÿÿÿ8á—·±Ù-

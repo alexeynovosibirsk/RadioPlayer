@@ -26,8 +26,8 @@ Dsrc/main/java/com/nazarov/radioPlayer/osdependent/VolumeControl.java,2/f/2f416
 r
 Bsrc/main/java/com/nazarov/radioPlayer/config/FileConfigReader.java,c/1/c123cd52f674d07fe03fe3e4556f92fd3f0a82e6
 ^
-.src/main/webapp/WEB-INF/jsp/webRadioPlayer.jsp,4/f/4f8af6a8d93b4231f0a64c1bd7dd2e268db96e07
-T
-$src/main/webapp/WEB-INF/jsp/help.jsp,1/4/14dbc5583843a7f9728a641a00f1d7cc76137f68
-^
 .src/main/webapp/WEB-INF/static/css/buttons.css,e/9/e9752eeded8669e697bbe6d4daf7c93ffa916f5a
+[
++src/main/webapp/WEB-INF/static/jsp/help.jsp,f/5/f501963098caa350c45653f127195a1e0202d0f6
+e
+5src/main/webapp/WEB-INF/static/jsp/webRadioPlayer.jsp,3/b/3b83adb62ac801c3253092461efbe0d5373a48e1

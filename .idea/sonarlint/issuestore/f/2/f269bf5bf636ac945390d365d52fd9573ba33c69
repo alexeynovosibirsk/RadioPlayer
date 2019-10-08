@@ -1,6 +1,6 @@
 
-^squid:HiddenFieldCheck"7Rename "file" which hides the field declared at line 9.(‘‚æ¬ıÿÿÿÿ
 ?squid:S1481"(Remove this unused "git" local variable.(Ô²š•
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸ŒË
-:squid:S1148!"#Use a logger to log this exception.(³î™ÿ
 Nsquid:S1854"7Remove this useless assignment to local variable "git".(Ô²š•
+:squid:S1148!"#Use a logger to log this exception.(³î™ÿ
+^squid:HiddenFieldCheck"7Rename "file" which hides the field declared at line 9.(‘‚æ¬ıÿÿÿÿ
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸ŒË
