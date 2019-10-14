@@ -1,8 +1,10 @@
 /* GENERAL STYLES */
 
 body {
-  text-align: center;
+  text-align: left;
   background: #000000;
+  max-width: 400px;
+  width: 100%;
 }
 @font-face {
   font-family: 'dnevnikregular';
@@ -33,7 +35,7 @@ button {
   margin:0 auto;
 }
 .volume .button {
-  color: blue;
+  color: rgb(160, 123, 255);
   background: black;
 }
 .volume .button {
@@ -44,7 +46,7 @@ button {
   margin: 5px;
   position: relative;
   overflow: hidden;
-  border: 2px solid blue;
+  border: 2px solid #9c80ff;
   transition: color .5s;
 }
 .volume .button:hover {

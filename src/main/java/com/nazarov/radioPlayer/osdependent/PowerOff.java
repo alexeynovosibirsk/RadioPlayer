@@ -4,11 +4,11 @@ import java.io.IOException;
 
 public class PowerOff {
 
-    public void powerOff() {
+    public void powerOff(int time) {
 
         Runtime run = Runtime.getRuntime();
         Process process = null;
-        String cmd = "shutdown -h now";
+        String cmd = "shutdown " + time;
 
         try {
 
@@ -26,4 +26,5 @@ public class PowerOff {
             process.destroy();
         }
     }
+
 }

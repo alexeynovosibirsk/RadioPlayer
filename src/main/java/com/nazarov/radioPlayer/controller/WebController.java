@@ -3,6 +3,7 @@ package com.nazarov.radioPlayer.controller;
 import com.nazarov.radioPlayer.audio.StationSwitcher;
 import com.nazarov.radioPlayer.osdependent.PowerOff;
 import com.nazarov.radioPlayer.osdependent.VolumeControl;
+import com.nazarov.radioPlayer.playlist.GitCloner;
 import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -57,8 +58,16 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
             stationSwitcher.stopRadio();
         }
         if (action.equals("Shutdown")) {
-            powerOff.powerOff();
+            powerOff.powerOff(0);
         }
+        if (action.equals("Sleep_Mode_15")) {
+            powerOff.powerOff(15);
+        }
+        if (action.equals("Get_config")) {
+            GitCloner gitCloner = new GitCloner();
+            gitCloner.clonePlaylists("configfile","https://github.com/nixoved/webRadioPlayerPlaylists");
+        }
+
 
         return webRadioPlayer();
     }
