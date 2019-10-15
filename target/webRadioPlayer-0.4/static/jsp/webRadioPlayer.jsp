@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/static/css/buttons.css">
 </head>
 <body>
+<div align="center">
     <img src="/static/images/banner.png">
     <br>
 
@@ -40,12 +41,10 @@
             </div>
         </form>
         <form method = "GET" action = "/help">
-                     <div class="mute">
-                        <button class="button" type="submit" name="/help" value="help">Help</button>
-                    </div>
-         </form>
-
-
-
+            <div class="mute">
+                <button class="button" type="submit" name="/help" value="help">Help</button>
+            </div>
+        </form>
+</div>
 </body>
 </html>

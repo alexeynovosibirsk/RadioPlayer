@@ -19,23 +19,22 @@
             <button class="button" type="submit">BACK</button>
         </div>
     </form>
-    <p>Если клавиатура не работает, нужно скачать файл</p>
-    <p>конфигурации. Он должен лежать рядом с плеером.</p>
-    <p>Образец файла можно получить нажав кнопку ниже:</p>
+    <p>If keyboard won't work check config file:</p>
     <p></p>
-    <form method = "GET" action = "/static/files/config.txt">
+    <form method = "GET" action = "/config">
         <div class="next">
-            <button class="button" type="submit">SHOW CONFIG OPTIONS</button>
+            <button class="button" type="submit">SHOW CONFIG </button>
         </div>
     </form>
-    <form>
+    <p>If configfile/config.txt is absent - pull the file:</p>
+    <p></p>
+    <form action="#" data-th-action="@{/action/edit}" data-th-object="${model}" method="post">
         <div class="next">
             <button class="button" type="submit" name="action" value="Get_config">GET CONFIG</button>
         </div>
     </form>
 </div>
 <p>
-
 </body>
 </html>
 

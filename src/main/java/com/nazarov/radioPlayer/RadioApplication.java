@@ -17,7 +17,7 @@ public class RadioApplication  {
     public static void main(String[] args)  {
 
         String playlistDirectory = "playlists";
-        String githubUrl = "https://github.com/nixoved/webRadioPlayerPlaylists";
+        String githubUrl = "https://github.com/nixoved/RadioPlayerPlaylists";
 
         SpringApplication.run(RadioApplication.class, args);
 

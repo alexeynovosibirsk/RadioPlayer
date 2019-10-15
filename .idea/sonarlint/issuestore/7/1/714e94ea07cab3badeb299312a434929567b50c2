@@ -1,13 +1,22 @@
 
-ysquid:S1488"[Immediately return this expression instead of assigning it to the temporary variable "mav".(Ã‹¬İ8ü“¬Ù-
-|squid:S2293W"YReplace the type specification in this constructor call with the diamond operator ("<>").(ì•ö§úÿÿÿÿ8±à¸Û-
-hsquid:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(²‘·8ü“¬Ù-
-vsquid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¡¥›¥8ü“¬Ù-
-ksquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(–û‚ùÿÿÿÿ8ü“¬Ù-
-esquid:S00112L"FDefine and throw a dedicated exception instead of using a generic one.(Š§Îå8±à¸Û-
-fsquid:S4488K"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ì²ªÃ8±à¸Û-
-vsquid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(‰ïà¨8ü“¬Ù-
-¤%squid:RedundantThrowsDeclarationCheckL"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(Š§Îå8±à¸Û-
-vsquid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(•Ëƒó8ü“¬Ù-
-fsquid:S4488E"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ş´éœ8±à¸Û-
+vsquid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(‰ïà¨8ü“¬Ù-
+msquid:S4488M"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ë§›Äøÿÿÿÿ8ÛßƒöÜ-
+vsquid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¡¥›¥8ÛßƒöÜ-
+fsquid:S4488k"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ì²ªÃ8±à¸Û-
+~squid:S1488I"[Immediately return this expression instead of assigning it to the temporary variable "mav".(å–¡âüÿÿÿÿ8ÛßƒöÜ-
+ksquid:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(–û‚ùÿÿÿÿ8ü“¬Ù-
+ksquid:S4488d"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÒÂÅ‹ÿÿÿÿÿ8·»³öÜ-
+V
+squid:S106W"9Replace this use of System.out or System.err by a logger.(Àãøò8ÛßƒöÜ-
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹É®‡úÿÿÿÿ
+vsquid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(•Ëƒó8ü“¬Ù-
+{squid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(É‡Ë„ùÿÿÿÿ8ÛßƒöÜ-
+hsquid:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(²‘·8ü“¬Ù-
+fsquid:S4488G"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ş´éœ8±à¸Û-
+¤%squid:RedundantThrowsDeclarationCheckl"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(Š§Îå8±à¸Û-
+ysquid:S1488f"[Immediately return this expression instead of assigning it to the temporary variable "mav".(Êİ¬Â8·»³öÜ-
+ysquid:S1488"[Immediately return this expression instead of assigning it to the temporary variable "mav".(Ã‹¬İ8ü“¬Ù-
+esquid:S00112l"FDefine and throw a dedicated exception instead of using a generic one.(Š§Îå8±à¸Û-
+ksquid:S4488^"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¿ÄÕúÿÿÿÿ8ÛßƒöÜ-
+ysquid:S1488`"[Immediately return this expression instead of assigning it to the temporary variable "mav".(ıŞ€À8ÛßƒöÜ-
+|squid:S2293w"YReplace the type specification in this constructor call with the diamond operator ("<>").(ì•ö§úÿÿÿÿ8±à¸Û-
