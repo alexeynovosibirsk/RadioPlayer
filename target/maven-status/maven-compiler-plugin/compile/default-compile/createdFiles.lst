@@ -1,8 +1,8 @@
 com/nazarov/radioPlayer/audio/UrlPlayer.class
-com/nazarov/radioPlayer/osdependent/PowerOff.class
 com/nazarov/radioPlayer/audio/StationPlayer.class
-com/nazarov/radioPlayer/controller/KeyController.class
+com/nazarov/radioPlayer/osdependent/PowerOff.class
 com/nazarov/radioPlayer/playlist/GitCloner.class
+com/nazarov/radioPlayer/controller/KeyController.class
 com/nazarov/radioPlayer/playlist/UrlMaker.class
 com/nazarov/radioPlayer/playlist/FilePlayList.class
 com/nazarov/radioPlayer/RadioApplication.class

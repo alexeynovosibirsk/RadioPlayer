@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WebRadioPlayer</title>
+    <title>webRadioPlayer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/static/css/buttons.css">
 </head>
 <body>
 <div align="center">
-    <img src="/static/images/banner.png">
+    <img width="290" src="/static/images/banner.png">
     <br>
 
         <form action="#" data-th-action="@{/action/edit}" data-th-object="${model}" method="post">

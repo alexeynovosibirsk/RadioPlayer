@@ -112,7 +112,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
 
         HttpHeaders responseHeaders = new HttpHeaders();
         responseHeaders.set("charset", "utf-8");
-        responseHeaders.setContentType(MediaType.valueOf("text/html"));
+        responseHeaders.setContentType(MediaType.valueOf("tssext/html"));
         responseHeaders.setContentLength(output.length);
         responseHeaders.set("Content-disposition", "attachment; filename=filename.txt");
 
