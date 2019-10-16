@@ -89,7 +89,7 @@
   }
 
   .next button {
-    color: #7a9214;
+    color: green;
     background: black;
   }
 
@@ -101,12 +101,12 @@
     margin: 5px;
     position: relative;
     overflow: hidden;
-    border: 2px solid #7a9214;
+    border: 2px solid green;
     transition: color .5s;
   }
 
   .next .button:hover {
-    color: #fff;
+    color: #81ff2e;
   }
 
   .mute {

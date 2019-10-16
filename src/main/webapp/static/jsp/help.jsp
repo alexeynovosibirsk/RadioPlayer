@@ -8,7 +8,7 @@
 </head>
 <body>
 <div align="center">
-    <img width="290" src="/static/images/bannergi.png">
+    <img width="290" src="/static/images/banner.png">
     <br>
     <form method = "GET" action = "/">
         <div class="mute">
