@@ -1,5 +1,8 @@
 package com.nazarov.radioPlayer.audio;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class StationSwitcher {
 
     StationPlayer stationPlayer = new StationPlayer();
@@ -32,10 +35,17 @@ public class StationSwitcher {
         stationPlayer.playRadio(0);
     }
 
-    public void other() {
-        System.out.println("Other");
-        stationPlayer.setPlaylist("playlists/other.txt");
+    public void variable() {
+        System.out.println("Variable");
+        stationPlayer.setPlaylist("playlists/variable.txt");
         stationPlayer.setNumIndex(4);
+        stationPlayer.playRadio(0);
+    }
+
+    public void dance() {
+        System.out.println("Dance");
+        stationPlayer.setPlaylist("playlists/dance.txt");
+        stationPlayer.setNumIndex(9);
         stationPlayer.playRadio(0);
     }
 

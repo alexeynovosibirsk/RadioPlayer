@@ -29,7 +29,7 @@
             </div>
             <div class="genre">
                 <button class="button" type="submit" name="action" value="Variable">Variable</button>
-                <button class="button" type="submit" name="action" value="">VOID</button>
+                <button class="button" type="submit" name="action" value="Dance">Dance</button>
             </div>
             <div class="mute">
                 <button class="button" type="submit" name="action" value="Mute">Mute</button>

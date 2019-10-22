@@ -19,9 +19,12 @@ public class FilePlayList {
         arrLogo.add(s + "jazz.mp3");
         arrLogo.add(s + "trance.mp3");
         arrLogo.add(s + "retro.mp3");
-        arrLogo.add(s + "other.mp3");
+        arrLogo.add(s + "variable.mp3");
         arrLogo.add(s + "hello.mp3");
         arrLogo.add(s + "next.mp3");
+        arrLogo.add(s + "sleepMode.mp3");
+        arrLogo.add(s + "shutdown.mp3");
+        arrLogo.add(s + "dance.mp3");
 
         Resource resource = new ClassPathResource(arrLogo.get(numIndex));
 

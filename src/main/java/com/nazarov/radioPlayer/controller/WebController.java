@@ -1,10 +1,13 @@
 package com.nazarov.radioPlayer.controller;
 
+import com.nazarov.radioPlayer.audio.FilePlayer;
+import com.nazarov.radioPlayer.audio.StationPlayer;
 import com.nazarov.radioPlayer.audio.StationSwitcher;
 import com.nazarov.radioPlayer.osdependent.PowerOff;
 import com.nazarov.radioPlayer.osdependent.VolumeControl;
 import com.nazarov.radioPlayer.playlist.GitCloner;
 import org.eclipse.jgit.api.errors.JGitInternalException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -17,10 +20,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class WebController extends HttpServlet implements WebMvcConfigurer {
 
-    StationSwitcher stationSwitcher = new StationSwitcher();
+    //StationSwitcher stationSwitcher = new StationSwitcher();
     VolumeControl volumeControl = new VolumeControl();
     PowerOff powerOff = new PowerOff();
     GitCloner gitCloner = new GitCloner();
+    FilePlayer filePlayer = new FilePlayer();
+
+    @Autowired
+   // private FilePlayer filePlayer;
+   // private StationPlayer stationPlayer;
+    private StationSwitcher stationSwitcher;
+
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView webRadioPlayer() {
@@ -44,7 +54,10 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
             stationSwitcher.retro();
         }
         if (action.equals("Variable")) {
-            stationSwitcher.other();
+            stationSwitcher.variable();
+        }
+        if (action.equals("Dance")) {
+            stationSwitcher.dance();
         }
         if (action.equals("Next_Station")) {
             stationSwitcher.nextStation();
@@ -59,9 +72,12 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
             stationSwitcher.stopRadio();
         }
         if (action.equals("Shutdown")) {
+            filePlayer.logoPlayer(8);
+
             powerOff.powerOff(0);
         }
         if (action.equals("Sleep_Mode_15")) {
+            filePlayer.logoPlayer(7);
             powerOff.powerOff(15);
         }
 

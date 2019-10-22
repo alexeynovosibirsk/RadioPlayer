@@ -1,5 +1,6 @@
 package com.nazarov.radioPlayer;
 
+import com.nazarov.radioPlayer.controller.WebController;
 import org.jnativehook.GlobalScreen;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

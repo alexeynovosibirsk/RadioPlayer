@@ -33,65 +33,28 @@ public class KeyController implements NativeKeyListener {
             stationSwitcher.retro();
         }
         if (e.getKeyCode() == fileConfigReader.getKeyCode(4)) {
-            stationSwitcher.other();
+            stationSwitcher.variable();
         }
         if (e.getKeyCode() == fileConfigReader.getKeyCode(5)) {
-
+            stationSwitcher.dance();
         }
         if (e.getKeyCode() == fileConfigReader.getKeyCode(6)) {
             stationSwitcher.nextStation();
         }
-        if (e.getKeyCode() == fileConfigReader.getKeyCode(7)) {
-
+         if (e.getKeyCode() == fileConfigReader.getKeyCode(7)) {
+            volumeControl.volumeUp();
         }
         if (e.getKeyCode() == fileConfigReader.getKeyCode(8)) {
-            volumeControl.volumeUp();
+            volumeControl.volumeDn();
         }
         if (e.getKeyCode() == fileConfigReader.getKeyCode(9)) {
-            volumeControl.volumeDn();
+            stationSwitcher.stopRadio();
         }
         if (e.getKeyCode() == fileConfigReader.getKeyCode(10)) {
-            stationSwitcher.stopRadio();
+            powerOff.powerOff(0);
         }
         if (e.getKeyCode() == fileConfigReader.getKeyCode(11)) {
-            powerOff.powerOff(0);
-        }
-        /* ------------------- Remote keyboard ----------------- */
-        if (e.getKeyCode() == fileConfigReader.getKeyCode(12)) {
-            stationSwitcher.ambient();
-        }
-        if (e.getKeyCode() == fileConfigReader.getKeyCode(13)) {
-            stationSwitcher.jazz();
-        }
-        if (e.getKeyCode() == fileConfigReader.getKeyCode(14)) {
-            stationSwitcher.trance();
-        }
-        if (e.getKeyCode() == fileConfigReader.getKeyCode(15)) {
-            stationSwitcher.retro();
-        }
-        if (e.getKeyCode() == fileConfigReader.getKeyCode(16)) {
-            stationSwitcher.other();
-        }
-        if (e.getKeyCode() == fileConfigReader.getKeyCode(17)) {
-
-        }
-        if (e.getKeyCode() == fileConfigReader.getKeyCode(18)) {
-            stationSwitcher.nextStation();
-        }
-        if (e.getKeyCode() == fileConfigReader.getKeyCode(19)) {
-            volumeControl.volumeUp();
-        }
-        if (e.getKeyCode() == fileConfigReader.getKeyCode(20)) {
-            volumeControl.volumeDn();
-        }
-        if (e.getKeyCode() == fileConfigReader.getKeyCode(21)) {
-            stationSwitcher.stopRadio();
-        }
-        if (e.getKeyCode() == fileConfigReader.getKeyCode(22)) {
-            powerOff.powerOff(0);
-        }
-        if (e.getKeyCode() == fileConfigReader.getKeyCode(23)) {
-
+            powerOff.powerOff(15);
         }
 
 //        if (e.getKeyCode() == NativeKeyEvent.VC_0) {

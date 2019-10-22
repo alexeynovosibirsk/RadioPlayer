@@ -6,7 +6,7 @@
 
     <groupId>RadioPlayer</groupId>
     <artifactId>webRadioPlayer</artifactId>
-    <version>0.4</version>
+    <version>0.5</version>
     <name>radio</name>
     <description>Just i-radio player</description>
     <packaging>war</packaging>

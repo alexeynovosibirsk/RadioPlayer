@@ -3,6 +3,8 @@ package com.nazarov.radioPlayer.audio;
 import com.nazarov.radioPlayer.playlist.FilePlayList;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.advanced.AdvancedPlayer;
+import org.springframework.stereotype.Service;
+
 import java.io.InputStream;
 
 public class FilePlayer {

@@ -2,13 +2,7 @@ package com.nazarov.radioPlayer.audio;
 
 import com.nazarov.radioPlayer.playlist.UrlMaker;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-
 public class StationPlayer extends Thread {
-
 
     private Thread musicThread = new Thread();
     private static int urlNumber = 0;
