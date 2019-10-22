@@ -1,9 +1,9 @@
+.idea
+*.iml
 **/.idea/
 **/*.iml
 **/*.log
 **/*.log.*
 **/log/*
 **/target/**
-.idea
-*.iml
 /classes/**
