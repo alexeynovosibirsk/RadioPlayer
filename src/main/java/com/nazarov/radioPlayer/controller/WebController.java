@@ -13,9 +13,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletResponse;
+import javax.swing.*;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class WebController extends HttpServlet implements WebMvcConfigurer {
@@ -117,6 +126,26 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
     public ModelAndView configFile() {
         ModelAndView mav = new ModelAndView("config");
         return mav;
+    }
+
+    @RequestMapping(value = "/showconfigfile")
+    @ResponseBody
+    public List<String> helloWorld()  {
+        List<String> out = new ArrayList<>();
+        JTextArea jTextArea = new JTextArea();
+
+        try (BufferedReader br = new BufferedReader(new FileReader("configfile/config.txt"))) {
+            String line = "";
+
+            while ((line = br.readLine()) != null) {
+                jTextArea.append(line);
+                out.add(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return out;
     }
 
 

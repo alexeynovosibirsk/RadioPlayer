@@ -12,14 +12,14 @@
     <br>
     <form method = "GET" action = "/">
         <div class="mute">
-            <button class="button" type="submit">BACK</button>
+            <button class="button" type="submit">RETURN TO MAIN MENU</button>
         </div>
     </form>
     <p>If keyboard won't work check config file:</p>
     <p></p>
     <form method = "GET" action = "/config">
         <div class="next">
-            <button class="button" type="submit">SHOW CONFIG </button>
+            <button class="button" type="submit">SHOW CONFIG</button>
         </div>
     </form>
     <p>If configfile/config.txt is absent - pull the file:</p>
