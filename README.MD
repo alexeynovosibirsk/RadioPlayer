@@ -1,5 +1,3 @@
-TODO: Sleep mode must be added!
-
 Install to Debian 10:
 
 1. install minimum system
