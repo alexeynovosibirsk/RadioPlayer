@@ -1,14 +1,8 @@
 
-p
-@src/main/java/com/nazarov/radioPlayer/playlist/FilePlayList.java,8/c/8ce4e1fa9b7a67fd68e5f9cc5aa589dc73c6109e
 k
 ;src/main/java/com/nazarov/radioPlayer/RadioApplication.java,4/a/4afea65024569e05b6886426d908f9b3c9d8b5e3
 p
 @src/main/java/com/nazarov/radioPlayer/audio/StationSwitcher.java,7/e/7e603169ee84205e07c131b8821dc88d9f0174e3
-s
-Csrc/main/java/com/nazarov/radioPlayer/controller/KeyController.java,6/c/6c64e70ec4aea52813fc10ee0a8c9ea81b2f6e9d
-k
-;src/main/java/com/nazarov/radioPlayer/audio/FilePlayer.java,a/0/a0b4c4cb00234079254a27e651f1c3a4c6133813
 n
 >src/main/java/com/nazarov/radioPlayer/audio/StationPlayer.java,e/1/e1440853c08127d9e0685d419a0ca709c181e407
 l
@@ -23,8 +17,6 @@ k
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 t
 Dsrc/main/java/com/nazarov/radioPlayer/osdependent/VolumeControl.java,2/f/2f4168daf3b478f055c5b054ff10b4adb99e52c0
-r
-Bsrc/main/java/com/nazarov/radioPlayer/config/FileConfigReader.java,c/1/c123cd52f674d07fe03fe3e4556f92fd3f0a82e6
 j
 :src/main/java/com/nazarov/radioPlayer/audio/UrlPlayer.java,3/0/309078f26f5e73ece56d1b37eabefc14d2f7cf24
 o

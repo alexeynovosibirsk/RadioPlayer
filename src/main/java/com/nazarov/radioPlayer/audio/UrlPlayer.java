@@ -7,7 +7,7 @@ import javazoom.jl.player.advanced.*;
 
 public class UrlPlayer {
 
-    public void playR(URL url) {
+    public UrlPlayer(URL url) {
 
         try {
 

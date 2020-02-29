@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PowerOff {
 
-    public void powerOff(int time) {
+    public PowerOff(int time) {
 
         Runtime run = Runtime.getRuntime();
         Process process = null;

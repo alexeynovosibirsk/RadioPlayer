@@ -9,7 +9,7 @@ import java.util.Comparator;
 
 public class DeleteTemp {
 
-    public void del(String fileName) {
+    public DeleteTemp(String fileName) {
 
         Path rootPath = Paths.get(fileName);
         System.out.println("Delete temporary directory:");

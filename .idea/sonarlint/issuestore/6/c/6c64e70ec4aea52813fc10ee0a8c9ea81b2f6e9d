@@ -1,15 +1,0 @@
-
-Msquid:S00108e")Either remove or fill this block of code.(ëĞ²ãüÿÿÿÿ8ûûŞØ-
-¤squid:S1186q"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(„®‹¾üÿÿÿÿ8²‡€ĞÚ-
-nsquid:CommentedOutCodeLinei"<This block of commented-out lines of code should be removed.(íÅÆÚûÿÿÿÿ8‘Ò§Ø-
-wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹É®‡úÿÿÿÿ
-vsquid:UselessImportCheck
-"FRemove this unused import 'org.springframework.stereotype.Controller'.(øŠ—Öùÿÿÿÿ8Æ‚×îİ-
-Hsquid:S00108.")Either remove or fill this block of code.(Ø´Õ—8Æ°ÚØ-
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(‰Ëğáüÿÿÿÿ8å¹úŠØ-
-ƒsquid:UselessImportCheck	"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8àÜîİ-
-˜squid:S1186o"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(„ØĞÍ
-Msquid:S001084")Either remove or fill this block of code.(š¯ß¢úÿÿÿÿ8ÊÜØ-
-Msquid:S00108S")Either remove or fill this block of code.(°èµ¿üÿÿÿÿ8ûûŞØ-
-usquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(‰¶¨“úÿÿÿÿ8¹ÂŞØ-

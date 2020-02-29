@@ -20,12 +20,15 @@ public class VolumeControl {
 
         Process process = null;
 
+        String raspberry = "amixer -c 0 set PCM 2dB" + sign;
+
         String debian = "amixer sset Master 5%" + sign;
 
         String ubuntu = "amixer -D pulse sset Master 5%" + sign;
 
         try {
 
+            process = run.exec(raspberry);
             process = run.exec(debian);
             process = run.exec(ubuntu);
             process.getErrorStream();
@@ -38,7 +41,6 @@ public class VolumeControl {
             System.out.println("Bash command ERROR");
 
         } finally {
-
             process.destroy();
         }
     }

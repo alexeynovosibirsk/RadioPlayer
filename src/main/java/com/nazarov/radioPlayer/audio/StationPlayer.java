@@ -9,9 +9,6 @@ public class StationPlayer extends Thread {
     private int numIndex;
     private String playlist;
 
-    UrlPlayer urlPlayer = new UrlPlayer();
-    FilePlayer filePlayer = new FilePlayer();
-
     public void setPlaylist(String playlist) {
 
         this.playlist = playlist;
@@ -26,15 +23,15 @@ public class StationPlayer extends Thread {
 
         stopRadio();
 
-        filePlayer.logoPlayer(numIndex);                          // playing logo file from sounds/
-
-        UrlMaker.setFilelist(playlist);                           // set playlist
-
-        UrlMaker.setNumber(urlNumber);                            // set number of row in playlist
-
         musicThread = new Thread(() -> {
 
-            urlPlayer.playR(UrlMaker.getUrl());
+        new LogoPlayer(numIndex);                          // playing logo file from sounds/
+
+        UrlMaker.setFilelist(playlist);                    // set playlist
+
+        UrlMaker.setNumber(urlNumber);                     // set number of row in playlist
+
+            new UrlPlayer(UrlMaker.getUrl());
         });
 
         musicThread.start();
@@ -53,7 +50,7 @@ public class StationPlayer extends Thread {
             urlNumber = 0;
         }
 
-        filePlayer.logoPlayer(6);   // playing logo "Next station"
+        new LogoPlayer(6);   // playing logo "Next station"
 
         playRadio(urlNumber);
     }

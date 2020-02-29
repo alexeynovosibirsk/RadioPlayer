@@ -30,6 +30,31 @@
     font-size: 20px;
   }
 
+.header {
+
+  margin: 0 auto;
+}
+
+.header button {
+  color: #000000;
+  background: #545251;
+}
+
+.header .button {
+  display: inline-block;
+  width: 275px;
+  height: 40px;
+  line-height: 10px;
+  margin: 5px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #848281;
+  transition: color .5s;
+}
+
+.header .button:hover {
+  color: #848281;
+}
 
   .volume {
 
@@ -37,24 +62,24 @@
   }
 
   .volume .button {
-    color: rgb(160, 123, 255);
+    color: rgb(7, 5, 233);
     background: black;
   }
 
   .volume .button {
     display: inline-block;
     width: 130px;
-    height: 40px;
+    height: 60px;
     line-height: 10px;
     margin: 5px;
     position: relative;
     overflow: hidden;
-    border: 2px solid #9c80ff;
+    border: 2px solid #0705e9;
     transition: color .5s;
   }
 
   .volume .button:hover {
-    color: #fff;
+    color: #81ff2e;
   }
 
   .genre {
@@ -70,7 +95,7 @@
   .genre .button {
     display: inline-block;
     width: 130px;
-    height: 40px;
+    height: 60px;
     line-height: 10px;
     margin: 5px;
     position: relative;
@@ -89,19 +114,19 @@
   }
 
   .next button {
-    color: green;
+    color: #0705e9;
     background: black;
   }
 
   .next .button {
     display: inline-block;
     width: 275px;
-    height: 40px;
+    height: 60px;
     line-height: 10px;
     margin: 5px;
     position: relative;
     overflow: hidden;
-    border: 2px solid green;
+    border: 2px solid #0705e9;
     transition: color .5s;
   }
 
@@ -122,7 +147,7 @@
   .mute .button {
     display: inline-block;
     width: 275px;
-    height: 40px;
+    height: 60px;
     line-height: 10px;
     margin: 5px;
     position: relative;
@@ -148,7 +173,7 @@
   .shutdown .button {
     display: inline-block;
     width: 275px;
-    height: 40px;
+    height: 60px;
     line-height: 10px;
     margin: 5px;
     position: relative;
