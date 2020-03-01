@@ -15,6 +15,7 @@
         <div class="mute">
             <button class="button" type="submit" name="/" value="/">Go back</button>
         </div>
+    </form>
     <form action="#" data-th-action="@{/action/edit}" data-th-object="${model}" method="post">
         <div class="shutdown">
             <button class="button" type="submit" name="action" value="Shutdown">Shutdown</button>

@@ -29,9 +29,9 @@ R
 "src/main/java/META-INF/MANIFEST.MF,6/3/63ef5783cbf71fdf39c1fd6ae6873fd812259930
 ]
 -src/main/webapp/static/jsp/webRadioPlayer.jsp,4/d/4d5c4426b574e8ddc297cf8bb109bfd6af879449
-S
-#src/main/webapp/static/jsp/help.jsp,0/d/0df79d4ad451cdf185765e41b83dcc154642e669
 V
 &src/main/webapp/static/css/buttons.css,7/f/7f3dfe9821d55e32f2c3b6f747b1a3625cd3bb72
 U
 %src/main/webapp/static/jsp/config.jsp,5/7/57e97da84d087edd29ee923c0cc70f86975cf94c
+W
+'src/main/webapp/static/jsp/shutdown.jsp,8/6/86a09323fb66b93b9407324d936d982481357ca8
