@@ -1,3 +1,5 @@
+git clone --single-branch --branch raspberry git@github.com:nixoved/RadioPlayer.git
+
 Install to Debian 10:
 
 1. install minimum system
