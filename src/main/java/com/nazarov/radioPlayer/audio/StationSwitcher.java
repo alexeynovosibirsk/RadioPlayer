@@ -10,8 +10,8 @@ public class StationSwitcher {
     public void ambient() {
         System.out.println("Ambient");
         stationPlayer.setPlaylist("playlists/ambient.txt");
-        stationPlayer.setNumIndex(0);
-        stationPlayer.playRadio(0);
+        stationPlayer.setNumIndex(0);                       // Number of LogoList string for LogoPlayer
+        stationPlayer.playRadio(0);              // Number of urlList string  for urlPlayer
     }
 
     public void jazz() {

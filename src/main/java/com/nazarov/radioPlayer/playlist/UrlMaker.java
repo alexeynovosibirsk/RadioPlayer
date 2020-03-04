@@ -1,14 +1,13 @@
 package com.nazarov.radioPlayer.playlist;
 
-import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class UrlMaker {
 
@@ -41,29 +40,23 @@ public class UrlMaker {
         System.out.println("TotalStations: " + playlistsize + " | Current: " + number + " | url: " + url);
 
         return url;
-
     }
 
     private static void urlMaker() {
 
         List<String> playlist = new ArrayList<>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(filelist))) {
+        try (Scanner scanner = new Scanner(new FileReader(filelist))) {
 
-            String line = "";
+            while (scanner.hasNextLine()) {
 
-            while (line != null) {
+                String line = scanner.nextLine();
 
-                line = br.readLine();
+                String url = line.split(" ")[0];
 
-                playlist.add(line);
+                playlist.add(url);
             }
-
-            playlist.removeAll(Collections.singleton(null));
-
-            playlist.removeAll(Collections.singleton(""));
-
-        } catch (IOException e) {
+         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 

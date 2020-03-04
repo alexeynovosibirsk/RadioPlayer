@@ -27,7 +27,6 @@ public class VolumeControl {
         String ubuntu = "amixer -D pulse sset Master 5%" + sign;
 
         try {
-
             process = run.exec(raspberry);
             process = run.exec(debian);
             process = run.exec(ubuntu);
@@ -39,7 +38,6 @@ public class VolumeControl {
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Bash command ERROR");
-
         } finally {
             process.destroy();
         }

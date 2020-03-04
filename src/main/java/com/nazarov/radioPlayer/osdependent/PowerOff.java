@@ -21,10 +21,8 @@ public class PowerOff {
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Bash command ERROR");
-
         } finally {
             process.destroy();
         }
     }
-
 }

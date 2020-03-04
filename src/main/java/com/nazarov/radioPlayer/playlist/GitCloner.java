@@ -11,7 +11,6 @@ public class GitCloner {
         File file = new File(s);
 
         try {
-
             Git git = Git.cloneRepository()
                     .setURI(uri)
                     .setDirectory(file)

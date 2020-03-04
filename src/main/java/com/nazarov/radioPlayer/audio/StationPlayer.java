@@ -4,7 +4,7 @@ import com.nazarov.radioPlayer.playlist.UrlMaker;
 
 public class StationPlayer extends Thread {
 
-    private Thread musicThread = new Thread();
+    private static Thread musicThread = new Thread();
     private static int urlNumber = 0;
     private int numIndex;
     private String playlist;
@@ -18,12 +18,16 @@ public class StationPlayer extends Thread {
 
         this.numIndex = numIndex;
     }
+    
+    @Override
+    public void run() {
+
+        new UrlPlayer(UrlMaker.getUrl());
+    }
 
     public void playRadio(int urlNumber) {
 
         stopRadio();
-
-        musicThread = new Thread(() -> {
 
         new LogoPlayer(numIndex);                          // playing logo file from sounds/
 
@@ -31,10 +35,10 @@ public class StationPlayer extends Thread {
 
         UrlMaker.setNumber(urlNumber);                     // set number of row in playlist
 
-            new UrlPlayer(UrlMaker.getUrl());
-        });
+        musicThread = new StationPlayer();
 
         musicThread.start();
+        System.out.println(musicThread.getName());
     }
 
     public void nextStation() {

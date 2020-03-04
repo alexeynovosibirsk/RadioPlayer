@@ -10,7 +10,7 @@
 <div align="center">
         <form action="#" data-th-action="@{/action/edit}" data-th-object="${model}" method="post">
             <div class="header">
-            <button class="button" type="submit" name="action" value="">v.05.2 </button>
+            <button class="button" type="submit" name="action" value="">v.05.3 </button>
             </div>
             <div class="genre">
                 <button class="button" type="submit" name="action" value="Ambient">Ambient</button>

@@ -18,7 +18,6 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
 
     VolumeControl volumeControl = new VolumeControl();
 
-
     @Autowired
     private StationSwitcher stationSwitcher;
 
@@ -87,7 +86,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         return webRadioPlayer();
     }
 
-    @RequestMapping(value = "/config", method = RequestMethod.GET)
+    @RequestMapping(value = "/config", method = RequestMethod.GET)  // now using now but I have the plan)))
     public ModelAndView configFile() {
         ModelAndView mav = new ModelAndView("config");
         return mav;
