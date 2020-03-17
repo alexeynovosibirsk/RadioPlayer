@@ -31,12 +31,12 @@ public class WebConfig extends WebMvcConfigurerAdapter {
                 "/images/**",
                 "/css/**",
                 "/fonts/**",
-                "/files/**")
+                "/jsp/**")
                 .addResourceLocations(
                         "classpath:/webapp/static/images/",
                         "classpath:/webapp/static/css/",
                         "classpath:/webapp/static/fonts/",
-                        "classpath:/webapp/static/files/");
+                        "classpath:/webapp/static/jsp/");
     }
 
     @Override

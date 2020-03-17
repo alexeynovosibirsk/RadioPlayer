@@ -4,14 +4,23 @@ import com.nazarov.radioPlayer.audio.LogoPlayer;
 import com.nazarov.radioPlayer.audio.StationSwitcher;
 import com.nazarov.radioPlayer.osdependent.PowerOff;
 import com.nazarov.radioPlayer.osdependent.VolumeControl;
+import com.nazarov.radioPlayer.playlist.UrlMaker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import javax.servlet.http.HttpServlet;
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 @Controller
 public class WebController extends HttpServlet implements WebMvcConfigurer {
@@ -21,9 +30,16 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
     @Autowired
     private StationSwitcher stationSwitcher;
 
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView webRadioPlayer() {
+
+        UrlMaker u = new UrlMaker();
+        URL url = u.getUrl();
+
         ModelAndView mav = new ModelAndView("webRadioPlayer");
+        mav.addObject("url", url);
+
         return mav;
     }
 
@@ -91,4 +107,16 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         ModelAndView mav = new ModelAndView("config");
         return mav;
     }
+
+//    @RequestMapping(value = "/err", method = RequestMethod.GET)
+//    public ModelAndView getdata() {
+//
+//        UrlMaker u = new UrlMaker();
+//        URL url = u.getUrl();
+//        ModelAndView mav = new ModelAndView("err");
+//
+//        mav.addObject("url", url);
+//
+//        return mav;
+//    }
 }

@@ -3,8 +3,6 @@
   body {
     text-align: left;
     background: #000000;
-
-
     width: 100%;
   }
 
@@ -28,6 +26,14 @@
     text-transform: uppercase;
     font-family: Helvetica;
     font-size: 20px;
+  }
+
+  label {
+    color: gray;
+    text-decoration: none;
+    text-transform: lowercase;
+    font-family: Helvetica;
+    font-size: 15px;
   }
 
 .header {
@@ -55,6 +61,34 @@
 .header .button:hover {
   color: #848281;
 }
+
+.url {
+
+  margin: 0 auto;
+}
+
+.url label {
+  color: rgba(156, 153, 162, 0.57);
+  background: #000000;
+}
+
+.url .label {
+  display: inline-block;
+  width: 275px;
+  height: 40px;
+  line-height: 10px;
+  margin: 5px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #848281;
+  transition: color .5s;
+}
+
+.url .label:hover {
+  color: #848281;
+}
+
+---
 
   .volume {
 

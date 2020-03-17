@@ -19,10 +19,13 @@ public class RadioApplication  {
 
         new GitCloner(playlistDirectory, githubUrl);
 
+        // Below for jsp ${url}:
+        UrlMaker u = new UrlMaker();
+        u.setFilelist(playlistDirectory + "/ambient.txt");
+        u.setNumber(0);
+
         System.out.println("----- webRadio is ready! -----");
 
        new LogoPlayer(5);
-
     }
-
 }

@@ -35,5 +35,15 @@ U
 %src/main/webapp/static/jsp/config.jsp,5/7/57e97da84d087edd29ee923c0cc70f86975cf94c
 W
 'src/main/webapp/static/jsp/shutdown.jsp,8/6/86a09323fb66b93b9407324d936d982481357ca8
-e
-5src/main/java/com/nazarov/radioPlayer/TestThread.java,3/f/3f4c8e3f3da8e244300540f07b856d5c305cae14
+E
+playlists/ambient.txt,6/f/6f50fabfe3c9909b650c2298acddbe1fbe80ba68
+F
+playlists/variable.txt,4/2/42c8a38570dd0d5a88c9f3e992d9402c85532a23
+k
+;src/main/java/com/nazarov/radioPlayer/audio/LogoPlayer.java,8/2/824d3fb143f8212bf2349ed1c7633bc9328a9f29
+k
+;src/main/java/com/nazarov/radioPlayer/audio/ThreadTest.java,e/2/e2a77417d74fb5bb26134b82d5cff6e8e18b34e1
+s
+Csrc/main/java/com/nazarov/radioPlayer/playlist/RadioSureParser.java,6/0/60fc9ae3a4a0f79377849651c4d90548f2be801c
+R
+"src/main/webapp/static/jsp/err.jsp,9/6/9686d28c26757f13a980c3522d77330681748ba7

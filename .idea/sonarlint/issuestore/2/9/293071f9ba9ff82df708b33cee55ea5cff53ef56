@@ -1,11 +1,11 @@
 
 `squid:S2095"DUse try-with-resources or close this "Stream" in a "finally" clause.(ËªÂ’üÿÿÿÿ
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸ŒË
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(ÆİÜêùÿÿÿÿ
 8squid:S3864"!Remove this use of "Stream.peek".(ßˆ±ö
 O
 squid:S106"9Replace this use of System.out or System.err by a logger.(ßˆ±ö
+bsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(†€éˆ
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸ŒË
 O
 squid:S106"9Replace this use of System.out or System.err by a logger.(µÇÉù
-bsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(†€éˆ
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÆİÜêùÿÿÿÿ

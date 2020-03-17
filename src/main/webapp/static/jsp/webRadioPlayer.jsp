@@ -10,8 +10,12 @@
 <div align="center">
         <form action="#" data-th-action="@{/action/edit}" data-th-object="${model}" method="post">
             <div class="header">
-            <button class="button" type="submit" name="action" value="">v.05.3 </button>
+            <button class="button" type="submit" name="action" value="">v.06</button>
             </div>
+            <div class="url">
+                <label class="button" type="submit" name="action" value="" >${url} </label>
+            </div>
+
             <div class="genre">
                 <button class="button" type="submit" name="action" value="Ambient">Ambient</button>
                 <button class="button" type="submit" name="action" value="Jazz">Jazz</button>
@@ -39,7 +43,9 @@
             <div class="shutdown">
                 <button class="button" type="submit" name="shutdown" value="Shutdown">Shutdown</button>
             </div>
+
         </form>
+
 </div>
 </body>
 </html>
