@@ -36,9 +36,11 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
 
         UrlMaker u = new UrlMaker();
         URL url = u.getUrl();
+        String info = u.getInfo();
 
         ModelAndView mav = new ModelAndView("webRadioPlayer");
         mav.addObject("url", url);
+        mav.addObject("info", info);
 
         return mav;
     }

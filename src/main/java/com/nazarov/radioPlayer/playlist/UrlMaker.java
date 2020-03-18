@@ -37,9 +37,15 @@ public class UrlMaker {
 
         urlMaker();
 
-        System.out.println("TotalStations: " + playlistsize + " | Current: " + number + " | url: " + url);
-
         return url;
+    }
+
+    public String getInfo() {
+
+        String filelistToString = filelist.toString();
+        String genre = filelistToString.split("/")[1].replace(".txt", "");
+
+        return  playlistsize + " - " + genre + " - " + number;
     }
 
     private static void urlMaker() {

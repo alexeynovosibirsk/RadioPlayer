@@ -1,4 +1,4 @@
-package com.nazarov.radioPlayer.audio;
+package com.nazarov.radioPlayer.NewFeatures;
 
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.advanced.AdvancedPlayer;
@@ -6,7 +6,6 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 public class ThreadTest implements Runnable {
 

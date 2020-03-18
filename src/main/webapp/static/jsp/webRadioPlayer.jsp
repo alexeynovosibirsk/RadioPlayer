@@ -8,12 +8,12 @@
 </head>
 <body>
 <div align="center">
-        <form action="#" data-th-action="@{/action/edit}" data-th-object="${model}" method="post">
+        <form action="" data-th-action="@{/action/edit}" data-th-object="${model}" method="post">
             <div class="header">
             <button class="button" type="submit" name="action" value="">v.06</button>
             </div>
             <div class="url">
-                <label class="button" type="submit" name="action" value="" >${url} </label>
+                <label class="label" type="submit" name="action" value="" ><br> ${url} <P> ${info}</label>
             </div>
 
             <div class="genre">

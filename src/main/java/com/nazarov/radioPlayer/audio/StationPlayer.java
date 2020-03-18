@@ -38,7 +38,6 @@ public class StationPlayer extends Thread {
         musicThread = new StationPlayer();
 
         musicThread.start();
-        System.out.println(musicThread.getName());
     }
 
     public void nextStation() {
