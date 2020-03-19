@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class RadioSureParser {
 
@@ -27,6 +28,8 @@ public class RadioSureParser {
     int m3u = 0;
     int pls = 0;
     int good = 0;
+    int allLinksStream = 0;
+    int allLinks = 0;
 
     public int pageMax() {
 
@@ -39,15 +42,18 @@ public class RadioSureParser {
         }
         // Get number of pages:
         Elements pageNumbers = doc.select("p.style3");
-        String pageNumber = pageNumbers.text().substring(10, 11) + 0;
-        int pageMax = Integer.parseInt(pageNumber);
+        String pageNumber = pageNumbers.text().split(" ")[3];
+        int pageMaxRaw = Integer.parseInt(pageNumber);
+        int pageMaximum = pageMaxRaw * 20 - 20;
 
-        return pageMax;
+        System.out.println("pageMax = " + pageMaximum);
+
+        return pageMaximum;
     }
 
-    public void getLinksFromQuery(int pageMax) {
+    public void getLinksFromQuery(int pageMaximum) {
 
-        for(int pgNum = 10; pgNum < pageMax; pgNum += 10) {
+        for(int pgNum = 10; pgNum < pageMaximum; pgNum += 10) {
 
             String url = prefixUrl + queryBody + queryVar + queryMid + pgNum + queryTail;
             try {
@@ -73,7 +79,14 @@ public class RadioSureParser {
         }
         for (String s : list)  {
             getStationStream(s);
+            try {
+                TimeUnit.MILLISECONDS.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            allLinks++;
         }
+        System.out.println("All links = " + allLinks);
     }
 
     public void getStationStream(String url) {
@@ -89,14 +102,21 @@ public class RadioSureParser {
         Element stationStream = urlsFromPage.get(1);
         String stationStreamToString = stationStream.text();
         stationsStreams.add(stationStreamToString);
+
     }
 
     public void writeToFile() {
+
+        //Just statistic:
+        for(String a : stationsStreams) {
+            allLinksStream++;
+        }
 
 
         try {
             fw = new FileWriter(queryVar + ".txt");
             for(String s : stationsStreams)
+
                 if (s.endsWith("mp3")) { mp3++;}
 
                 else if (s.endsWith("aac")) { aac++;}
@@ -120,6 +140,7 @@ public class RadioSureParser {
         System.out.println("M3U " + m3u);
         System.out.println("PLS " + pls);
         System.out.println("Write " + good);
+        System.out.println("All links = " + allLinksStream);
     }
 
     public static void main(String[] args) {

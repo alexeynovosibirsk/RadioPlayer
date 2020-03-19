@@ -10,10 +10,18 @@ import java.util.Scanner;
 public class ThreadTest implements Runnable {
 
     URL url;
+    boolean isActive;
+    void disable() {
+        isActive = false;
+    }
+
+    ThreadTest() {
+        isActive = true;
+    }
 
     @Override
     public void run() {
-        while (!Thread.currentThread().isInterrupted()) {
+        while (isActive) {
             try {
                 url = new URL("http://stream.syntheticfm.com:8040/stream");
 
@@ -60,13 +68,13 @@ class Demo {
 //        t.start();
 //        t.setDaemon(true);
         ThreadTest tt = new ThreadTest();
-        tt.justPlay();
+       new Thread(tt).start();
 
         Scanner scanner = new Scanner(System.in);
         int i  = scanner.nextInt();
         if (i == 1) {
 
-          //  t.interrupt();
+            tt.disable();
 
             System.out.println("AAA");
         }
