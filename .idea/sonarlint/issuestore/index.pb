@@ -41,9 +41,5 @@ F
 playlists/variable.txt,4/2/42c8a38570dd0d5a88c9f3e992d9402c85532a23
 k
 ;src/main/java/com/nazarov/radioPlayer/audio/LogoPlayer.java,8/2/824d3fb143f8212bf2349ed1c7633bc9328a9f29
-k
-;src/main/java/com/nazarov/radioPlayer/audio/ThreadTest.java,e/2/e2a77417d74fb5bb26134b82d5cff6e8e18b34e1
-s
-Csrc/main/java/com/nazarov/radioPlayer/playlist/RadioSureParser.java,6/0/60fc9ae3a4a0f79377849651c4d90548f2be801c
 R
 "src/main/webapp/static/jsp/err.jsp,9/6/9686d28c26757f13a980c3522d77330681748ba7
