@@ -1,9 +1,11 @@
-package com.nazarov.radioPlayer.NewFeatures;
+package com.nazarov.radioPlayer.updates;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -21,16 +23,31 @@ public class RadioSureParser {
     private static String queryVar = "";
     private String queryMid = "&pos=";
     private String queryTail = "&reset_pos=0&status=active#info";
+    private File outputDir = new File("NewPlaylist");
+
+
+
     private List<String> list = new ArrayList<>();
     private List<String> stationsStreams = new ArrayList<>();
     private FileWriter fw;
     int mp3Counter = 0;
     int aacCounter = 0;
     int m3uCounter = 0;
+    int m3u8Counter = 0;
     int plsCounter = 0;
+    int asxCounter = 0;
+    int phpCounter = 0;
     int goodCounter = 0;
     int allLinksStreamCounter = 0;
     int allLinksCounter = 0;
+
+
+    public String getQueryVar() {
+        return queryVar;
+    }
+    public String getFullFileName() {
+        return fullFileName;
+    }
 
     public int pageMax() {
 
@@ -45,33 +62,45 @@ public class RadioSureParser {
         Elements pageNumbers = doc.select("p.style3");
         String pageNumber = pageNumbers.text().split(" ")[3];
         int pageMaxRaw = Integer.parseInt(pageNumber);
-        int pageMaximum = pageMaxRaw * 20 - 20;
+        int pageMaximum;
+        System.out.println("66 pageMaxRaw " + pageMaxRaw);
+        if(pageMaxRaw > 2) {
+            pageMaximum = pageMaxRaw * 20 - 20;
+        } else {
+            pageMaximum = pageMaxRaw * 10;
+        }
+        System.out.println("72 pageMaximum " + pageMaximum);
 
         return pageMaximum;
     }
 
     public void getLinksFromQuery(int pageMaximum) {
 
-        for(int pgNum = 10; pgNum < pageMaximum; pgNum += 10) {
 
-            String url = prefixUrl + queryBody + queryVar + queryMid + pgNum + queryTail;
-            try {
-                doc = Jsoup.connect(url)
-                        .get();
 
-            } catch (IOException e) {
-                e.printStackTrace();
+            for (int pgNum = 10; pgNum < pageMaximum; pgNum += 10) {
+
+                String url = prefixUrl + queryBody + queryVar + queryMid + pgNum + queryTail;
+
+                try {
+                    doc = Jsoup.connect(url)
+                            .get();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                // Get urls from page:
+                Elements tbody = doc.select("tbody");
+                Elements links = tbody.select("a[href]");
+
+                for (Element a : links) {
+                    String s = a.attr("href");
+                    String fullUrl = prefixUrl + s;
+                    list.add(fullUrl);
+                }
             }
-            // Get urls from page:
-            Elements tbody = doc.select("tbody");
-            Elements links = tbody.select("a[href]");
 
-            for (Element a : links) {
-                String s = a.attr("href");
-                String fullUrl = prefixUrl + s;
-                list.add(fullUrl);
-            }
-        }
+
         for (String s : list)  {
             getStationStream(s);
               allLinksCounter++;
@@ -96,26 +125,39 @@ public class RadioSureParser {
     }
     public void writeToFile() {
 
+        String fullFileName = queryVar + ".txt";
+
         //Just statistic:
         for(String a : stationsStreams) {
             allLinksStreamCounter++;
         }
-
         try {
-            Path outputDir = Files.createDirectory(Paths.get("NewPlaylists"));
+            if(!outputDir.exists()) {
+                outputDir.mkdir();
+            } else {
+                fw = new FileWriter(outputDir + "/" + fullFileName);
+                for (String s : stationsStreams)
 
+                    if (s.endsWith("mp3")) {
+                        mp3Counter++;
+                    } else if (s.endsWith("aac")) {
+                        aacCounter++;
+                    } else if (s.endsWith("m3u")) {
+                        m3uCounter++;
+                    } else if (s.endsWith("m3u8")) {
+                        m3u8Counter++;
+                    } else if (s.endsWith("pls")) {
+                        plsCounter++;
+                    } else if (s.endsWith("asx")) {
+                        asxCounter++;
+                    } else if (s.contains(".php")) {
+                        phpCounter++;
+                    } else {
+                        goodCounter++;
 
-            fw = new FileWriter( outputDir + "/" +queryVar + ".txt");
-            for(String s : stationsStreams)
-
-                if (s.endsWith("mp3")) { mp3Counter++;}
-
-                else if (s.endsWith("aac")) { aacCounter++;}
-                else if (s.endsWith("m3u")) { m3uCounter++;}
-                else if (s.endsWith("pls")) { plsCounter++;}
-                else { goodCounter++;
-
-                    fw.write(s + "\n");}
+                        fw.write(s + "\n");
+                    }
+            }
 
         } catch (IOException e) {
             e.printStackTrace();

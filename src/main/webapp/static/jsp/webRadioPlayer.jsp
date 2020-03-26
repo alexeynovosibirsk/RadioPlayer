@@ -10,23 +10,22 @@
 <div align="center">
         <form action="" data-th-action="@{/action/edit}" data-th-object="${model}" method="post">
             <div class="header">
-            <button class="button" type="submit" name="action" value="">v.06</button>
+            <button class="button" type="submit" name="action" value="">v.07</button>
             </div>
             <div class="url">
                 <label class="label" type="submit" name="action" value="" ><br> ${url} <P> ${info}</label>
             </div>
-
             <div class="genre">
-                <button class="button" type="submit" name="action" value="Ambient">Ambient</button>
-                <button class="button" type="submit" name="action" value="Jazz">Jazz</button>
+                <button class="button" type="submit" name="action" value=${genreOne}>${genreOne}</button>
+                <button class="button" type="submit" name="action" value=${genreTwo}>${genreTwo}</button>
             </div>
             <div class="genre">
-                <button class="button" type="submit" name="action" value="Trance">Trance</button>
-                <button class="button" type="submit" name="action" value="Retro">Retro</button>
+                <button class="button" type="submit" name="action" value=${genreThree}>${genreThree}</button>
+                <button class="button" type="submit" name="action" value=${genreFour}>${genreFour}</button>
             </div>
             <div class="genre">
-                <button class="button" type="submit" name="action" value="Variable">Variable</button>
-                <button class="button" type="submit" name="action" value="Dance">Dance</button>
+                <button class="button" type="submit" name="action" value=${genreFive}>${genreFive}</button>
+                <button class="button" type="submit" name="action" value=${genreSix}>${genreSix}</button>
             </div>
             <div class="next">
                 <button class="button" type="submit" name="action" value="Next_Station">Next Station</button>
@@ -43,9 +42,7 @@
             <div class="shutdown">
                 <button class="button" type="submit" name="shutdown" value="Shutdown">Shutdown</button>
             </div>
-
         </form>
-
 </div>
 </body>
 </html>

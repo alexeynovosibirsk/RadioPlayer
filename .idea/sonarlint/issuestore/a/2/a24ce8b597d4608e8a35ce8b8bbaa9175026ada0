@@ -1,7 +1,8 @@
 
+Fsquid:S3010"#Remove this assignment of "number".(Ì¾÷œúÿÿÿÿ8ÿĞ†©‘.
+Asquid:S1148B"#Use a logger to log this exception.(éì‡›8¶‰ÕĞÑ-
+Csquid:S3010"%Remove this assignment of "filelist".(ˆíšù8ÿĞ†©‘.
+Ssquid:S2209"5Change this instance-reference to a static reference.(ˆíšù8ÿĞ†©‘.
 rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸ŒË
-Fsquid:S1148<"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ìŠÀ¦Š.
-]squid:S1118":Add a private constructor to hide the implicit public one.(ÖÁÍ€ıÿÿÿÿ8–£©ÑÑ-
-[
-squid:S106("9Replace this use of System.out or System.err by a logger.(Ÿ¹ªËúÿÿÿÿ8¿øÜĞÑ-
-Asquid:S1148E"#Use a logger to log this exception.(éì‡›8¶‰ÕĞÑ-
+Xsquid:S2209"5Change this instance-reference to a static reference.(Ì¾÷œúÿÿÿÿ8ÿĞ†©‘.
+Fsquid:S11489"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ìŠÀ¦Š.

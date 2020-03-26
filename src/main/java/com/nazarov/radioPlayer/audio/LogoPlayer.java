@@ -14,10 +14,8 @@ public class LogoPlayer {
     private static InputStream is;
 
     public LogoPlayer(int numIndex) {
-
         play(logoList(numIndex));
     }
-
     private void play(InputStream is) {
 
         try {
@@ -28,20 +26,14 @@ public class LogoPlayer {
             j.printStackTrace();
         }
     }
-
     private static InputStream logoList(int numIndex)  {
 
         List<String> arrLogo = new ArrayList<>();
-        arrLogo.add("sounds/ambient.mp3");
-        arrLogo.add("sounds/jazz.mp3");
-        arrLogo.add("sounds/trance.mp3");
-        arrLogo.add("sounds/retro.mp3");
-        arrLogo.add("sounds/variable.mp3");
         arrLogo.add("sounds/hello.mp3");
         arrLogo.add("sounds/next.mp3");
+        arrLogo.add("sounds/newStationList.mp3");
         arrLogo.add("sounds/sleepMode.mp3");
         arrLogo.add("sounds/shutdown.mp3");
-        arrLogo.add("sounds/dance.mp3");
 
         Resource resource = new ClassPathResource(arrLogo.get(numIndex));
 

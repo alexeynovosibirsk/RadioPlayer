@@ -119,7 +119,6 @@ http://streams.calmradio.com:20228/;
 http://streams.calmradio.com:20528/;
 http://streams.calmradio.com:20628/;
 http://streams.fluxfm.de/event01/mp3-320
-http://AM98.5Mhz.net/listen.asx
 http://85.25.217.22:8060/stream
 http://79.111.119.111:9105/
 http://79.111.119.111:9023/
@@ -128,7 +127,6 @@ http://streams.greenhost.nl:8080/concertzenderlive
 http://79.120.39.202:9093/
 http://79.120.39.202:9051/
 http://streams.fluxfm.de/event01/mp3-320
-http://AM98.5Mhz.net/listen.asx
 http://85.25.217.22:8060/stream
 http://79.111.119.111:9105/
 http://79.111.119.111:9023/
@@ -139,7 +137,6 @@ http://79.120.39.202:9051/
 http://79.120.39.202:9095/
 http://79.111.14.76:9037/
 http://79.111.14.76:9023/
-http://www.partyviberadio.com:2199/tunein/trance.asx
 http://listen.radiogora.ru:8000/etc320
 http://www.songcastradio.com:9018/;stream
 http://62.149.196.16:8800/stream
@@ -148,7 +145,6 @@ http://62.149.196.16:8888/stream
 http://79.120.39.202:9095/
 http://79.111.14.76:9037/
 http://79.111.14.76:9023/
-http://www.partyviberadio.com:2199/tunein/trance.asx
 http://listen.radiogora.ru:8000/etc320
 http://www.songcastradio.com:9018/;stream
 http://62.149.196.16:8800/stream

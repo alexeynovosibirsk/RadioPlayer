@@ -1,8 +1,6 @@
 
-Tsquid:S26966"6Make the enclosing method "static" or remove this set.(¡¸í™8‘¥Ý¾Ý-
-Tsquid:S26960"6Make the enclosing method "static" or remove this set.(óÎÃ 8úÙÏÑÑ-
-V
-squid:S106)"9Replace this use of System.out or System.err by a logger.(”ÒŠî8êùÔü‰.
+Fsquid:S1148;"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8žàÿ§‘.
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ýî¢—þÿÿÿÿ
-Tsquid:CallToDeprecatedMethod@",Remove this use of "stop"; it is deprecated.(Éí¥Î
-Tsquid:S2696&"6Make the enclosing method "static" or remove this set.(ÒúÝ×8ÙÉè¥Š.
+Fsquid:S11489"#Use a logger to log this exception.(üÑôìþÿÿÿÿ8žàÿ§‘.
+Tsquid:CallToDeprecatedMethod2",Remove this use of "stop"; it is deprecated.(íˆÀ¯
+Osquid:S1068",Remove this unused "numIndex" private field.(œö”šøÿÿÿÿ8¯ÇÞª‘.

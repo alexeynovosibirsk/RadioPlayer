@@ -1,46 +1,50 @@
 package com.nazarov.radioPlayer.controller;
 
+import com.nazarov.radioPlayer.RadioApplication;
 import com.nazarov.radioPlayer.audio.LogoPlayer;
-import com.nazarov.radioPlayer.audio.StationSwitcher;
+import com.nazarov.radioPlayer.audio.StationPlayer;
+import com.nazarov.radioPlayer.config.ConfigReader;
 import com.nazarov.radioPlayer.osdependent.PowerOff;
 import com.nazarov.radioPlayer.osdependent.VolumeControl;
 import com.nazarov.radioPlayer.playlist.UrlMaker;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import javax.servlet.http.HttpServlet;
-import javax.validation.Valid;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import java.net.MalformedURLException;
 import java.net.URL;
 
 @Controller
 public class WebController extends HttpServlet implements WebMvcConfigurer {
 
     VolumeControl volumeControl = new VolumeControl();
-
-    @Autowired
-    private StationSwitcher stationSwitcher;
-
+    StationPlayer stationPlayer = new StationPlayer();
+    ConfigReader configReader = new ConfigReader();
+    String genreOne = configReader.getGenreOne();
+    String genreTwo = configReader.getGenreTwo();
+    String genreThree = configReader.getGenreThree();
+    String genreFour = configReader.getGenreFour();
+    String genreFive = configReader.getGenreFive();
+    String genreSix = configReader.getGenreSix();
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView webRadioPlayer() {
 
         UrlMaker u = new UrlMaker();
-        URL url = u.getUrl();
-        String info = u.getInfo();
+        String url = u.getUrlForJsp();
+        String info = u.getInfoForJsp();
 
         ModelAndView mav = new ModelAndView("webRadioPlayer");
         mav.addObject("url", url);
         mav.addObject("info", info);
+        mav.addObject("genreOne", genreOne);
+        mav.addObject("genreTwo", genreTwo);
+        mav.addObject("genreThree", genreThree);
+        mav.addObject("genreFour", genreFour);
+        mav.addObject("genreFive", genreFive);
+        mav.addObject("genreSix", genreSix);
 
         return mav;
     }
@@ -48,26 +52,32 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public ModelAndView buttons(@RequestParam(value = "action", required = true) String action) {
 
-        if (action.equals("Ambient")) {
-            stationSwitcher.ambient();
+        if (action.equals(genreOne)) {
+                stationPlayer.setPlaylist(RadioApplication.getPlaylistDirPath() + action + RadioApplication.getPlaylistExtension());
+                stationPlayer.playRadio();
+       }
+        if (action.equals(genreTwo)) {
+            stationPlayer.setPlaylist(RadioApplication.getPlaylistDirPath() + action + RadioApplication.getPlaylistExtension());
+            stationPlayer.playRadio();
         }
-        if (action.equals("Jazz")) {
-            stationSwitcher.jazz();
+        if (action.equals(genreThree)) {
+            stationPlayer.setPlaylist(RadioApplication.getPlaylistDirPath() + action + RadioApplication.getPlaylistExtension());
+            stationPlayer.playRadio();
         }
-        if (action.equals("Trance")) {
-            stationSwitcher.trance();
+        if (action.equals(genreFour)) {
+            stationPlayer.setPlaylist(RadioApplication.getPlaylistDirPath() + action + RadioApplication.getPlaylistExtension());
+            stationPlayer.playRadio();
         }
-        if (action.equals("Retro")) {
-            stationSwitcher.retro();
+        if (action.equals(genreFive)) {
+            stationPlayer.setPlaylist(RadioApplication.getPlaylistDirPath() + action + RadioApplication.getPlaylistExtension());
+            stationPlayer.playRadio();
         }
-        if (action.equals("Variable")) {
-            stationSwitcher.variable();
-        }
-        if (action.equals("Dance")) {
-            stationSwitcher.dance();
+        if (action.equals(genreSix)) {
+            stationPlayer.setPlaylist(RadioApplication.getPlaylistDirPath() + action + RadioApplication.getPlaylistExtension());
+            stationPlayer.playRadio();
         }
         if (action.equals("Next_Station")) {
-            stationSwitcher.nextStation();
+            stationPlayer.nextStation();
         }
         if (action.equals("Volume_up")) {
             volumeControl.volumeUp();
@@ -76,7 +86,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
             volumeControl.volumeDn();
         }
         if (action.equals("Mute")) {
-            stationSwitcher.stopRadio();
+            stationPlayer.stopRadio();
         }
         return webRadioPlayer();
     }
@@ -90,15 +100,15 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
     @RequestMapping(value = "/shutdown", method = RequestMethod.POST)
     public ModelAndView shutdownButtons(@RequestParam(value = "action", required = true) String action) {
         if (action.equals("Shutdown")) {
-            new LogoPlayer(8);
+            new LogoPlayer(4);
             new PowerOff(0);
         }
         if (action.equals("Sleep_Mode_30")) {
-            new LogoPlayer(7);
+            new LogoPlayer(3);
             new PowerOff(30);
         }
         if (action.equals("Sleep_Mode_60")) {
-            new LogoPlayer(7);
+            new LogoPlayer(3);
             new PowerOff(60);
         }
         return webRadioPlayer();

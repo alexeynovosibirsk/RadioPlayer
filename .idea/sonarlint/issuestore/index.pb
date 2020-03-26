@@ -1,8 +1,6 @@
 
 k
 ;src/main/java/com/nazarov/radioPlayer/RadioApplication.java,4/a/4afea65024569e05b6886426d908f9b3c9d8b5e3
-p
-@src/main/java/com/nazarov/radioPlayer/audio/StationSwitcher.java,7/e/7e603169ee84205e07c131b8821dc88d9f0174e3
 n
 >src/main/java/com/nazarov/radioPlayer/audio/StationPlayer.java,e/1/e1440853c08127d9e0685d419a0ca709c181e407
 l
@@ -17,12 +15,8 @@ k
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 t
 Dsrc/main/java/com/nazarov/radioPlayer/osdependent/VolumeControl.java,2/f/2f4168daf3b478f055c5b054ff10b4adb99e52c0
-j
-:src/main/java/com/nazarov/radioPlayer/audio/UrlPlayer.java,3/0/309078f26f5e73ece56d1b37eabefc14d2f7cf24
 o
 ?src/main/java/com/nazarov/radioPlayer/osdependent/PowerOff.java,a/6/a65c11aba35ae7d3ef7e3f114402767f90ef823d
-n
->src/main/java/com/nazarov/radioPlayer/playlist/DeleteTemp.java,2/9/293071f9ba9ff82df708b33cee55ea5cff53ef56
 \
 ,src/main/webapp/WEB-INF/META-INF/MANIFEST.MF,c/c/cc85cdea50e6cbd15779216dc741757379371afd
 R
@@ -35,11 +29,15 @@ U
 %src/main/webapp/static/jsp/config.jsp,5/7/57e97da84d087edd29ee923c0cc70f86975cf94c
 W
 'src/main/webapp/static/jsp/shutdown.jsp,8/6/86a09323fb66b93b9407324d936d982481357ca8
-E
-playlists/ambient.txt,6/f/6f50fabfe3c9909b650c2298acddbe1fbe80ba68
-F
-playlists/variable.txt,4/2/42c8a38570dd0d5a88c9f3e992d9402c85532a23
 k
 ;src/main/java/com/nazarov/radioPlayer/audio/LogoPlayer.java,8/2/824d3fb143f8212bf2349ed1c7633bc9328a9f29
 R
 "src/main/webapp/static/jsp/err.jsp,9/6/9686d28c26757f13a980c3522d77330681748ba7
+v
+Fsrc/main/java/com/nazarov/radioPlayer/NewFeatures/RadioSureParser.java,6/7/67eef83193a767a41cc86aa93c72ead10ba715ce
+H
+NewPlaylists/ambient.txt,b/a/ba7feeb8e2362ac1cbc46a32d82bd8206a088752
+b
+2src/main/java/com/nazarov/radioPlayer/TestSet.java,d/5/d5dae03f75c774e2f5d702d56a4fe0b98622d177
+n
+>src/main/java/com/nazarov/radioPlayer/config/ConfigReader.java,5/4/54e322967a2215133fcfb763d23a61caede49ad3
