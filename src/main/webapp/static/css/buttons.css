@@ -42,19 +42,19 @@
 }
 
 .header button {
-  color: #000000;
-  background: #545251;
+  color: #791681;
+  background: #000000;
 }
 
 .header .button {
   display: inline-block;
   width: 275px;
-  height: 30px;
+  height: 20px;
   line-height: 10px;
   margin: 5px;
   position: relative;
   overflow: hidden;
-  border: 2px solid #848281;
+  border: 2px solid #62605f;
   transition: color .5s;
 }
 

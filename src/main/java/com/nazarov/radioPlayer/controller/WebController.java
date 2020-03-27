@@ -7,6 +7,8 @@ import com.nazarov.radioPlayer.config.ConfigReader;
 import com.nazarov.radioPlayer.osdependent.PowerOff;
 import com.nazarov.radioPlayer.osdependent.VolumeControl;
 import com.nazarov.radioPlayer.playlist.UrlMaker;
+import com.nazarov.radioPlayer.updates.QueryParserInput;
+import com.nazarov.radioPlayer.updates.RadioSureParser;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,13 +16,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import javax.servlet.http.HttpServlet;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import java.net.URL;
+
+import java.util.Scanner;
 
 @Controller
 public class WebController extends HttpServlet implements WebMvcConfigurer {
 
     VolumeControl volumeControl = new VolumeControl();
     StationPlayer stationPlayer = new StationPlayer();
+    QueryParserInput queryParserInput = new QueryParserInput();
+
     ConfigReader configReader = new ConfigReader();
     String genreOne = configReader.getGenreOne();
     String genreTwo = configReader.getGenreTwo();
@@ -91,14 +96,28 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         return webRadioPlayer();
     }
 
-    @RequestMapping(value = "/shutdown", method = RequestMethod.GET)
-    public ModelAndView shutdown() {
-        ModelAndView mav = new ModelAndView("shutdown");
+    @RequestMapping(value = "/operations", method = RequestMethod.GET)
+    public ModelAndView operations() {
+
+        ModelAndView mav = new ModelAndView("operations");
+
+//        RadioSureParser radioSureParser = new RadioSureParser();
+//        String queryVar = radioSureParser.getQueryVar();
+//        mav.addObject(queryVar);
         return mav;
     }
 
-    @RequestMapping(value = "/shutdown", method = RequestMethod.POST)
+    @RequestMapping(value = "/operations", method = RequestMethod.POST)
     public ModelAndView shutdownButtons(@RequestParam(value = "action", required = true) String action) {
+        if (action.equals("RadioSure")) {
+            QueryParserInput queryParserInput = new QueryParserInput();
+           // queryParserInput.inputQuery(queryVar);
+            queryParserInput.radiosureParsing();
+            //queryParserInput.getQueryVar();
+
+
+
+        }
         if (action.equals("Shutdown")) {
             new LogoPlayer(4);
             new PowerOff(0);

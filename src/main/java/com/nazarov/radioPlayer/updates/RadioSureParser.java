@@ -4,13 +4,9 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -18,35 +14,40 @@ import java.util.Scanner;
 public class RadioSureParser {
 
     private Document doc;
+    private String source = "_RadioSure";
     private String prefixUrl = "http://radiosure.com/rsdbms/";
     private String queryBody = "search.php?search=";
     private static String queryVar = "";
     private String queryMid = "&pos=";
     private String queryTail = "&reset_pos=0&status=active#info";
     private File outputDir = new File("NewPlaylist");
-
-
-
     private List<String> list = new ArrayList<>();
     private List<String> stationsStreams = new ArrayList<>();
     private FileWriter fw;
-    int mp3Counter = 0;
-    int aacCounter = 0;
-    int m3uCounter = 0;
-    int m3u8Counter = 0;
-    int plsCounter = 0;
-    int asxCounter = 0;
-    int phpCounter = 0;
-    int goodCounter = 0;
-    int allLinksStreamCounter = 0;
-    int allLinksCounter = 0;
+    private int countPage = 0;
+    private int mp3Counter = 0;
+    private int aacCounter = 0;
+    private int m3uCounter = 0;
+    private int m3u8Counter = 0;
+    private int plsCounter = 0;
+    private int asxCounter = 0;
+    private int phpCounter = 0;
+    private int goodCounter = 0;
+    private int allLinksStreamCounter = 0;
+    private int allLinksCounter = 0;
 
+    public void setQueryVar(String queryVar) {
+
+    }
 
     public String getQueryVar() {
         return queryVar;
     }
-    public String getFullFileName() {
-        return fullFileName;
+
+    public void startRadioSureParser() {
+
+        getLinksFromQuery(pageMax());
+        writeToFile();
     }
 
     public int pageMax() {
@@ -63,28 +64,20 @@ public class RadioSureParser {
         String pageNumber = pageNumbers.text().split(" ")[3];
         int pageMaxRaw = Integer.parseInt(pageNumber);
         int pageMaximum;
-        System.out.println("66 pageMaxRaw " + pageMaxRaw);
         if(pageMaxRaw > 2) {
             pageMaximum = pageMaxRaw * 20 - 20;
         } else {
             pageMaximum = pageMaxRaw * 10;
         }
-        System.out.println("72 pageMaximum " + pageMaximum);
-
         return pageMaximum;
     }
-
     public void getLinksFromQuery(int pageMaximum) {
 
-
-
-            for (int pgNum = 10; pgNum < pageMaximum; pgNum += 10) {
+            for (int pgNum = 0; pgNum <= pageMaximum; pgNum += 20) {
 
                 String url = prefixUrl + queryBody + queryVar + queryMid + pgNum + queryTail;
-
                 try {
-                    doc = Jsoup.connect(url)
-                            .get();
+                    doc = Jsoup.connect(url).get();
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -93,26 +86,25 @@ public class RadioSureParser {
                 Elements tbody = doc.select("tbody");
                 Elements links = tbody.select("a[href]");
 
+                countPage++;
+                System.out.println("Processing page number: " + countPage);
+
                 for (Element a : links) {
                     String s = a.attr("href");
                     String fullUrl = prefixUrl + s;
                     list.add(fullUrl);
                 }
             }
-
-
         for (String s : list)  {
             getStationStream(s);
               allLinksCounter++;
         }
-        System.out.println("All links = " + allLinksCounter);
+        System.out.println("-----------------");
+        System.out.println("All links4processing: " + allLinksCounter);
     }
-
     public void getStationStream(String url) {
-
         try {
-            doc = Jsoup.connect(url)
-                    .get();
+            doc = Jsoup.connect(url).get();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -123,10 +115,10 @@ public class RadioSureParser {
         stationsStreams.add(stationStreamToString);
 
     }
+
+
     public void writeToFile() {
-
-        String fullFileName = queryVar + ".txt";
-
+        String fullFileName = queryVar + source + ".txt";
         //Just statistic:
         for(String a : stationsStreams) {
             allLinksStreamCounter++;
@@ -158,7 +150,6 @@ public class RadioSureParser {
                         fw.write(s + "\n");
                     }
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -168,19 +159,28 @@ public class RadioSureParser {
                 e.printStackTrace();
             }
         }
+        System.out.println("Total processed links: " + allLinksStreamCounter);
         System.out.println("MP3 " + mp3Counter);
         System.out.println("AAC " + aacCounter);
         System.out.println("M3U " + m3uCounter);
         System.out.println("PLS " + plsCounter);
-        System.out.println("Write " + goodCounter);
-        System.out.println("All stream links = " + allLinksStreamCounter);
+        System.out.println("M38U " + m3u8Counter);
+        System.out.println("ASX " + asxCounter);
+        System.out.println("PHP " + phpCounter);
+        System.out.println("---------------------");
+        System.out.println("Write to file = " + goodCounter);
     }
-    public static void main(String[] args) {
-        RadioSureParser r = new RadioSureParser();
-        Scanner input = new Scanner(System.in);
-        System.out.println("Add query:");
-        queryVar  = input.nextLine();
-        r.getLinksFromQuery(r.pageMax());
-        r.writeToFile();
-    }
+//    public static void main(String[] args) {
+//        RadioSureParser r = new RadioSureParser();
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("Add query:");
+//        queryVar  = input.nextLine();
+//        r.getLinksFromQuery(r.pageMax());
+//        r.writeToFile();
+//
+//
+//        MailSender mailSender = new MailSender();
+//        mailSender.sendEmail("RadioSurePlaylist", r.outputDir + "/" + queryVar + r.source + ".txt");
+//
+//    }
 }

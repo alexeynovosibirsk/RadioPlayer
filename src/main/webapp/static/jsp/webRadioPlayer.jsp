@@ -38,9 +38,9 @@
                 <button class="button" type="submit" name="action" value="Mute">Mute</button>
             </div>
         </form>
-        <form method = "GET" action = "/shutdown">
-            <div class="shutdown">
-                <button class="button" type="submit" name="shutdown" value="Shutdown">Shutdown</button>
+        <form method = "GET" action = "/operations">
+            <div class="next">
+                <button class="button" type="submit" name="shutdown" value="Operations">Operations</button>
             </div>
         </form>
 </div>

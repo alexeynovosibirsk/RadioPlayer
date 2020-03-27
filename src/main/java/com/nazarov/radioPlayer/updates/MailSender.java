@@ -15,32 +15,21 @@ import java.util.Properties;
 public class MailSender {
 
     ConfigReader configReader = new ConfigReader();
-    RadioSureParser radioSureParser = new RadioSureParser();
 
     public static void main(String[] args) {
         MailSender mailSender = new MailSender();
-        mailSender.sendEmail();
+        mailSender.sendEmail("Trollolo", "NewPlaylist/8bit_RadioSure.txt");
     }
-
-    public void sendEmail() {
+    public void sendEmail(String subject, String attachmentName) {
         // Defines the E-Mail information.
         String from = configReader.getEmail();
         String to = configReader.getEmail();
-
-        String subject;
-        if(radioSureParser.getQueryVar() != null) {
-            subject = "New Playlist " + radioSureParser.getQueryVar();
-        } else {
-            subject = "New Playlist UnknownGenre";
-        }
-
-        String bodyText = "The new playlist in the attachment";
-
-        // The attachment file name.
-        String attachmentName = "NewPlaylist/dance USA.txt";
+        String fileName = attachmentName.split("/")[1];
+        String bodyText = subject + " - " + fileName;
 
         // Creates a Session with the following properties.
         Properties props = new Properties();
+//        For gmail:
 //        props.put("mail.smtp.host", "smtp.gmail.com");
 //        props.put("mail.transport.protocol", "smtp");
 //        props.put("mail.smtp.starttls.enable", "true");
@@ -88,5 +77,6 @@ public class MailSender {
         } catch (MessagingException e) {
             e.printStackTrace();
         }
+        System.out.println("Mail sended");
     }
 }

@@ -9,14 +9,23 @@
 <body>
 <div align="center">
     <div class="header">
-        <button class="button" type="submit" name="action" value="">v.05.3 </button>
+        <button class="button" type="submit" name="action" value="">Operations</button>
     </div>
-    <form method = "GET" action = "/">
-        <div class="mute">
-            <button class="button" type="submit" name="/" value="/">Go back</button>
-        </div>
+    <div class="url">
+        <label class="label" type="submit" name="action" value="" ><br> ${url} <P> ${info}</label>
+
+
+    </div>
+    <div>
+
+    <form action = "QueryParseInput" method = "POST">
+        <input type = "text" size=31 value=${queryVar}>
     </form>
+    </div>
     <form action="#" data-th-action="@{/action/edit}" data-th-object="${model}" method="post">
+        <div class="next">
+            <button class="button" type="submit" name="action" value="RadioSure">RadioSure</button>
+        </div>
         <div class="shutdown">
             <button class="button" type="submit" name="action" value="Shutdown">Shutdown</button>
         </div>
