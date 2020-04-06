@@ -27,8 +27,6 @@ V
 &src/main/webapp/static/css/buttons.css,7/f/7f3dfe9821d55e32f2c3b6f747b1a3625cd3bb72
 U
 %src/main/webapp/static/jsp/config.jsp,5/7/57e97da84d087edd29ee923c0cc70f86975cf94c
-W
-'src/main/webapp/static/jsp/shutdown.jsp,8/6/86a09323fb66b93b9407324d936d982481357ca8
 k
 ;src/main/java/com/nazarov/radioPlayer/audio/LogoPlayer.java,8/2/824d3fb143f8212bf2349ed1c7633bc9328a9f29
 R
@@ -45,3 +43,7 @@ U
 %NewPlaylist/jazz-smooth_RadioSure.txt,f/d/fd07733f6812ff4d74d7aa42232c0481985aa0f5
 Q
 !NewPlaylist/ambient_RadioSure.txt,8/9/8993a730f05580fa0d1e459ec5ce6239bdd80a50
+Y
+)src/main/webapp/static/jsp/operations.jsp,7/0/7013e3c846ae72e59694f08585539085764b3094
+s
+Csrc/main/java/com/nazarov/radioPlayer/updates/QueryParserInput.java,2/7/27ff7a843dbee16bc6cc8174210aa1749749e89c
