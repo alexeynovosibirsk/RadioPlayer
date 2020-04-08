@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>RadioPlayer</groupId>
     <artifactId>radio</artifactId>
-    <version>053</version>
+    <version>08</version>
     <name>radio</name>
     <description>Just i-radio player</description>
     <packaging>war</packaging>
@@ -49,34 +49,8 @@
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.0.1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.unix4j</groupId>
-            <artifactId>unix4j-command</artifactId>
-            <version>0.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
-        <dependency>
-            <groupId>org.jsoup</groupId>
-            <artifactId>jsoup</artifactId>
-            <version>1.13.1</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>mail</artifactId>
-            <version>1.5.0-b01</version>
         </dependency>
     </dependencies>
 </project>

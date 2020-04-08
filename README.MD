@@ -1,3 +1,10 @@
+This is a simple player for i-radio stations.
+
+The player after starting download playlists from github and buttons in the webUI will be named as downloaded playlists.
+
+In order to use your own playlists add your repo address in RadioApplication.java (string 18)
+
+
 Install to Debian 10:
 
 1. install minimum system

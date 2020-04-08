@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="radio-053.war">
+    <root id="archive" name="radio-08.war">
       <element id="artifact" artifact-name="webRadio:war exploded" />
     </root>
   </artifact>

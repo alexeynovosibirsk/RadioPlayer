@@ -1,3 +1,0 @@
-http://16bitfm.com:8000/idea_mp3_192
-http://16bitfm.com:8000/cafe_mp3_192
-http://16bitfm.com:8000/main_mp3_192

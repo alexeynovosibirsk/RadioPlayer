@@ -11,8 +11,8 @@ import java.util.Scanner;
 
 public class UrlMaker {
 
-    private static  File filelist;
-    private static  URL url;
+    private static File filelist;
+    private static URL url;
     private static int playlistsize;
     private static int number;
 
@@ -49,7 +49,7 @@ public class UrlMaker {
 
         return urlForJsp;
     }
-    public String getInfoForJsp() {
+    public static String getInfoForJsp() {
 
         String filelistToString = filelist.toString();
         String genre = filelistToString.split("/")[1].replace(".txt", "");
