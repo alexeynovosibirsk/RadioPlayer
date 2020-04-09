@@ -23,7 +23,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         viewResolver.setOrder(1);
         return viewResolver;
     }
-
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler(
@@ -38,7 +37,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
                         "classpath:/webapp/static/fonts/",
                         "classpath:/webapp/static/jsp/");
     }
-
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();

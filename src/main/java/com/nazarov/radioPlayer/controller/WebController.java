@@ -46,7 +46,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         } else if (action.equals("Volume_dn")) {
             volumeControl.volumeDn();
         } else if (action.equals("Mute")) {
-            stationPlayer.stopRadio();
+            volumeControl.mute();
         } else {
             stationPlayer.setPlaylist(RadioApplication.getPlaylistDirPath() + action + RadioApplication.getPlaylistExtension());
             stationPlayer.playRadio();
@@ -67,6 +67,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         if (action.equals("Shutdown")) {
             new LogoPlayer(4);
             new PowerOff(0);
+            return bye();
         }
         if (action.equals("Sleep_Mode_30")) {
             new LogoPlayer(3);
@@ -77,5 +78,12 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
             new PowerOff(60);
         }
         return webRadioPlayer();
+    }
+
+    @RequestMapping(value = "/bye", method = RequestMethod.GET)
+    public ModelAndView bye() {
+
+        ModelAndView mav = new ModelAndView("bye");
+        return mav;
     }
 }

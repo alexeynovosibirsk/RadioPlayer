@@ -10,7 +10,6 @@ public class StationPlayer extends Thread {
 
     private Thread musicThread = new Thread();
     private int urlNumber;
-    private int numIndex;
     private String playlist;
 
     public void setPlaylist(String playlist) {
@@ -41,13 +40,13 @@ public class StationPlayer extends Thread {
             urlNumber = 0;
         }
         new LogoPlayer(1);                      // playing logo "Next station"
-        UrlMaker.setNumber(urlNumber);                     // set number of row in playlist
+        UrlMaker.setNumber(urlNumber);                   // set number of row in playlist
         musicThread = new StationPlayer();
         musicThread.start();
     }
 
     public void stopRadio() {
-        musicThread.stop();   // I know it's bad but no other methods wont work with jplayer...
+        musicThread.stop();   // I know it's bad/deprecated but no other methods wont work with jplayer...
     }
     public void urlPlayer(URL url) {
         try {

@@ -1,4 +1,4 @@
-package com.nazarov.radioPlayer.NewFeatures;
+package com.nazarov.radioPlayer.newFeatures;
 
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.advanced.AdvancedPlayer;
