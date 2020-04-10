@@ -4,16 +4,34 @@ import java.io.IOException;
 
 public class VolumeControl {
 
+    boolean isMuted = false;
+
+    public boolean isMuted() {
+        return isMuted;
+    }
+
     public void volumeUp() {
         volLvl("+");
     }
+
     public void volumeDn() {
         volLvl("-");
     }
-    public void mute() {
-        for(int i = 0; i < 50; i++) {
+
+    public void muteOn() {
+        int i;
+        for(i = 0; i < 50; i++) {
            volumeDn();
         }
+        isMuted = true;
+    }
+
+    public void muteOff() {
+        int i;
+        for(i = 0; i < 15; i++) {
+            volumeUp();
+        }
+        isMuted = false;
     }
 
     private void volLvl(String sign) {
@@ -23,8 +41,8 @@ public class VolumeControl {
         Process process = null;
 
         String raspberry = "amixer -c 0 set PCM 2dB" + sign;
-        String debian = "amixer sset Master 5%" + sign;
-        String ubuntu = "amixer -D pulse sset Master 5%" + sign;
+        String debian = "amixer sset Master 2%" + sign;
+        String ubuntu = "amixer -D pulse sset Master 2%" + sign;
 
         try {
             process = run.exec(raspberry);

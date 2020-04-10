@@ -39,6 +39,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public ModelAndView buttons(@RequestParam(value = "action", required = true) String action) {
 
+
         if (action.equals("Next_Station")) {
             stationPlayer.nextStation();
         } else if (action.equals("Volume_up")) {
@@ -46,7 +47,12 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         } else if (action.equals("Volume_dn")) {
             volumeControl.volumeDn();
         } else if (action.equals("Mute")) {
-            volumeControl.mute();
+            System.out.println(volumeControl.isMuted());
+            if (!volumeControl.isMuted()) {
+                volumeControl.muteOn();
+            } else {
+                volumeControl.muteOff();
+            }
         } else {
             stationPlayer.setPlaylist(RadioApplication.getPlaylistDirPath() + action + RadioApplication.getPlaylistExtension());
             stationPlayer.playRadio();

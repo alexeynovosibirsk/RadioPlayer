@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>RadioPlayer</groupId>
     <artifactId>radio</artifactId>
-    <version>08</version>
+    <version>09</version>
     <name>radio</name>
     <description>Just i-radio player</description>
     <packaging>war</packaging>
