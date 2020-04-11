@@ -4,7 +4,8 @@ The player after starting downloads playlists from github and buttons in the web
 
 In order to use your own playlists add your repo address in RadioApplication.java (string 18)
 
-The UI fits for sellphone:
+The UI fits for sellphone (based on jsp):
+
 ![](pics/screen.png)
 
 
