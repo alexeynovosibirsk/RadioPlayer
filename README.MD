@@ -1,9 +1,14 @@
 This is a simple player for i-radio stations.
 
-The player after starting download playlists from github and buttons in the webUI will be named as downloaded playlists.
+The player after starting downloads playlists from github and buttons in the webUI will be named as downloaded playlists.
 
 In order to use your own playlists add your repo address in RadioApplication.java (string 18)
-![](pics/screen.png)![](pics/screen1.png)
+
+The UI fits for sellphone:
+![](pics/screen.png)
+
+
+![](pics/screen1.png)
 
 Install to Debian 10:
 
