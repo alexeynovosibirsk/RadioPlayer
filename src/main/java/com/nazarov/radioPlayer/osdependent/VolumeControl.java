@@ -10,30 +10,23 @@ public class VolumeControl {
         return isMuted;
     }
 
-    public void volumeUp() {
-        volLvl("+");
-    }
-
+    public void volumeUp() { volLvl("+"); }
     public void volumeDn() {
         volLvl("-");
     }
 
     public void muteOn() {
-        int i;
-        for(i = 0; i < 50; i++) {
+        for(int i = 0; i < 50; i++) {
            volumeDn();
         }
         isMuted = true;
     }
-
     public void muteOff() {
-        int i;
-        for(i = 0; i < 15; i++) {
+        for(int i = 0; i < 15; i++) {
             volumeUp();
         }
         isMuted = false;
     }
-
     private void volLvl(String sign) {
 
         Runtime run = Runtime.getRuntime();

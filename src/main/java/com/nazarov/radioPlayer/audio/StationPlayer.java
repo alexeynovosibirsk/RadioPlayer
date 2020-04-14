@@ -46,7 +46,7 @@ public class StationPlayer extends Thread {
     }
 
     public void stopRadio() {
-        musicThread.stop();   // I know it's bad/deprecated but no other methods wont work with jplayer...
+        musicThread.stop();   // I know it's bad/deprecated but it's webstream
     }
     public void urlPlayer(URL url) {
         try {

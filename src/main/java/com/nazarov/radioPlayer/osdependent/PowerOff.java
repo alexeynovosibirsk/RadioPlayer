@@ -11,7 +11,6 @@ public class PowerOff {
         String cmd = "shutdown " + time;
 
         try {
-
             process = run.exec(cmd);
             process.getErrorStream();
             process.waitFor();

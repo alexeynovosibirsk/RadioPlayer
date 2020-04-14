@@ -16,8 +16,6 @@ public class UrlMaker {
     private static int playlistsize;
     private static int number;
 
-    public UrlMaker() {}
-
     public UrlMaker (String filelist, int number) {
         this.filelist = new File(filelist);
         this.number = number;
@@ -46,7 +44,6 @@ public class UrlMaker {
         } else {
             urlForJsp = urlWithoutProtocol;
         }
-
         return urlForJsp;
     }
     public static String getInfoForJsp() {
@@ -69,7 +66,6 @@ public class UrlMaker {
          } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
         playlistsize = playlist.size() - 1;
 
         try {
