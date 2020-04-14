@@ -11,10 +11,21 @@ import java.util.List;
 
 public class LogoPlayer {
 
-    private static InputStream is;
+    private static InputStream is = null;
 
     public LogoPlayer(int numIndex) {
         play(logoList(numIndex));
+        try {
+            is.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                is.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
     private void play(InputStream is) {
 

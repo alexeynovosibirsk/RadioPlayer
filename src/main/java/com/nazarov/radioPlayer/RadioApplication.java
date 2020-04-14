@@ -7,9 +7,16 @@ import com.nazarov.radioPlayer.playlist.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @SpringBootApplication
 public class RadioApplication  {
@@ -50,37 +57,31 @@ public class RadioApplication  {
         return genreSix;
     }
 
-    public void readConfig() {
+    public void readConfigs() {
 
-    File file = new File(playlistDirPath + "config.txt");
-    Scanner scanner;
-    List<String> list = new ArrayList<>();
+        File folder = new File(playlistDirectory);
+        List<String> listGenres = new ArrayList<>(5);
+        for (File f : folder.listFiles()) {
 
-                try {
-        scanner = new Scanner(file);
-        while (scanner.hasNextLine()) {
-            String s = scanner.nextLine().split(" ")[0];
-            list.add(s);
-        }
-    } catch (
-    FileNotFoundException e) {
-        e.printStackTrace();
-    }
-
-    genreOne = list.get(1).intern();
-    genreTwo = list.get(2).intern();
-    genreThree = list.get(3).intern();
-    genreFour = list.get(4).intern();
-    genreFive = list.get(5).intern();
-    genreSix = list.get(6).intern();
+            String s = f.toString().split("/")[1];
+            if (s.endsWith("txt")) {
+                String genre = s.replace(playlistExtension, "");
+                listGenres.add(genre);
+            }
+         }
+        Collections.sort(listGenres);
+    genreOne = listGenres.get(0).intern();
+    genreTwo = listGenres.get(1).intern();
+    genreThree = listGenres.get(2).intern();
+    genreFour = listGenres.get(3).intern();
+    genreFive = listGenres.get(4).intern();
+    genreSix = listGenres.get(5).intern();
 }
-
     public static void main(String[] args)  {
 
         new GitCloner();
-
         RadioApplication r = new RadioApplication();
-        r.readConfig();
+        r.readConfigs();
 
         new UrlMaker(playlistDirPath + getGenreOne() + playlistExtension, 0); // For jsp ${url}
         SpringApplication.run(RadioApplication.class, args);

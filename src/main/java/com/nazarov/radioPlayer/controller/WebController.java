@@ -47,7 +47,6 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         } else if (action.equals("Volume_dn")) {
             volumeControl.volumeDn();
         } else if (action.equals("Mute")) {
-            System.out.println(volumeControl.isMuted());
             if (!volumeControl.isMuted()) {
                 volumeControl.muteOn();
             } else {
