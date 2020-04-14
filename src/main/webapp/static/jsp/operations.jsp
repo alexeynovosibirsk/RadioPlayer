@@ -14,7 +14,7 @@
     </div>
     <form method = "GET" action = "/">
         <div class="mute">
-            <button class="button" type="submit" name="/" value="help">Cancel</button>
+            <button class="button" type="submit">Cancel</button>
         </div>
     </form>
     <form action="#" data-th-action="@{/action/edit}" data-th-object="${model}" method="post">
@@ -30,7 +30,7 @@
     </form>
     <form method = "GET" action = "/">
         <div class="mute">
-            <button class="button" type="submit" name="/" value="help">Cancel</button>
+            <button class="button" type="submit">Cancel</button>
         </div>
     </form>
 </div>

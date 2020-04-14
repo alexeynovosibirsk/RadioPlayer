@@ -35,10 +35,8 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
 
         return mav;
     }
-
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public ModelAndView buttons(@RequestParam(value = "action", required = true) String action) {
-
 
         if (action.equals("Next_Station")) {
             stationPlayer.nextStation();
@@ -58,14 +56,12 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         }
         return webRadioPlayer();
     }
-
     @RequestMapping(value = "/operations", method = RequestMethod.GET)
     public ModelAndView operations() {
 
         ModelAndView mav = new ModelAndView("operations");
         return mav;
     }
-
     @RequestMapping(value = "/operations", method = RequestMethod.POST)
     public ModelAndView shutdownButtons(@RequestParam(value = "action", required = true) String action) {
 
@@ -84,7 +80,6 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         }
         return webRadioPlayer();
     }
-
     @RequestMapping(value = "/bye", method = RequestMethod.GET)
     public ModelAndView bye() {
 

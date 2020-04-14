@@ -40,7 +40,7 @@
         </form>
         <form method = "GET" action = "/operations">
             <div class="next">
-                <button class="button" type="submit" name="shutdown" value="Operations">Operations</button>
+                <button class="button" type="submit">Operations</button>
             </div>
         </form>
 </div>
