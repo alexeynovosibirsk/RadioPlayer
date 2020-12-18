@@ -11,26 +11,14 @@ import java.util.List;
 
 public class LogoPlayer {
 
-    private static InputStream is = null;
-
     public LogoPlayer(int numIndex) {
+
         play(logoList(numIndex));
-        try {
-            is.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                is.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
-    private void play(InputStream is) {
+    private void play(InputStream inputStream) {
         try {
-            AdvancedPlayer advancedPlayer = new AdvancedPlayer(is);
+            AdvancedPlayer advancedPlayer = new AdvancedPlayer(inputStream);
             advancedPlayer.play();
 
         } catch (JavaLayerException e) {
@@ -49,9 +37,11 @@ public class LogoPlayer {
         arrLogo.add("sounds/urlIsNotValid.mp3");
 
         Resource resource = new ClassPathResource(arrLogo.get(numIndex));
+        InputStream is = null;
 
         try {
             is = resource.getInputStream();
+
         } catch (IOException e) {
             e.printStackTrace();
         }

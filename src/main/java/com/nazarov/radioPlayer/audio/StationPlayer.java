@@ -20,6 +20,7 @@ public class StationPlayer extends Thread {
     public void setPlaylist(String playlist) {
         this.playlist = playlist;
     }
+
     @Override
     public void run() {
         urlPlayer(UrlMaker.getUrl());
@@ -58,6 +59,7 @@ public class StationPlayer extends Thread {
         try {
             AdvancedPlayer advancedPlayer = new AdvancedPlayer(url.openStream());
             advancedPlayer.play();
+
         } catch (JavaLayerException e) {
             e.printStackTrace();
         } catch (ConnectException e) {
