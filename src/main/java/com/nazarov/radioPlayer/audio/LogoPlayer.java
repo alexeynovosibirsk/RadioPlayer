@@ -27,16 +27,17 @@ public class LogoPlayer {
             }
         }
     }
-    private void play(InputStream is) {
 
+    private void play(InputStream is) {
         try {
             AdvancedPlayer advancedPlayer = new AdvancedPlayer(is);
             advancedPlayer.play();
 
-        } catch (JavaLayerException j) {
-            j.printStackTrace();
+        } catch (JavaLayerException e) {
+            e.printStackTrace();
         }
     }
+
     private static InputStream logoList(int numIndex)  {
 
         List<String> arrLogo = new ArrayList<>();
@@ -45,6 +46,7 @@ public class LogoPlayer {
         arrLogo.add("sounds/newStationList.mp3");
         arrLogo.add("sounds/sleepMode.mp3");
         arrLogo.add("sounds/shutdown.mp3");
+        arrLogo.add("sounds/urlIsNotValid.mp3");
 
         Resource resource = new ClassPathResource(arrLogo.get(numIndex));
 
@@ -53,6 +55,7 @@ public class LogoPlayer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return is;
     }
 }

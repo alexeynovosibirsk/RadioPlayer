@@ -1,5 +1,7 @@
 package com.nazarov.radioPlayer;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.nazarov.radioPlayer.audio.LogoPlayer;
@@ -11,6 +13,7 @@ import java.util.List;
 
 @SpringBootApplication
 public class RadioApplication  {
+    final static Logger logger = LoggerFactory.getLogger(RadioApplication.class);
 
    public static String playlistDirectory = "configs";
    public static String githubUrl = "https://github.com/nixoved/RadioPlayerPlaylists";
@@ -48,36 +51,37 @@ public class RadioApplication  {
         return genreSix;
     }
 
-    public void readConfigs() {
+    public static void readConfigs() {
 
         File folder = new File(playlistDirectory);
         List<String> listGenres = new ArrayList<>(5);
-        for (File f : folder.listFiles()) {
 
+        for (File f : folder.listFiles()) {
             String s = f.toString().split("/")[1];
             if (s.endsWith("txt")) {
                 String genre = s.replace(playlistExtension, "");
                 listGenres.add(genre);
             }
-         }
-        Collections.sort(listGenres);
-    genreOne = listGenres.get(0).intern();
-    genreTwo = listGenres.get(1).intern();
-    genreThree = listGenres.get(2).intern();
-    genreFour = listGenres.get(3).intern();
-    genreFive = listGenres.get(4).intern();
-    genreSix = listGenres.get(5).intern();
-}
+        }
+            Collections.sort(listGenres);
+            genreOne = listGenres.get(0).intern();
+            genreTwo = listGenres.get(1).intern();
+            genreThree = listGenres.get(2).intern();
+            genreFour = listGenres.get(3).intern();
+            genreFive = listGenres.get(4).intern();
+            genreSix = listGenres.get(5).intern();
+   }
+
     public static void main(String[] args)  {
 
         new GitCloner();
-        RadioApplication r = new RadioApplication();
-        r.readConfigs();
+
+        readConfigs();
 
         new UrlMaker(playlistDirPath + getGenreOne() + playlistExtension, 0); // For jsp ${url}
         SpringApplication.run(RadioApplication.class, args);
 
-        System.out.println("----- webRadio is ready! -----");
+        logger.info("WebRadio is ready!");
 
        new LogoPlayer(0);
     }

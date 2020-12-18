@@ -3,6 +3,8 @@ package com.nazarov.radioPlayer.playlist;
 import com.nazarov.radioPlayer.RadioApplication;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -11,13 +13,14 @@ import java.nio.file.Paths;
 import java.util.Comparator;
 
 public class GitCloner {
+    final static Logger logger = LoggerFactory.getLogger(GitCloner.class);
 
     public GitCloner() {
-        RadioApplication radioApplication = new RadioApplication();
 
         // remove directory with configs if it is
-        Path rootPath = Paths.get(radioApplication.playlistDirectory);
-        System.out.println("Delete temporary directory:");
+        Path rootPath = Paths.get(RadioApplication.playlistDirectory);
+        logger.info("Delete temporary directory:");
+
         try {
              Files.walk(rootPath)
                         .sorted(Comparator.reverseOrder())
@@ -26,14 +29,14 @@ public class GitCloner {
                         .forEach(File::delete);
 
             } catch (IOException e) {
-                System.out.println("No temp directory for deleting...");
+                logger.info("No temp directory for deleting...");
             }
 
         // then creating new directory and cloning from github
-        File file = new File(radioApplication.getPlaylistDirectory());
+        File file = new File(RadioApplication.getPlaylistDirectory());
         try {
             Git git = Git.cloneRepository()
-                    .setURI(radioApplication.getGithubUrl())
+                    .setURI(RadioApplication.getGithubUrl())
                     .setDirectory(file)
                     .call();
 

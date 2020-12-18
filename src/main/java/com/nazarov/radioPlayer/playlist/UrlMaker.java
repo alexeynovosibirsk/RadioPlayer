@@ -20,20 +20,25 @@ public class UrlMaker {
         this.filelist = new File(filelist);
         this.number = number;
     }
+
     public static void setFilelist(String s) {
         filelist = new File(s);
     }
+
     public static void setNumber(int localnumber) {
          number = localnumber;
     }
+
     public static int getPlaylistSize() {
         urlMaker();
         return playlistsize;
     }
+
     public static URL getUrl() {
         urlMaker();
         return url;
     }
+
     public static String getUrlForJsp() {
         urlMaker();
         String fullUrl = "" + url;
@@ -46,6 +51,7 @@ public class UrlMaker {
         }
         return urlForJsp;
     }
+
     public static String getInfoForJsp() {
 
         String filelistToString = filelist.toString();
