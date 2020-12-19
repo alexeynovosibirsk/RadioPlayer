@@ -6,6 +6,8 @@ import com.nazarov.radioPlayer.audio.StationPlayer;
 import com.nazarov.radioPlayer.osdependent.PowerOff;
 import com.nazarov.radioPlayer.osdependent.VolumeControl;
 import com.nazarov.radioPlayer.playlist.UrlMaker;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class WebController extends HttpServlet implements WebMvcConfigurer {
+    final static Logger logger = LoggerFactory.getLogger(WebController.class);
 
     VolumeControl volumeControl = new VolumeControl();
     StationPlayer stationPlayer = new StationPlayer();
@@ -47,6 +50,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
             volumeControl.volumeDn();
         } else if (action.equals("Mute")) {
             stationPlayer.mute();
+            logger.info("Player stoped");
 //            if (!volumeControl.isMuted()) {
 //                volumeControl.muteOn();
 //            } else {
