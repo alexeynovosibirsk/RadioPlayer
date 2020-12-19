@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="webRadio:war exploded">
-    <output-path>$PROJECT_DIR$/target/radio-094</output-path>
+    <output-path>$PROJECT_DIR$/target/radio-095</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -61,7 +61,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/radio-094/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/radio-095/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="webRadio/web/Web" />
     </root>

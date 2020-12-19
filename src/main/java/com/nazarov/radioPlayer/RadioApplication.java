@@ -15,7 +15,7 @@ import java.util.List;
 public class RadioApplication  {
     final static Logger logger = LoggerFactory.getLogger(RadioApplication.class);
 
-   public static String playlistDirectory = "configs";
+   public static String playlistDirectory = "/tmp/configs";
    public static String githubUrl = "https://github.com/nixoved/RadioPlayerPlaylists";
    public static String playlistDirPath = playlistDirectory + "/";
    public static String playlistExtension = ".txt";
@@ -57,7 +57,7 @@ public class RadioApplication  {
         List<String> listGenres = new ArrayList<>(5);
 
         for (File f : folder.listFiles()) {
-            String s = f.toString().split("/")[1];
+            String s = f.toString().split("/")[3];
             if (s.endsWith("txt")) {
                 String genre = s.replace(playlistExtension, "");
                 listGenres.add(genre);
