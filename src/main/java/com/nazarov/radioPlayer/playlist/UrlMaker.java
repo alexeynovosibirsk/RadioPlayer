@@ -55,7 +55,7 @@ public class UrlMaker {
     public static String getInfoForJsp() {
 
         String filelistToString = filelist.toString();
-        String genre = filelistToString.split("/")[1].replace(".txt", "");
+        String genre = filelistToString.split("/")[3].replace(".txt", "");
         return  playlistsize + " - " + genre + " - " + number;
     }
 

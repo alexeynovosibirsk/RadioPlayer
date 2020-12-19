@@ -13,7 +13,7 @@
             <label class="label">v.095</label>
             </div>
             <div class="url">
-                <label class="label" type="submit" name="action" value="" ><br> ${url} <P> ${info}</label>
+                <label class="label" type="submit" name="action" value=""><br> ${url} <P> ${info}</label>
             </div>
             <div class="genre">
                 <button class="button" type="submit" name="action" value=${genreOne}>${genreOne}</button>
@@ -37,7 +37,7 @@
             <div class="mute">
                 <button class="button" type="submit" name="action" value="Mute">Mute</button>
             </div>
-<%--        </form>--%>
+        </form>
 <%--        <form method = "GET" action = "/operations">--%>
 <%--            <div class="next">--%>
 <%--                <button class="button" type="submit">Operations</button>--%>
