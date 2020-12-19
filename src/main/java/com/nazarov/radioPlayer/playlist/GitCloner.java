@@ -16,10 +16,9 @@ public class GitCloner {
     final static Logger logger = LoggerFactory.getLogger(GitCloner.class);
 
     public GitCloner() {
-
         // remove directory with configs if it is
         Path rootPath = Paths.get(RadioApplication.playlistDirectory);
-        logger.info("Delete temporary directory:");
+        logger.info("Delete temporary directory");
 
         try {
              Files.walk(rootPath)
@@ -35,7 +34,7 @@ public class GitCloner {
         // then creating new directory and cloning from github
         File file = new File(RadioApplication.getPlaylistDirectory());
         try {
-            Git git = Git.cloneRepository()
+            Git.cloneRepository()
                     .setURI(RadioApplication.getGithubUrl())
                     .setDirectory(file)
                     .call();

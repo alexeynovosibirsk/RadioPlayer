@@ -52,11 +52,17 @@ public class StationPlayer extends Thread {
     }
 
     public void stopRadio() {
+
         musicThread.stop();   // I know it's bad/deprecated but it's webstream
     }
 
+    public void mute() {
+        stopRadio();
+            }
+
     public void urlPlayer(URL url) {
         try {
+
             AdvancedPlayer advancedPlayer = new AdvancedPlayer(url.openStream());
             advancedPlayer.play();
 

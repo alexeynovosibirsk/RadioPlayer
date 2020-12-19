@@ -35,6 +35,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
 
         return mav;
     }
+
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public ModelAndView buttons(@RequestParam(value = "action", required = true) String action) {
 
@@ -45,41 +46,45 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         } else if (action.equals("Volume_dn")) {
             volumeControl.volumeDn();
         } else if (action.equals("Mute")) {
-            if (!volumeControl.isMuted()) {
-                volumeControl.muteOn();
-            } else {
-                volumeControl.muteOff();
-            }
+            stationPlayer.mute();
+//            if (!volumeControl.isMuted()) {
+//                volumeControl.muteOn();
+//            } else {
+//                volumeControl.muteOff();
+//            }
         } else {
             stationPlayer.setPlaylist(RadioApplication.getPlaylistDirPath() + action + RadioApplication.getPlaylistExtension());
             stationPlayer.playRadio();
         }
         return webRadioPlayer();
     }
-    @RequestMapping(value = "/operations", method = RequestMethod.GET)
-    public ModelAndView operations() {
 
-        ModelAndView mav = new ModelAndView("operations");
-        return mav;
-    }
-    @RequestMapping(value = "/operations", method = RequestMethod.POST)
-    public ModelAndView shutdownButtons(@RequestParam(value = "action", required = true) String action) {
+//    @RequestMapping(value = "/operations", method = RequestMethod.GET)
+//    public ModelAndView operations() {
+//
+//        ModelAndView mav = new ModelAndView("operations");
+//        return mav;
+//    }
 
-        if (action.equals("Shutdown")) {
-            new LogoPlayer(4);
-            new PowerOff(0);
-            return bye();
-        }
-        if (action.equals("Sleep_Mode_30")) {
-            new LogoPlayer(3);
-            new PowerOff(30);
-        }
-        if (action.equals("Sleep_Mode_60")) {
-            new LogoPlayer(3);
-            new PowerOff(60);
-        }
-        return webRadioPlayer();
-    }
+//    @RequestMapping(value = "/operations", method = RequestMethod.POST)
+//    public ModelAndView shutdownButtons(@RequestParam(value = "action", required = true) String action) {
+//
+//        if (action.equals("Shutdown")) {
+//            new LogoPlayer(4);
+//            new PowerOff(0);
+//            return bye();
+//        }
+//        if (action.equals("Sleep_Mode_30")) {
+//            new LogoPlayer(3);
+//            new PowerOff(30);
+//        }
+//        if (action.equals("Sleep_Mode_60")) {
+//            new LogoPlayer(3);
+//            new PowerOff(60);
+//        }
+//        return webRadioPlayer();
+//    }
+
     @RequestMapping(value = "/bye", method = RequestMethod.GET)
     public ModelAndView bye() {
 

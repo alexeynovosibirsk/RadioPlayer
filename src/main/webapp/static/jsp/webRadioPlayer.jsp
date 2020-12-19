@@ -37,12 +37,12 @@
             <div class="mute">
                 <button class="button" type="submit" name="action" value="Mute">Mute</button>
             </div>
-        </form>
-        <form method = "GET" action = "/operations">
-            <div class="next">
-                <button class="button" type="submit">Operations</button>
-            </div>
-        </form>
+<%--        </form>--%>
+<%--        <form method = "GET" action = "/operations">--%>
+<%--            <div class="next">--%>
+<%--                <button class="button" type="submit">Operations</button>--%>
+<%--            </div>--%>
+<%--        </form>--%>
 </div>
 </body>
 </html>

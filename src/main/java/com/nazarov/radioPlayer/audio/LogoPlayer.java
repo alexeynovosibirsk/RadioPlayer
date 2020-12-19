@@ -12,23 +12,13 @@ import java.util.List;
 public class LogoPlayer {
 
     public LogoPlayer(int numIndex) {
-
         play(logoList(numIndex));
-    }
-
-    private void play(InputStream inputStream) {
-        try {
-            AdvancedPlayer advancedPlayer = new AdvancedPlayer(inputStream);
-            advancedPlayer.play();
-
-        } catch (JavaLayerException e) {
-            e.printStackTrace();
-        }
     }
 
     private static InputStream logoList(int numIndex)  {
 
         List<String> arrLogo = new ArrayList<>();
+
         arrLogo.add("sounds/hello.mp3");
         arrLogo.add("sounds/next.mp3");
         arrLogo.add("sounds/newStationList.mp3");
@@ -45,7 +35,17 @@ public class LogoPlayer {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return is;
+    }
+
+    private void play(InputStream inputStream) {
+
+        try {
+            AdvancedPlayer advancedPlayer = new AdvancedPlayer(inputStream);
+            advancedPlayer.play();
+
+        } catch (JavaLayerException e) {
+            e.printStackTrace();
+        }
     }
 }
