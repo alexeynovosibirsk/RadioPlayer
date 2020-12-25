@@ -29,6 +29,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         ModelAndView mav = new ModelAndView("webRadioPlayer");
         mav.addObject("url", UrlMaker.getUrlForJsp());
         mav.addObject("info", UrlMaker.getInfoForJsp());
+        mav.addObject("stationName", UrlMaker.getStationNameForJsp());
         mav.addObject("genreOne", RadioApplication.getGenreOne());
         mav.addObject("genreTwo", RadioApplication.getGenreTwo());
         mav.addObject("genreThree", RadioApplication.getGenreThree());

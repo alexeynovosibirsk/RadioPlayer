@@ -10,10 +10,10 @@
 <div align="center">
         <form action="" data-th-action="@{/action/edit}" data-th-object="${model}" method="post">
             <div class="header">
-            <label class="label">v.095</label>
+            <label class="label">v.096</label>
             </div>
             <div class="url">
-                <label class="label" type="submit" name="action" value=""><br> ${url} <P> ${info}</label>
+                <label class="label" type="submit" name="action" value=""><br> ${url} <P><playlistInfo> ${info} <P><stationName> ${stationName}</label>
             </div>
             <div class="genre">
                 <button class="button" type="submit" name="action" value=${genreOne}>${genreOne}</button>

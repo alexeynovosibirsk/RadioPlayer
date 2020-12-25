@@ -13,12 +13,7 @@
     font-weight: normal;
     font-style: normal;
   }
-  p {
-    color: #38d125;
-    font-family: Hack;
-    font-size: 14px;
-    margin: 20px 0 0 0;
-  }
+
 
   button {
     color: black;
@@ -29,54 +24,52 @@
   }
 
   label {
-    color: gray;
+    color: #d103ff;
     text-decoration: none;
     text-transform: lowercase;
     font-family: Helvetica;
     font-size: 15px;
   }
 
-.header {
+/*.header {*/
+/*  margin: 0 auto;*/
+/*}*/
 
-  margin: 0 auto;
-}
+/*.header p {*/
+/*  color: #1d8401;*/
+/*  background: #000000;*/
+/*}*/
 
-.header p {
-  color: #1d8401;
-  background: #000000;
-}
+/*.header .p {*/
+/*  display: inline-block;*/
+/*  width: 275px;*/
+/*  height: 20px;*/
+/*  line-height: 5px;*/
+/*  margin: 5px;*/
+/*  position: relative;*/
+/*  overflow: hidden;*/
+/*  border: 2px solid #62605f;*/
+/*  transition: color .5s;*/
+/*}*/
 
-.header .p {
-  display: inline-block;
-  width: 275px;
-  height: 20px;
-  line-height: 10px;
-  margin: 5px;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid #62605f;
-  transition: color .5s;
-}
-
-.header .p:hover {
-  color: #1d8401;
-}
+/*.header .p:hover {*/
+/*  color: #fdfdff;*/
+/*}*/
 
 .url {
-
   margin: 0 auto;
 }
 
 .url label {
-  color: rgba(156, 153, 162, 0.57);
+  color: rgb(7, 97, 241);
   background: #000000;
 }
 
 .url .label {
   display: inline-block;
-  width: 275px;
-  height: 60px;
-  line-height: 10px;
+  width: 270px;
+  height: 70px;
+  line-height: 7px;
   margin: 5px;
   position: relative;
   overflow: hidden;
@@ -85,9 +78,22 @@
 }
 
 .url .label:hover {
-  color: #848281;
+  color: #f3590c;
 }
 
+playlistInfo {
+  color: #38d125;
+  font-family: Hack;
+  font-size: 14px;
+  margin: 10px 0 0 0;
+}
+
+stationName {
+  color: #b203f1;
+  font-family: Hack;
+  font-size: 14px;
+  margin: 10px 0 0 0;
+}
 ---
 
   .volume {

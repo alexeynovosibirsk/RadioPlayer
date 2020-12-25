@@ -5,6 +5,8 @@ import com.nazarov.radioPlayer.playlist.UrlMaker;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.advanced.AdvancedPlayer;
 import org.slf4j.LoggerFactory;
+
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.ConnectException;
 import java.net.URL;
@@ -15,11 +17,12 @@ public class StationPlayer extends Thread {
 
     private Thread musicThread = new Thread();
     private int urlNumber;
-    private String playlist;
+    private static String playlist;
 
     public void setPlaylist(String playlist) {
         this.playlist = playlist;
     }
+    public String getPlaylist() { return playlist; }
 
     @Override
     public void run() {
@@ -61,19 +64,23 @@ public class StationPlayer extends Thread {
             }
 
     public void urlPlayer(URL url) {
+        logger.info("Playing: " + url);
         try {
-
             AdvancedPlayer advancedPlayer = new AdvancedPlayer(url.openStream());
             advancedPlayer.play();
 
         } catch (JavaLayerException e) {
             e.printStackTrace();
-        } catch (ConnectException e) {
+        } catch (ConnectException | FileNotFoundException e) {
 
             new LogoPlayer(5);
-            logger.info("Url not valid!");
+            logger.info("BAD URL: " + getPlaylist().split("/")[3] + " " + url);
 
         } catch (IOException e) {
+
+
+            new LogoPlayer(5);
+            logger.info("BAD URL: " + getPlaylist().split("/")[3] + " " + url);
             e.printStackTrace();
         }
     }
