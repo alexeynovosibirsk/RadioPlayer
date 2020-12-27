@@ -1,9 +1,5 @@
 package com.nazarov.radioPlayer.playlist;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.slf4j.MDC;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -14,16 +10,16 @@ import java.util.List;
 import java.util.Scanner;
 
 public class UrlMaker {
-    final static Logger logger = LoggerFactory.getLogger(UrlMaker.class);
 
     private static File filelist;
+    private static int number;
     private static URL url;
     private static String stationName;
     private static int playlistsize;
-    private static int number;
 
 
     public UrlMaker (String filelist, int number) {
+
         this.filelist = new File(filelist);
         this.number = number;
     }
@@ -47,22 +43,35 @@ public class UrlMaker {
     }
 
     public static String getUrlForJsp() {
-        String urlForJsp = null;
+
         urlMaker();
-        String fullUrl = url.toString();
-        String urlWithoutProtocol = fullUrl.replace("http://", "");
-        if (urlWithoutProtocol.length() > 33) {
-            urlForJsp = urlWithoutProtocol.substring(0, 32).split("/")[0];
-        } else {
-            urlForJsp = urlWithoutProtocol.split("/")[0];
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(url.toString())
+                .delete(0, 7);
+        if(sb.length() > 33) {
+            sb.substring(32);
         }
-        return urlForJsp;
+
+        return sb.toString().split("/")[0];
     }
 
     public static String getInfoForJsp() {
-        String filelistToString = filelist.toString();
-        String genre = filelistToString.split("/")[3].replace(".txt", "");
-        return  playlistsize + " - " + genre + " - " + number;
+
+        StringBuilder genre = new StringBuilder();
+        genre.append(filelist.toString().split("/")[3])
+                .reverse()
+                .delete(0, 4)
+                .reverse();
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(playlistsize + 1)
+                .append(" < ")
+                .append(genre)
+                .append(" > ")
+                .append(number + 1);
+
+        return  sb.toString();
     }
 
     public static String getStationNameForJsp() {
