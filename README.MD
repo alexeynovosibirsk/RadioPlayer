@@ -9,8 +9,6 @@ The UI fits for sellphone (based on jsp):
 ![](pics/screen.png)
 
 
-![](pics/screen1.png)
-
 Install to Debian 10:
 
 1. install minimum system
@@ -22,6 +20,7 @@ java -jar ...
 - update-grub
 
 --------
+Not obligatory (this is just for myself)
 install wifi driver: 
 
 - sudo apt-get install git dkms git make build-essential
