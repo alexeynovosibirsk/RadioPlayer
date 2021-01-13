@@ -9,6 +9,8 @@ The UI fits for sellphone (based on jsp):
 ![](pics/screen.png)
 
 
+All below is just for myself for using as embedded:
+
 Install to Debian 10:
 
 1. install minimum system
@@ -20,7 +22,7 @@ java -jar ...
 - update-grub
 
 --------
-Not obligatory (this is just for myself)
+
 install wifi driver: 
 
 - sudo apt-get install git dkms git make build-essential
@@ -30,5 +32,3 @@ install wifi driver:
 - sudo dkms build 8188eu/1.0
 - sudo dkms install 8188eu/1.0
 - sudo modprobe 8188eu
-
-
