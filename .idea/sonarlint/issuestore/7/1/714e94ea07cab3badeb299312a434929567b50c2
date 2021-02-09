@@ -1,35 +1,0 @@
-
-{squid:S2226!"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(‡äõÝüÿÿÿÿ8²–£ˆ‘.
-Xsquid:S2209"5Change this instance-reference to a static reference.(äÛƒÃþÿÿÿÿ8Í’¹Ô‘.
-{squid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¾½à÷þÿÿÿÿ8“‰ ˆ‘.
-{squid:S2226#"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ÄŒœ“ýÿÿÿÿ8²–£ˆ‘.
-vsquid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(äþÃ¬8²–£ˆ‘.
-fsquid:S4488ˆ"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(”Ùô8ÂÐ‰×‘.
-Xsquid:S2209#"5Change this instance-reference to a static reference.(ÄŒœ“ýÿÿÿÿ8Í’¹Ô‘.
-Xsquid:S2209!"5Change this instance-reference to a static reference.(‡äõÝüÿÿÿÿ8Í’¹Ô‘.
-osquid:CommentedOutCodeLine•"<This block of commented-out lines of code should be removed.(âî÷Äÿÿÿÿÿ8ÂÐ‰×‘.
-Ssquid:S2209)"5Change this instance-reference to a static reference.(ºÝéä8Í’¹Ô‘.
-msquid:S4488n"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¥îðùÿÿÿÿ8óËõÀÝ-
-usquid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ŸÁÉ?8Ü³×Ö‘.
-osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(„ñÖ³üÿÿÿÿ8ÂÐ‰×‘.
-vsquid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(•Ëƒó8¶ž«¦Š.
-{squid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¥²¢ÿÿÿÿÿ8²–£ˆ‘.
-vsquid:S2226 "XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ñÃš¼8²–£ˆ‘.
-Xsquid:S2209"5Change this instance-reference to a static reference.(¥²¢ÿÿÿÿÿ8Í’¹Ô‘.
-wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹É®‡úÿÿÿÿ
-ksquid:S4488c"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¯ºÒ‹ýÿÿÿÿ8óËõÀÝ-
-^squid:UselessImportCheck".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ8¢õ½Ö‘.
-ksquid:S4488%"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ž–û‚ùÿÿÿÿ8ü“¬Ù-
-lsquid:HiddenFieldCheckq"DRename "queryParserInput" which hides the field declared at line 27.(ŸÁÉ?8ÂÐ‰×‘.
-vsquid:S2226""XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(„ÚÏÏ8²–£ˆ‘.
-zsquid:S1488Š"[Immediately return this expression instead of assigning it to the temporary variable "mav".(ÊÝ¬Â8ÂÐ‰×‘.
-nsquid:CommentedOutCodeLineh"<This block of commented-out lines of code should be removed.(èËÔäûÿÿÿÿ8ëÜÅÙ‘.
-isquid:CommentedOutCodeLinet"<This block of commented-out lines of code should be removed.(¾ÆôÏ8¢˜£Ù‘.
-jsquid:CommentedOutCodeLine‘"<This block of commented-out lines of code should be removed.(áÍƒŽ8ÂÐ‰×‘.
-Ssquid:S2209 "5Change this instance-reference to a static reference.(ñÃš¼8Í’¹Ô‘.
-Ssquid:S2209""5Change this instance-reference to a static reference.(„ÚÏÏ8Í’¹Ô‘.
-{squid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(äÛƒÃþÿÿÿÿ8²–£ˆ‘.
-osquid:CommentedOutCodeLine—"<This block of commented-out lines of code should be removed.(ÂÚ¤…øÿÿÿÿ8ÂÐ‰×‘.
-~squid:S1488f"[Immediately return this expression instead of assigning it to the temporary variable "mav".(–ÎÛßøÿÿÿÿ8ëÜÅÙ‘.
-hsquid:S44889"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(²‘·8ü“¬Ù-
-nsquid:CommentedOutCodeLiner"<This block of commented-out lines of code should be removed.(±¹£“úÿÿÿÿ8ç¾êÙ‘.

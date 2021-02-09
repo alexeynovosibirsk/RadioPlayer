@@ -1,16 +1,0 @@
-
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸ŒË
-Ssquid:S2209"5Change this instance-reference to a static reference.(Ì½åĞ8™ÇÉ¨‘.
-V
-squid:S106"9Replace this use of System.out or System.err by a logger.(ßˆ±ö8™ÇÉ¨‘.
-gsquid:S2095"DUse try-with-resources or close this "Stream" in a "finally" clause.(ËªÂ’üÿÿÿÿ8™ÇÉ¨‘.
-Ssquid:S2209!"5Change this instance-reference to a static reference.(³Àæß8İ©­¨‘.
-?squid:S3864"!Remove this use of "Stream.peek".(ßˆ±ö8™ÇÉ¨‘.
-V
-squid:S106"9Replace this use of System.out or System.err by a logger.(µÇÉù8™ÇÉ¨‘.
-?squid:S1481#"(Remove this unused "git" local variable.(Ô²š•
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(ÆİÜêùÿÿÿÿ8™ÇÉ¨‘.
-:squid:S1148)"#Use a logger to log this exception.(³î™ÿ
-Nsquid:S2440"0Remove this instantiation of "RadioApplication".(êÍñ‘8•‰ê¬‘.
-Ssquid:S2209$"5Change this instance-reference to a static reference.(Ëéß˜8•‰ê¬‘.
