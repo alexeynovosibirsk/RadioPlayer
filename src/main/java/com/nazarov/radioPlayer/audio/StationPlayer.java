@@ -18,6 +18,7 @@ public class StationPlayer extends Thread {
     private Thread musicThread = new Thread();
     private int urlNumber;
     private static String playlist;
+    private boolean isMuted;
 
     public void setPlaylist(String playlist) {
         this.playlist = playlist;
@@ -55,13 +56,22 @@ public class StationPlayer extends Thread {
     }
 
     public void stopRadio() {
-
         musicThread.stop();   // I know it's bad/deprecated but it's webstream
     }
 
     public void mute() {
-        stopRadio();
-            }
+
+        if (!isMuted) {
+            stopRadio();
+            isMuted = true;
+
+        } else {
+            UrlMaker.setNumber(urlNumber);
+            musicThread = new StationPlayer();
+            musicThread.start();
+            isMuted = false;
+        }
+    }
 
     public void urlPlayer(URL url) {
         logger.info("Playing: " + url);
