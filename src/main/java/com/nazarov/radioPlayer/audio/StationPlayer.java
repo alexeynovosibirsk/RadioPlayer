@@ -49,7 +49,22 @@ public class StationPlayer extends Thread {
         if (urlNumber > maxUrlNumber) {
             urlNumber = 0;
         }
-        new LogoPlayer(1);                      // playing logo "Next station"
+        new LogoPlayer(6);                      // playing logo "switch station"
+        UrlMaker.setNumber(urlNumber);                   // set number of row in playlist
+        musicThread = new StationPlayer();
+        musicThread.start();
+    }
+
+    public void previousStation() {
+
+        stopRadio();
+        urlNumber--;
+        System.out.println(urlNumber);
+        int maxUrlNumber = UrlMaker.getPlaylistSize();
+        if (urlNumber < 0) {
+            urlNumber = maxUrlNumber;
+        }
+        new LogoPlayer(6);                      // playing logo "switch station"
         UrlMaker.setNumber(urlNumber);                   // set number of row in playlist
         musicThread = new StationPlayer();
         musicThread.start();

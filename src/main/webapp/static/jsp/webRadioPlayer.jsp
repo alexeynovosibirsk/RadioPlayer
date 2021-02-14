@@ -11,7 +11,7 @@
 <div align="center">
         <form action="" data-th-action="@{/action/edit}" data-th-object="${model}" method="post">
             <div class="header">
-            <label class="label">v.099</label>
+            <label class="label">v 1.0</label>
             </div>
             <div class="url">
                 <label class="label" type="submit" name="action" value=""><br> ${url} <P><playlistInfo> ${info} <P><stationName> ${stationName}</label>
@@ -28,13 +28,16 @@
                 <button class="button" type="submit" name="action" value=${genreFive}>${genreFive}</button>
                 <button class="button" type="submit" name="action" value=${genreSix}>${genreSix}</button>
             </div>
-            <div class="next">
-                <button class="button" type="submit" name="action" value="Next_Station">Next Station</button>
+            <div class="switch">
+                <button class="button" type="submit" name="action" value="Next_Station">Next</button>
             </div>
-            <div class="volume">
-                <button class="button" type="submit" name="action" value="Volume_up">Volume +</button>
-                <button class="button" type="submit" name="action" value="Volume_dn">Volume -</button>
+            <div class="switch">
+                <button class="button" type="submit" name="action" value="Previous_Station">Prev</button>
             </div>
+<%--            <div class="volume">--%>
+<%--                <button class="button" type="submit" name="action" value="Volume_up">Volume +</button>--%>
+<%--                <button class="button" type="submit" name="action" value="Volume_dn">Volume -</button>--%>
+<%--            </div>--%>
             <div class="mute">
                 <button class="button" type="submit" name="action" value="Mute">Mute</button>
             </div>

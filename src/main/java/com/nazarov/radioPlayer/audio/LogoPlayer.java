@@ -25,6 +25,7 @@ public class LogoPlayer {
         arrLogo.add("sounds/sleepMode.mp3");
         arrLogo.add("sounds/shutdown.mp3");
         arrLogo.add("sounds/urlIsNotValid.mp3");
+        arrLogo.add("sounds/switch.mp3");
 
         Resource resource = new ClassPathResource(arrLogo.get(numIndex));
         InputStream is = null;

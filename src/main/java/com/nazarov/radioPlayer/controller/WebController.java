@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class WebController extends HttpServlet implements WebMvcConfigurer {
     final static Logger logger = LoggerFactory.getLogger(WebController.class);
 
-    VolumeControl volumeControl = new VolumeControl();
+//    VolumeControl volumeControl = new VolumeControl();
     StationPlayer stationPlayer = new StationPlayer();
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
@@ -45,10 +45,12 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
 
         if (action.equals("Next_Station")) {
             stationPlayer.nextStation();
-        } else if (action.equals("Volume_up")) {
-            volumeControl.volumeUp();
-        } else if (action.equals("Volume_dn")) {
-            volumeControl.volumeDn();
+//        } else if (action.equals("Volume_up")) {
+//            volumeControl.volumeUp();
+//        } else if (action.equals("Volume_dn")) {
+//            volumeControl.volumeDn();
+        } else if (action.equals("Previous_Station")) {
+            stationPlayer.previousStation();
         } else if (action.equals("Mute")) {
             stationPlayer.mute();
             logger.info("Player stoped");
