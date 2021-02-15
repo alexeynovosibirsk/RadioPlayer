@@ -27,6 +27,7 @@ public class StationPlayer extends Thread {
 
     @Override
     public void run() {
+
         urlPlayer(UrlMaker.getUrl());
     }
 
@@ -34,11 +35,11 @@ public class StationPlayer extends Thread {
 
         stopRadio();
         urlNumber = 0;
-        new LogoPlayer(2);                       // playing logo file NewStationList
         UrlMaker.setFilelist(playlist);                    // set playlist
         UrlMaker.setNumber(urlNumber);                     // set number of row in playlist
         musicThread = new StationPlayer();
         musicThread.start();
+        new LogoPlayer(2);                       // playing logo file NewStationList
     }
 
     public void nextStation() {
@@ -71,7 +72,8 @@ public class StationPlayer extends Thread {
     }
 
     public void stopRadio() {
-        musicThread.stop();   // I know it's bad/deprecated but it's webstream
+
+            musicThread.stop();   // I know it's bad/deprecated but it's webstream
     }
 
     public void mute() {
@@ -100,9 +102,9 @@ public class StationPlayer extends Thread {
 
             new LogoPlayer(5);
             logger.info("BAD URL: " + getPlaylist().split("/")[3] + " " + url);
+            e.printStackTrace();
 
         } catch (IOException e) {
-
 
             new LogoPlayer(5);
             logger.info("BAD URL: " + getPlaylist().split("/")[3] + " " + url);
