@@ -62,6 +62,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         } else {
             stationPlayer.setPlaylist(RadioApplication.getPlaylistDirPath() + action + RadioApplication.getPlaylistExtension());
             stationPlayer.playRadio();
+            stationPlayer.setUnmute();
         }
         return webRadioPlayer();
     }

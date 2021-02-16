@@ -5,7 +5,6 @@ import com.nazarov.radioPlayer.playlist.UrlMaker;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.advanced.AdvancedPlayer;
 import org.slf4j.LoggerFactory;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.ConnectException;
@@ -19,6 +18,10 @@ public class StationPlayer extends Thread {
     private int urlNumber;
     private static String playlist;
     private boolean isMuted;
+
+    public void setUnmute() {
+        isMuted = false;
+    }
 
     public void setPlaylist(String playlist) {
         this.playlist = playlist;
@@ -86,7 +89,7 @@ public class StationPlayer extends Thread {
             UrlMaker.setNumber(urlNumber);
             musicThread = new StationPlayer();
             musicThread.start();
-            isMuted = false;
+            setUnmute();
         }
     }
 
