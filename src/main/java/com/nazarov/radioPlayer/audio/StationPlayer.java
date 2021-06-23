@@ -95,23 +95,37 @@ public class StationPlayer extends Thread {
 
     public void urlPlayer(URL url) {
         logger.info("Playing: " + url);
-        try {
-            AdvancedPlayer advancedPlayer = new AdvancedPlayer(url.openStream());
-            advancedPlayer.play();
+        String check = url.toString();
+        if (check.contains("aac") || check.contains("https")) {
+            try {
 
-        } catch (JavaLayerException e) {
-            e.printStackTrace();
-        } catch (ConnectException | FileNotFoundException e) {
+                AACPlayer.decodeAAC(url.openStream());
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
-            new LogoPlayer(5);
-            logger.info("BAD URL: " + getPlaylist().split("/")[3] + " " + url);
-            e.printStackTrace();
 
-        } catch (IOException e) {
+        } else {
+            try {
+                AdvancedPlayer advancedPlayer = new AdvancedPlayer(url.openStream());
+                advancedPlayer.play();
 
-            new LogoPlayer(5);
-            logger.info("BAD URL: " + getPlaylist().split("/")[3] + " " + url);
-            e.printStackTrace();
+            } catch (JavaLayerException e) {
+                e.printStackTrace();
+            } catch (ConnectException | FileNotFoundException e) {
+
+                new LogoPlayer(5);
+                logger.info("BAD URL: " + getPlaylist().split("/")[3] + " " + url);
+                e.printStackTrace();
+
+            } catch (IOException e) {
+
+                new LogoPlayer(5);
+                logger.info("BAD URL: " + getPlaylist().split("/")[3] + " " + url);
+                e.printStackTrace();
+            }
         }
     }
 }

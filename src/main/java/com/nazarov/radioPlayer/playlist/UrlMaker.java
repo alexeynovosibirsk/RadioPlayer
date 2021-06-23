@@ -51,13 +51,19 @@ public class UrlMaker {
         urlMaker();
 
         StringBuilder sb = new StringBuilder();
-        sb.append(url.toString())
-                .delete(0, 7);
-        if(sb.length() > 33) {
-            sb.substring(32);
+        boolean https = sb.append(url).toString().contains("https");
+        sb.append(url.toString());
+        if (https) {
+            sb.delete(0, 8);
+        } else {
+            sb.delete(0, 7);
         }
 
-        return sb.toString().split("/")[0];
+        if (sb.length() > 33) {
+            return sb.substring(0, 32).split("/")[0];
+        } else {
+            return sb.toString().split("/")[0];
+        }
     }
 
     public static String getInfoForJsp() {

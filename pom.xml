@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>RadioPlayer</groupId>
     <artifactId>radio</artifactId>
-    <version>1.2</version>
+    <version>1.3</version>
     <name>radio</name>
     <description>Just i-radio player</description>
     <packaging>war</packaging>
@@ -18,6 +18,13 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.3.2.RELEASE</version>
     </parent>
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>bintray</name>
+            <url>http://jcenter.bintray.com</url>
+        </repository>
+    </repositories>
     <build>
         <plugins>
             <plugin>
@@ -42,6 +49,15 @@
             <artifactId>jlayer</artifactId>
             <version>1.0.1.4</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.vacco.jaad/jaad -->
+        <dependency>
+            <groupId>io.vacco.jaad</groupId>
+            <artifactId>jaad</artifactId>
+            <version>0.8.7</version>
+        </dependency>
+
+
+
         <dependency>
             <groupId>org.eclipse.jgit</groupId>
             <artifactId>org.eclipse.jgit</artifactId>

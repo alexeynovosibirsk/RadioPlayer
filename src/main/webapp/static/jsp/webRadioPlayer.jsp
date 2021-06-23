@@ -11,7 +11,7 @@
 <div align="center">
         <form action="" data-th-action="@{/action/edit}" data-th-object="${model}" method="post">
             <div class="header">
-            <label class="label">v 1.2</label>
+            <label class="label">v 1.3</label>
             </div>
             <div class="url">
                 <label class="label" type="submit" name="action" value=""><br> ${url} <P><playlistInfo> ${info} <P><stationName> ${stationName}</label>
