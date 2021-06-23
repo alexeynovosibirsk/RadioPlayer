@@ -1,5 +1,8 @@
 package com.nazarov.radioPlayer.playlist;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -10,13 +13,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class UrlMaker {
+    private static final Logger logger = LoggerFactory.getLogger(UrlMaker.class);
 
     private static File filelist;
     private static int number;
     private static URL url;
+    private static String urlForJsp;
     private static String stationName;
     private static int playlistsize;
-
 
     public UrlMaker (String filelist, int number) {
 
@@ -41,8 +45,6 @@ public class UrlMaker {
         urlMaker();
         return url;
     }
-
-
 
     public static String getUrlForJsp() {
 
@@ -90,12 +92,23 @@ public class UrlMaker {
                 String line = scanner.nextLine();
                 String url = line.split(" ")[0];
 
-                String st = line.replaceAll("[\\s|\\u00A0]+", " ");
-                String name = st.split(" ")[1];
-
                 playlist.add(url);
-                statname.add(name);
 
+                String st = line.replaceAll("[\\s|\\u00A0]+", " ");
+                String nameArray[] = st.split(" ");
+                String name;
+
+                if (nameArray.length != 1) {
+                    StringBuilder sb = new StringBuilder();
+                    for (int i = 1; i < nameArray.length; i++) {
+                        sb.append(nameArray[i] + " ");
+                    }
+                    name = sb.toString();
+
+                } else {
+                    name = "uknown station";
+                }
+                        statname.add(name);
             }
          } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -105,7 +118,6 @@ public class UrlMaker {
         try {
             url = new URL(playlist.get(number));
             stationName = statname.get(number);
-
 
         } catch (MalformedURLException em) {
             em.printStackTrace();

@@ -91,6 +91,7 @@ playlistInfo {
 stationName {
   color: #b203f1;
   font-family: Hack;
+  text-transform: none;
   font-size: 14px;
   margin: 10px 0 0 0;
 }
