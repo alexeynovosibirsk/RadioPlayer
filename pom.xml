@@ -49,15 +49,6 @@
             <artifactId>jlayer</artifactId>
             <version>1.0.1.4</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.vacco.jaad/jaad -->
-        <dependency>
-            <groupId>io.vacco.jaad</groupId>
-            <artifactId>jaad</artifactId>
-            <version>0.8.7</version>
-        </dependency>
-
-
-
         <dependency>
             <groupId>org.eclipse.jgit</groupId>
             <artifactId>org.eclipse.jgit</artifactId>
@@ -78,7 +69,6 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.30</version>
-
         </dependency>
     </dependencies>
 </project>
