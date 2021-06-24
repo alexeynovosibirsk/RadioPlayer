@@ -24,7 +24,6 @@ public class StationPlayer extends Thread {
     }
 
     public boolean getIsMuted() {
-        System.out.println("Status " + isMuted);
     return isMuted;
     }
 
@@ -42,7 +41,6 @@ public class StationPlayer extends Thread {
 
         stopRadio();
         setIsMuted(false);
-        getIsMuted();
         urlNumber = 0;
         UrlMaker.setFilelist(playlist);                    // set playlist
         UrlMaker.setNumber(urlNumber);                     // set number of row in playlist
@@ -55,7 +53,6 @@ public class StationPlayer extends Thread {
 
         stopRadio();
         setIsMuted(false);
-        getIsMuted();
         urlNumber++;
         int maxUrlNumber = UrlMaker.getPlaylistSize();
         if (urlNumber > maxUrlNumber) {
@@ -71,9 +68,7 @@ public class StationPlayer extends Thread {
 
         stopRadio();
         setIsMuted(false);
-        getIsMuted();
         urlNumber--;
-        System.out.println(urlNumber);
         int maxUrlNumber = UrlMaker.getPlaylistSize();
         if (urlNumber < 0) {
             urlNumber = maxUrlNumber;
