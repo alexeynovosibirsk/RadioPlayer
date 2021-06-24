@@ -19,8 +19,13 @@ public class StationPlayer extends Thread {
     private static String playlist;
     private boolean isMuted;
 
-    public void setUnmute() {
-        isMuted = false;
+    public void setIsMuted(boolean state) {
+        isMuted = state;
+    }
+
+    public boolean getIsMuted() {
+        System.out.println("Status " + isMuted);
+    return isMuted;
     }
 
     public void setPlaylist(String playlist) {
@@ -30,13 +35,14 @@ public class StationPlayer extends Thread {
 
     @Override
     public void run() {
-
         urlPlayer(UrlMaker.getUrl());
     }
 
     public void playRadio() {
 
         stopRadio();
+        setIsMuted(false);
+        getIsMuted();
         urlNumber = 0;
         UrlMaker.setFilelist(playlist);                    // set playlist
         UrlMaker.setNumber(urlNumber);                     // set number of row in playlist
@@ -48,6 +54,8 @@ public class StationPlayer extends Thread {
     public void nextStation() {
 
         stopRadio();
+        setIsMuted(false);
+        getIsMuted();
         urlNumber++;
         int maxUrlNumber = UrlMaker.getPlaylistSize();
         if (urlNumber > maxUrlNumber) {
@@ -62,6 +70,8 @@ public class StationPlayer extends Thread {
     public void previousStation() {
 
         stopRadio();
+        setIsMuted(false);
+        getIsMuted();
         urlNumber--;
         System.out.println(urlNumber);
         int maxUrlNumber = UrlMaker.getPlaylistSize();
@@ -80,16 +90,23 @@ public class StationPlayer extends Thread {
     }
 
     public void mute() {
+        System.out.println("muteActivate");
 
-        if (!isMuted) {
+        if (!getIsMuted()) {
             stopRadio();
-            isMuted = true;
+            setIsMuted(true);
+            getIsMuted();
 
         } else {
-            UrlMaker.setNumber(urlNumber);
-            musicThread = new StationPlayer();
-            musicThread.start();
-            setUnmute();
+            System.out.println("UnMute");
+
+            if (getIsMuted()) {
+                UrlMaker.setNumber(urlNumber);
+                musicThread = new StationPlayer();
+                musicThread.start();
+                setIsMuted(false);
+                getIsMuted();
+            }
         }
     }
 
@@ -98,14 +115,12 @@ public class StationPlayer extends Thread {
         String check = url.toString();
         if (check.contains("aac") || check.contains("https")) {
             try {
-
                 AACPlayer.decodeAAC(url.openStream());
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
 
         } else {
             try {

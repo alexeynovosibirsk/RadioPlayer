@@ -240,7 +240,7 @@ stationName {
   .shutdown .button {
     display: inline-block;
     width: 275px;
-    height: 80px;
+    height: 40px;
     line-height: 10px;
     margin: 15px;
     position: relative;
