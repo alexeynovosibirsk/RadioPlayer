@@ -22,13 +22,13 @@ java -jar ...
 - update-grub
 
 --------
+20210625 v 1.5
+- Added function update playlists
 
-install wifi driver: 
+20210624 v 1.4
+- Bug fix with mute
 
-- sudo apt-get install git dkms git make build-essential
-- cd /usr/src
-- sudo git clone https://github.com/lwfinger/rtl8188eu.git
-- sudo dkms add ./rtl8188eu
-- sudo dkms build 8188eu/1.0
-- sudo dkms install 8188eu/1.0
-- sudo modprobe 8188eu
+20210623 v 1.3 
+- Added AAC support
+
+

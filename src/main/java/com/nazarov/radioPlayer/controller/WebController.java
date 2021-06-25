@@ -3,12 +3,9 @@ package com.nazarov.radioPlayer.controller;
 import com.nazarov.radioPlayer.RadioApplication;
 import com.nazarov.radioPlayer.audio.LogoPlayer;
 import com.nazarov.radioPlayer.audio.StationPlayer;
-import com.nazarov.radioPlayer.config.WebConfig;
-import com.nazarov.radioPlayer.osdependent.PowerOff;
 import com.nazarov.radioPlayer.osdependent.Shutdown;
-import com.nazarov.radioPlayer.osdependent.VolumeControl;
+import com.nazarov.radioPlayer.playlist.GitCloner;
 import com.nazarov.radioPlayer.playlist.UrlMaker;
-import org.apache.taglibs.standard.Version;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -30,7 +27,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
     public ModelAndView webRadioPlayer() {
 
         ModelAndView mav = new ModelAndView("webRadioPlayer");
-        mav.addObject("version", "v 1.4");
+        mav.addObject("version", "v 1.5");
         mav.addObject("url", UrlMaker.getUrlForJsp());
         mav.addObject("info", UrlMaker.getInfoForJsp());
         mav.addObject("stationName", UrlMaker.getStationNameForJsp());
@@ -56,7 +53,11 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         } else if (action.equals("Previous_Station")) {
             stationPlayer.previousStation();
         } else if (action.equals("Shutdown")) {
+            stationPlayer.mute();
             Shutdown.go();
+        } else if (action.equals("Update_lists")) {
+            new GitCloner();
+            new LogoPlayer(8);
         } else if (action.equals("Mute")) {
             stationPlayer.mute();
             logger.info("Player stoped");
@@ -70,8 +71,6 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
             stationPlayer.playRadio();
             stationPlayer.setIsMuted(false);
         }
-
-
 
         return webRadioPlayer();
     }

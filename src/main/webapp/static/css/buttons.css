@@ -16,7 +16,6 @@
 
 
   button {
-    color: black;
     text-decoration: none;
     text-transform: uppercase;
     font-family: Helvetica;
@@ -62,7 +61,7 @@
 
 .url label {
   color: rgb(7, 97, 241);
-  background: #000000;
+  background: black;
 }
 
 .url .label {
@@ -75,6 +74,7 @@
   overflow: hidden;
   border: 2px solid #848281;
   transition: color .5s;
+
 }
 
 .url .label:hover {
@@ -97,31 +97,31 @@ stationName {
 }
 ---
 
-  .volume {
+  /*.volume {*/
 
-    margin: 0 auto;
-  }
+  /*  margin: 0 auto;*/
+  /*}*/
 
-  .volume .button {
-    color: #8b8891;
-    background: black;
-  }
+  /*.volume .button {*/
+  /*  color: #8b8891;*/
+  /*  background: transparent;*/
+  /*}*/
 
-  .volume .button {
-    display: inline-block;
-    width: 130px;
-    height: 60px;
-    line-height: 10px;
-    margin: 5px;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid #8b8891;
-    transition: color .5s;
-  }
+  /*.volume .button {*/
+  /*  display: inline-block;*/
+  /*  width: 130px;*/
+  /*  height: 60px;*/
+  /*  line-height: 10px;*/
+  /*  margin: 5px;*/
+  /*  position: relative;*/
+  /*  overflow: hidden;*/
+  /*  border: 2px solid #8b8891;*/
+  /*  transition: color .5s;*/
+  /*}*/
 
-  .volume .button:hover {
-    color: #81ff2e;
-  }
+  /*.volume .button:hover {*/
+  /*  color: #81ff2e;*/
+  /*}*/
 
   .genre {
 
@@ -130,7 +130,7 @@ stationName {
 
   .genre button {
     color: green;
-    background: black;
+    background: transparent;
   }
 
   .genre .button {
@@ -149,32 +149,6 @@ stationName {
     color: #81ff2e;
   }
 
-  .next {
-
-    margin: 0 auto;
-  }
-
-  .next button {
-    color: green;
-    background: black;
-  }
-
-  .next .button {
-    display: inline-block;
-    width: 275px;
-    height: 60px;
-    line-height: 10px;
-    margin: 5px;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid green;
-    transition: color .5s;
-  }
-
-  .next .button:hover {
-    color: #81ff2e;
-  }
-
 .switch {
 
   margin: 0 auto;
@@ -182,7 +156,7 @@ stationName {
 
 .switch button {
   color: #0b85f3;
-  background: black;
+  background: transparent;
 }
 
 .switch .button {
@@ -208,7 +182,7 @@ stationName {
 
   .mute button {
     color: #8b8891;
-    background: black;
+    background: transparent;
   }
 
   .mute .button {
@@ -227,6 +201,35 @@ stationName {
     color: #fff;
   }
 
+
+  .update {
+
+    margin: 0 auto;
+  }
+
+.update button {
+  color: #7f6619;
+  background: transparent;
+  font-size: small;
+}
+
+.update .button {
+  display: inline-block;
+  width: 275px;
+  height: 40px;
+  line-height: 10px;
+  margin: 5px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #7f6619;
+  transition: color .5s;
+}
+
+.update .button:hover {
+  color: #f3590c;
+          /*#81ff2e;*/
+}
+
   .shutdown {
 
     margin: 0 auto;
@@ -234,7 +237,7 @@ stationName {
 
   .shutdown button {
     color: #9c0700;
-    background: black;
+    background: transparent;
   }
 
   .shutdown .button {
@@ -242,7 +245,7 @@ stationName {
     width: 275px;
     height: 40px;
     line-height: 10px;
-    margin: 15px;
+    margin: 5px;
     position: relative;
     overflow: hidden;
     border: 2px solid #9c0700;

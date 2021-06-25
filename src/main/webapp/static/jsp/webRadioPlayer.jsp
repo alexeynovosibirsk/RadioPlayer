@@ -41,6 +41,9 @@
             <div class="mute">
                 <button class="button" type="submit" name="action" value="Mute">Mute</button>
             </div>
+            <div class="update">
+                <button class="button" type="submit" name="action" value="Update_lists">Update playlists</button>
+            </div>
             <div class="shutdown">
                 <button class="button" type="submit" name="action" value="Shutdown">Shutdown</button>
             </div>
