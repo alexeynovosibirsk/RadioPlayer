@@ -19,15 +19,15 @@ public class LogoPlayer {
 
         List<String> arrLogo = new ArrayList<>();
 
-        arrLogo.add("sounds/hello.mp3");
-        arrLogo.add("sounds/next.mp3");
-        arrLogo.add("sounds/newStationList.mp3");
-        arrLogo.add("sounds/sleepMode.mp3");
-        arrLogo.add("sounds/shutdown.mp3");
-        arrLogo.add("sounds/urlIsNotValid.mp3");
-        arrLogo.add("sounds/switch.mp3");
-        arrLogo.add("sounds/falling.mp3");
-        arrLogo.add("sounds/updatesCompleted.mp3");
+        arrLogo.add("sounds/0-hello.mp3");
+        arrLogo.add("sounds/1-next.mp3");
+        arrLogo.add("sounds/2-newStationList.mp3");
+        arrLogo.add("sounds/3-sleepMode.mp3");
+        arrLogo.add("sounds/4-shutdown.mp3");
+        arrLogo.add("sounds/5-urlIsNotValid.mp3");
+        arrLogo.add("sounds/6-switch.mp3");
+        arrLogo.add("sounds/7-falling.mp3");
+        arrLogo.add("sounds/8-updatesCompleted.mp3");
 
         Resource resource = new ClassPathResource(arrLogo.get(numIndex));
         InputStream is = null;
