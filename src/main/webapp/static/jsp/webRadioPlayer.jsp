@@ -34,10 +34,6 @@
             <div class="switch">
                 <button class="button" type="submit" name="action" value="Previous_Station">Prev</button>
             </div>
-<%--            <div class="volume">--%>
-<%--                <button class="button" type="submit" name="action" value="Volume_up">Volume +</button>--%>
-<%--                <button class="button" type="submit" name="action" value="Volume_dn">Volume -</button>--%>
-<%--            </div>--%>
             <div class="mute">
                 <button class="button" type="submit" name="action" value="Mute">Mute</button>
             </div>
@@ -46,6 +42,9 @@
             </div>
             <div class="shutdown">
                 <button class="button" type="submit" name="action" value="Shutdown">Shutdown</button>
+            </div>
+            <div class="shutdown">
+            <button class="button" type="submit" name="action" value="Poweroff">Power off</button>
             </div>
         </form>
 <%--        <form method = "GET" action = "/operations">--%>

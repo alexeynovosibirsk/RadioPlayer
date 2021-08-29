@@ -3,6 +3,7 @@ package com.nazarov.radioPlayer.controller;
 import com.nazarov.radioPlayer.RadioApplication;
 import com.nazarov.radioPlayer.audio.LogoPlayer;
 import com.nazarov.radioPlayer.audio.StationPlayer;
+import com.nazarov.radioPlayer.osdependent.PowerOff;
 import com.nazarov.radioPlayer.osdependent.Shutdown;
 import com.nazarov.radioPlayer.playlist.GitCloner;
 import com.nazarov.radioPlayer.playlist.UrlMaker;
@@ -20,14 +21,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class WebController extends HttpServlet implements WebMvcConfigurer {
     final static Logger logger = LoggerFactory.getLogger(WebController.class);
 
-//    VolumeControl volumeControl = new VolumeControl();
     StationPlayer stationPlayer = new StationPlayer();
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView webRadioPlayer() {
 
         ModelAndView mav = new ModelAndView("webRadioPlayer");
-        mav.addObject("version", "v 1.5.1");
+        mav.addObject("version", "v 1.5.2");
         mav.addObject("url", UrlMaker.getUrlForJsp());
         mav.addObject("info", UrlMaker.getInfoForJsp());
         mav.addObject("stationName", UrlMaker.getStationNameForJsp());
@@ -46,26 +46,25 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
 
         if (action.equals("Next_Station")) {
             stationPlayer.nextStation();
-//        } else if (action.equals("Volume_up")) {
-//            volumeControl.volumeUp();
-//        } else if (action.equals("Volume_dn")) {
-//            volumeControl.volumeDn();
+
         } else if (action.equals("Previous_Station")) {
             stationPlayer.previousStation();
-        } else if (action.equals("Shutdown")) {
-            stationPlayer.mute();
-            Shutdown.go();
-        } else if (action.equals("Update_lists")) {
-            new GitCloner();
-            new LogoPlayer(8);
+
         } else if (action.equals("Mute")) {
             stationPlayer.mute();
             logger.info("Player stoped");
-//            if (!volumeControl.isMuted()) {
-//                volumeControl.muteOn();
-//            } else {
-//                volumeControl.muteOff();
-//            }
+
+        } else if (action.equals("Update_lists")) {
+            new GitCloner();
+            new LogoPlayer(8);
+
+        } else if (action.equals("Shutdown")) {
+            stationPlayer.mute();
+            Shutdown.go();
+
+        } else if (action.equals("Poweroff")) {
+            new PowerOff(0);
+
         } else {
             stationPlayer.setPlaylist(RadioApplication.getPlaylistDirPath() + action + RadioApplication.getPlaylistExtension());
             stationPlayer.playRadio();
