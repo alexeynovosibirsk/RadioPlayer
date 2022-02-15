@@ -14,8 +14,13 @@ import java.util.Comparator;
 
 public class GitCloner {
     final static Logger logger = LoggerFactory.getLogger(GitCloner.class);
+    private boolean playlistsCloned = false;
 
-    public GitCloner() {
+    public boolean getPlaylistsCloned() {
+        return playlistsCloned;
+    }
+
+    public boolean go() {
         // remove directory with configs if it is
         Path rootPath = Paths.get(RadioApplication.playlistDirectory);
         logger.info("Delete temporary directory");
@@ -39,8 +44,12 @@ public class GitCloner {
                     .setDirectory(file)
                     .call();
 
-        } catch (GitAPIException ge) {
-            ge.printStackTrace();
+            playlistsCloned = true;
+
+        } catch (GitAPIException e) {
+            logger.error("No connection to github!");
         }
+
+        return playlistsCloned;
     }
 }

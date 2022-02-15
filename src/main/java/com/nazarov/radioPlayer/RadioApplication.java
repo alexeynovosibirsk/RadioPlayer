@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.nazarov.radioPlayer.audio.LogoPlayer;
 import com.nazarov.radioPlayer.playlist.*;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -57,7 +59,7 @@ public class RadioApplication  {
         List<String> listGenres = new ArrayList<>(5);
 
         for (File f : folder.listFiles()) {
-            String s = f.toString().split("/")[3];
+            String s = f.getName();
             if (s.endsWith("txt")) {
                 String genre = s.replace(playlistExtension, "");
                 listGenres.add(genre);
@@ -74,15 +76,30 @@ public class RadioApplication  {
 
     public static void main(String[] args)  {
 
-        new GitCloner();
+       GitCloner gs = new GitCloner();
+       gs.go();
 
-        readConfigs();
+       if (gs.getPlaylistsCloned() == true) {
+           readConfigs();
 
-        new UrlMaker(playlistDirPath + getGenreOne() + playlistExtension, 0); // For jsp ${url}
+           new UrlMaker(playlistDirPath + getGenreOne() + playlistExtension, 0); // For jsp ${url}
+
+           logger.info("WebRadio is ready!");
+           new LogoPlayer(0);
+
+       } else {
+           File fakeFile = null;
+           try {
+               fakeFile = new File("/tmp/configs/easy.txt");
+               FileWriter fw = new FileWriter(fakeFile);
+               fw.write("http://error_no_connection_to_github/ error no connection to github");
+               fw.close();
+               fw.flush();
+           } catch (IOException e) {
+               logger.error("Unable to write to fake file");
+           }
+           new UrlMaker(fakeFile.toString(), 0);
+       }
         SpringApplication.run(RadioApplication.class, args);
-
-        logger.info("WebRadio is ready!");
-
-       new LogoPlayer(0);
     }
 }

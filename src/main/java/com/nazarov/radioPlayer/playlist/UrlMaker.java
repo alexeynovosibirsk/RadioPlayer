@@ -68,11 +68,8 @@ public class UrlMaker {
 
     public static String getInfoForJsp() {
 
-        StringBuilder genre = new StringBuilder();
-        genre.append(filelist.toString().split("/")[3])
-                .reverse()
-                .delete(0, 4)
-                .reverse();
+        int dotIndex = filelist.getName().lastIndexOf('.');
+        String genre = filelist.getName().substring(0, dotIndex);
 
         StringBuilder sb = new StringBuilder();
         sb.append(playlistsize + 1)

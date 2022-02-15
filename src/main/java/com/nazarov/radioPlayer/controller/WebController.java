@@ -27,7 +27,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
     public ModelAndView webRadioPlayer() {
 
         ModelAndView mav = new ModelAndView("webRadioPlayer");
-        mav.addObject("version", "v 1.5.2");
+        mav.addObject("version", "v 1.6");
         mav.addObject("url", UrlMaker.getUrlForJsp());
         mav.addObject("info", UrlMaker.getInfoForJsp());
         mav.addObject("stationName", UrlMaker.getStationNameForJsp());
@@ -55,7 +55,9 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
             logger.info("Player stoped");
 
         } else if (action.equals("Update_lists")) {
-            new GitCloner();
+            GitCloner gs = new GitCloner();
+            gs.go();
+            RadioApplication.readConfigs();
             new LogoPlayer(8);
 
         } else if (action.equals("Shutdown")) {
