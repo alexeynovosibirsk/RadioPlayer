@@ -9,11 +9,14 @@ import com.nazarov.radioPlayer.playlist.GitCloner;
 import com.nazarov.radioPlayer.playlist.UrlMaker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import javax.servlet.http.HttpServlet;
+import javax.swing.*;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -21,13 +24,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class WebController extends HttpServlet implements WebMvcConfigurer {
     final static Logger logger = LoggerFactory.getLogger(WebController.class);
 
-    StationPlayer stationPlayer = new StationPlayer();
+    StationPlayer stationPlayer = StationPlayer.getInstance();
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView webRadioPlayer() {
 
         ModelAndView mav = new ModelAndView("webRadioPlayer");
-        mav.addObject("version", "v 1.6");
+        mav.addObject("version", "v 1.7");
         mav.addObject("url", UrlMaker.getUrlForJsp());
         mav.addObject("info", UrlMaker.getInfoForJsp());
         mav.addObject("stationName", UrlMaker.getStationNameForJsp());

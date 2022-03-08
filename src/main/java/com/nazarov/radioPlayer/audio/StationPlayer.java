@@ -19,6 +19,17 @@ public class StationPlayer extends Thread {
     private static String playlist;
     private boolean isMuted;
 
+    private static StationPlayer _instance = null;
+
+    private StationPlayer(){}
+
+    public static StationPlayer getInstance() {
+        if (_instance == null) {
+            _instance = new StationPlayer();
+        }
+        return _instance;
+    }
+
     public void setIsMuted(boolean state) {
         isMuted = state;
     }
@@ -81,7 +92,7 @@ public class StationPlayer extends Thread {
 
     public void stopRadio() {
 
-            musicThread.stop();   // I know it's bad/deprecated but it's webstream
+            musicThread.stop();   // I know it's bad/deprecated but it's the webstream
     }
 
     public void mute() {

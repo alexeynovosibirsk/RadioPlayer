@@ -1,5 +1,8 @@
 package com.nazarov.radioPlayer;
 
+import com.github.kwhat.jnativehook.GlobalScreen;
+import com.github.kwhat.jnativehook.NativeHookException;
+import com.nazarov.radioPlayer.controller.KeyController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -75,7 +78,6 @@ public class RadioApplication  {
    }
 
     public static void main(String[] args)  {
-
        GitCloner gs = new GitCloner();
        gs.go();
 
@@ -101,5 +103,18 @@ public class RadioApplication  {
            new UrlMaker(fakeFile.toString(), 0);
        }
         SpringApplication.run(RadioApplication.class, args);
+
+       //JnativeHook:
+        try {
+            GlobalScreen.registerNativeHook();
+        }
+        catch (NativeHookException ex) {
+            System.err.println("There was a problem registering the native hook.");
+            System.err.println(ex.getMessage());
+
+            System.exit(1);
+        }
+
+        GlobalScreen.addNativeKeyListener(new KeyController());
     }
 }
