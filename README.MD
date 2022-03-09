@@ -8,9 +8,13 @@ The UI fits for sellphone (based on jsp):
 
 ![](pics/screen.png)
 Also keyboard shotcuts available:
+
 alt + 1 - mute\unmute
+
 alt + 2 - next station
+
 alt + 3 - previous station
+
 alt + 4 till 9 - switch playlists
 
 All below is just for myself for using as embedded:
