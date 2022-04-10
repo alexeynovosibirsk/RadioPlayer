@@ -8,31 +8,34 @@ The UI fits for sellphone (based on jsp):
 
 ![](pics/screen.png)
 Also keyboard shotcuts available:
+
 alt + 1 - mute\unmute
+
 alt + 2 - next station
+
 alt + 3 - previous station
+
 alt + 4 till 9 - switch playlists
 
-All below is just for myself for using as embedded:
-
-Install to Debian 10:
-
-1. install minimum system
-2. apt install xserver-xorg-video-all xserver-xorg-input-all xserver-xorg-core xinit x11-xserver-utils openssh-server alsa-utils nodm wicd openjdk-11-jre-headless
-3. vi .bashrc
-java -jar ...
-4. Reduce time waiting bootloader:
-- vi /etc/default/grub
-- update-grub
-
 --------
-20210625 v 1.5
-- Added function update playlists
+Version's history:
 
-20210624 v 1.4
-- Bug fix with mute
+v 1.7 20220309 Keyboard shotcuts
 
-20210623 v 1.3 
-- Added AAC support
+v 1.6 20220215 OS independent (Windows ready)
+
+v 1.5.x 20210829 Poweroff
+
+v 1.5 20210625 Update playlists
+
+v 1.4 20210624 Bug fix with mute and multithreading
+
+v 1.3 20210623 Support AAC
+
+v 1.2 - 1.1 20210623 Some improves
+
+v 1.0 20210214 Improves
+
+v 0.1 - 0.99 20190829 - 20210113 
 
 
