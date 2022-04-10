@@ -1,10 +1,10 @@
 package com.nazarov.radioPlayer.playlist;
 
 import com.nazarov.radioPlayer.RadioApplication;
+import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,18 +12,16 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Comparator;
 
+@Slf4j
+@Getter
 public class GitCloner {
-    final static Logger logger = LoggerFactory.getLogger(GitCloner.class);
-    private boolean playlistsCloned = false;
 
-    public boolean getPlaylistsCloned() {
-        return playlistsCloned;
-    }
+    private boolean playlistsCloned = false;
 
     public boolean go() {
         // remove directory with configs if it is
         Path rootPath = Paths.get(RadioApplication.playlistDirectory);
-        logger.info("Delete temporary directory");
+        log.info("Delete temporary directory");
 
         try {
              Files.walk(rootPath)
@@ -33,7 +31,7 @@ public class GitCloner {
                         .forEach(File::delete);
 
             } catch (IOException e) {
-                logger.info("No temp directory for deleting...");
+                log.info("No temp directory for deleting...");
             }
 
         // then creating new directory and cloning from github
@@ -47,7 +45,7 @@ public class GitCloner {
             playlistsCloned = true;
 
         } catch (GitAPIException e) {
-            logger.error("No connection to github!");
+            log.error("No connection to github!");
         }
 
         return playlistsCloned;

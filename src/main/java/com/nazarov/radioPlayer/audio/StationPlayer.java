@@ -1,18 +1,16 @@
 package com.nazarov.radioPlayer.audio;
 
-import org.slf4j.Logger;
 import com.nazarov.radioPlayer.playlist.UrlMaker;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.advanced.AdvancedPlayer;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.ConnectException;
 import java.net.URL;
 
+@Slf4j
 public class StationPlayer extends Thread {
-
-    final static Logger logger = LoggerFactory.getLogger(StationPlayer.class);
 
     private Thread musicThread = new Thread();
     private int urlNumber;
@@ -101,12 +99,14 @@ public class StationPlayer extends Thread {
         if (!getIsMuted()) {
             stopRadio();
             setIsMuted(true);
+            new LogoPlayer(6);
             getIsMuted();
 
         } else {
             System.out.println("UnMute");
 
             if (getIsMuted()) {
+                new LogoPlayer(6);
                 UrlMaker.setNumber(urlNumber);
                 musicThread = new StationPlayer();
                 musicThread.start();
@@ -116,10 +116,8 @@ public class StationPlayer extends Thread {
         }
     }
 
-
-
     public void urlPlayer(URL url) {
-        logger.info("Playing: " + url);
+        log.info("Playing: " + url);
         String check = url.toString();
         if (check.contains("aac") || check.contains("https")) {
             try {
@@ -140,13 +138,13 @@ public class StationPlayer extends Thread {
             } catch (ConnectException | FileNotFoundException e) {
 
                 new LogoPlayer(5);
-                logger.info("BAD URL: " + getPlaylist().split("/")[3] + " " + url);
+                log.info("BAD URL: " + getPlaylist().split("/")[3] + " " + url);
                 e.printStackTrace();
 
             } catch (IOException e) {
 
                 new LogoPlayer(5);
-                logger.info("BAD URL: " + getPlaylist().split("/")[3] + " " + url);
+                log.info("BAD URL: " + getPlaylist().split("/")[3] + " " + url);
                 e.printStackTrace();
             }
         }

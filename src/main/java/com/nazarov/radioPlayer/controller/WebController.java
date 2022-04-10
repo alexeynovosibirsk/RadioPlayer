@@ -7,6 +7,7 @@ import com.nazarov.radioPlayer.osdependent.PowerOff;
 import com.nazarov.radioPlayer.osdependent.Shutdown;
 import com.nazarov.radioPlayer.playlist.GitCloner;
 import com.nazarov.radioPlayer.playlist.UrlMaker;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -21,8 +22,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+@Slf4j
 public class WebController extends HttpServlet implements WebMvcConfigurer {
-    final static Logger logger = LoggerFactory.getLogger(WebController.class);
 
     StationPlayer stationPlayer = StationPlayer.getInstance();
 
@@ -55,7 +56,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
 
         } else if (action.equals("Mute")) {
             stationPlayer.mute();
-            logger.info("Player stoped");
+            log.info("Player stoped");
 
         } else if (action.equals("Update_lists")) {
             GitCloner gs = new GitCloner();

@@ -1,8 +1,5 @@
 package com.nazarov.radioPlayer.playlist;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -13,7 +10,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class UrlMaker {
-    private static final Logger logger = LoggerFactory.getLogger(UrlMaker.class);
 
     private static File filelist;
     private static int number;

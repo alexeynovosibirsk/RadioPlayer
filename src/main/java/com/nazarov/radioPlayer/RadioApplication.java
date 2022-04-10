@@ -1,10 +1,9 @@
 package com.nazarov.radioPlayer;
 
 import com.nazarov.radioPlayer.controller.KeyController;
+import lombok.extern.slf4j.Slf4j;
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.nazarov.radioPlayer.audio.LogoPlayer;
@@ -16,10 +15,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+@Slf4j
 @SpringBootApplication
 public class RadioApplication  {
-
-   final static Logger logger = LoggerFactory.getLogger(RadioApplication.class);
 
    public static String playlistDirectory = "/tmp/configs";
    public static String githubUrl = "https://github.com/nixoved/RadioPlayerPlaylists";
@@ -83,12 +81,12 @@ public class RadioApplication  {
        GitCloner gs = new GitCloner();
        gs.go();
 
-       if (gs.getPlaylistsCloned() == true) {
+       if (gs.isPlaylistsCloned() == true) {
            readConfigs();
 
            new UrlMaker(playlistDirPath + getGenreOne() + playlistExtension, 0); // For jsp ${url}
 
-           logger.info("WebRadio is ready!");
+           log.info("WebRadio is ready!");
            new LogoPlayer(0);
 
        } else {
@@ -100,7 +98,7 @@ public class RadioApplication  {
                fw.close();
                fw.flush();
            } catch (IOException e) {
-               logger.error("Unable to write to fake file");
+               log.error("Unable to write to fake file");
            }
            new UrlMaker(fakeFile.toString(), 0);
        }
@@ -113,10 +111,8 @@ public class RadioApplication  {
         catch (NativeHookException ex) {
             System.err.println("There was a problem registering the native hook.");
             System.err.println(ex.getMessage());
-
             System.exit(1);
         }
-
         GlobalScreen.addNativeKeyListener(new KeyController());
     }
 }
