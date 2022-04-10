@@ -1,11 +1,10 @@
 package com.nazarov.radioPlayer.controller;
 
-import com.github.kwhat.jnativehook.keyboard.NativeKeyEvent;
-import com.github.kwhat.jnativehook.keyboard.NativeKeyListener;
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
+
+import okhttp3.*;
+import org.jnativehook.keyboard.NativeKeyEvent;
+import org.jnativehook.keyboard.NativeKeyListener;
+
 
 import java.io.IOException;
 
@@ -13,6 +12,7 @@ public class KeyController implements NativeKeyListener {
 
     private final WebController webController = new WebController();
 
+    @Override
     public void nativeKeyPressed(NativeKeyEvent e) {
 //        System.out.println("Key Pressed: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
 
@@ -81,10 +81,12 @@ public class KeyController implements NativeKeyListener {
         }
     }
 
+    @Override
     public void nativeKeyReleased(NativeKeyEvent e) {
 //        System.out.println("Key Released: " + NativeKeyEvent.getKeyText(e.getKeyCode()));
     }
 
+    @Override
     public void nativeKeyTyped(NativeKeyEvent e) {
 //        System.out.println("Key Typed: " + e.getKeyText(e.getKeyCode()));
     }
