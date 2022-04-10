@@ -1,8 +1,8 @@
 package com.nazarov.radioPlayer;
 
-import com.github.kwhat.jnativehook.GlobalScreen;
-import com.github.kwhat.jnativehook.NativeHookException;
 import com.nazarov.radioPlayer.controller.KeyController;
+import org.jnativehook.GlobalScreen;
+import org.jnativehook.NativeHookException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -18,7 +18,8 @@ import java.util.List;
 
 @SpringBootApplication
 public class RadioApplication  {
-    final static Logger logger = LoggerFactory.getLogger(RadioApplication.class);
+
+   final static Logger logger = LoggerFactory.getLogger(RadioApplication.class);
 
    public static String playlistDirectory = "/tmp/configs";
    public static String githubUrl = "https://github.com/nixoved/RadioPlayerPlaylists";
@@ -78,6 +79,7 @@ public class RadioApplication  {
    }
 
     public static void main(String[] args)  {
+
        GitCloner gs = new GitCloner();
        gs.go();
 

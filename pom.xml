@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>RadioPlayer</groupId>
     <artifactId>radio</artifactId>
-    <version>1.6</version>
+    <version>1.7</version>
     <name>radio</name>
     <description>Just i-radio player</description>
     <packaging>war</packaging>
@@ -74,6 +74,11 @@
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
             <version>4.9.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.1stleg</groupId>
+            <artifactId>jnativehook</artifactId>
+            <version>2.0.2</version>
         </dependency>
     </dependencies>
 </project>
