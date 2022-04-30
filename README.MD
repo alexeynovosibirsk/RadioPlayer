@@ -20,6 +20,8 @@ alt + 4 till 9 - switch playlists
 --------
 Version's history:
 
+v 1.8 20220430 Update playlists 2.0
+
 v 1.7 20220309 Keyboard shotcuts
 
 v 1.6 20220215 OS independent (Windows ready)
