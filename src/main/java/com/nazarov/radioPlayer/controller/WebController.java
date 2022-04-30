@@ -59,8 +59,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
             log.info("Player stoped");
 
         } else if (action.equals("Update_lists")) {
-            GitCloner gs = new GitCloner();
-            gs.go();
+            GitCloner.getInstance().updatePlaylists();
             RadioApplication.readConfigs();
             new LogoPlayer(8);
 

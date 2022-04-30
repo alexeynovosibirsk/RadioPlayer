@@ -47,20 +47,21 @@ public class RadioApplication  {
             }
         }
             Collections.sort(listGenres);
+        if(listGenres.size() > 1) {
             genreOne = listGenres.get(0).intern();
             genreTwo = listGenres.get(1).intern();
             genreThree = listGenres.get(2).intern();
             genreFour = listGenres.get(3).intern();
             genreFive = listGenres.get(4).intern();
             genreSix = listGenres.get(5).intern();
+        }
    }
 
     public static void main(String[] args)  {
 
-       GitCloner gs = new GitCloner();
-       gs.go();
+       GitCloner.getInstance().go();
 
-       if (gs.isPlaylistsCloned() == true) {
+       if (GitCloner.getInstance().isPlaylistsCloned() == true) {
            readConfigs();
 
            new UrlMaker(playlistDirPath + genreOne + playlistExtension, 0); // For jsp ${url}
