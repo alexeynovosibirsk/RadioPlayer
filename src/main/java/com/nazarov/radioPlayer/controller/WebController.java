@@ -35,12 +35,12 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         mav.addObject("url", UrlMaker.getUrlForJsp());
         mav.addObject("info", UrlMaker.getInfoForJsp());
         mav.addObject("stationName", UrlMaker.getStationNameForJsp());
-        mav.addObject("genreOne", RadioApplication.getGenreOne());
-        mav.addObject("genreTwo", RadioApplication.getGenreTwo());
-        mav.addObject("genreThree", RadioApplication.getGenreThree());
-        mav.addObject("genreFour", RadioApplication.getGenreFour());
-        mav.addObject("genreFive", RadioApplication.getGenreFive());
-        mav.addObject("genreSix", RadioApplication.getGenreSix());
+        mav.addObject("genreOne", RadioApplication.genreOne);
+        mav.addObject("genreTwo", RadioApplication.genreTwo);
+        mav.addObject("genreThree", RadioApplication.genreThree);
+        mav.addObject("genreFour", RadioApplication.genreFour);
+        mav.addObject("genreFive", RadioApplication.genreFive);
+        mav.addObject("genreSix", RadioApplication.genreSix);
 
         return mav;
     }
@@ -72,7 +72,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
             new PowerOff(0);
 
         } else {
-            stationPlayer.setPlaylist(RadioApplication.getPlaylistDirPath() + action + RadioApplication.getPlaylistExtension());
+            stationPlayer.setPlaylist(RadioApplication.playlistDirPath + action + RadioApplication.playlistExtension);
             stationPlayer.playRadio();
             stationPlayer.setIsMuted(false);
         }

@@ -35,10 +35,10 @@ public class GitCloner {
             }
 
         // then creating new directory and cloning from github
-        File file = new File(RadioApplication.getPlaylistDirectory());
+        File file = new File(RadioApplication.playlistDirectory);
         try {
             Git.cloneRepository()
-                    .setURI(RadioApplication.getGithubUrl())
+                    .setURI(RadioApplication.githubUrl)
                     .setDirectory(file)
                     .call();
 

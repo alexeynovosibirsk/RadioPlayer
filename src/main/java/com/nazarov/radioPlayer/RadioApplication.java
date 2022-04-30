@@ -1,6 +1,7 @@
 package com.nazarov.radioPlayer;
 
 import com.nazarov.radioPlayer.controller.KeyController;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
@@ -14,8 +15,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Slf4j
+@Getter
 @SpringBootApplication
 public class RadioApplication  {
 
@@ -29,31 +33,6 @@ public class RadioApplication  {
    public static String genreFour;
    public static String genreFive;
    public static String genreSix;
-
-   public static String getPlaylistDirectory() {
-       return playlistDirectory;
-   }
-   public static String getPlaylistDirPath() { return playlistDirPath; }
-   public static String getPlaylistExtension() { return playlistExtension; }
-   public static String getGithubUrl() { return githubUrl; }
-   public static String getGenreOne() {
-        return genreOne;
-    }
-   public static String getGenreTwo() {
-        return genreTwo;
-    }
-   public static String getGenreThree() {
-        return genreThree;
-    }
-   public static String getGenreFour() {
-        return genreFour;
-    }
-   public static String getGenreFive() {
-        return genreFive;
-    }
-   public static String getGenreSix() {
-        return genreSix;
-    }
 
     public static void readConfigs() {
 
@@ -84,7 +63,7 @@ public class RadioApplication  {
        if (gs.isPlaylistsCloned() == true) {
            readConfigs();
 
-           new UrlMaker(playlistDirPath + getGenreOne() + playlistExtension, 0); // For jsp ${url}
+           new UrlMaker(playlistDirPath + genreOne + playlistExtension, 0); // For jsp ${url}
 
            log.info("WebRadio is ready!");
            new LogoPlayer(0);
@@ -114,5 +93,8 @@ public class RadioApplication  {
             System.exit(1);
         }
         GlobalScreen.addNativeKeyListener(new KeyController());
+        Logger logger = Logger.getLogger(GlobalScreen.class.getPackage().getName());
+        logger.setLevel(Level.OFF);
+        logger.setUseParentHandlers(false);
     }
 }
