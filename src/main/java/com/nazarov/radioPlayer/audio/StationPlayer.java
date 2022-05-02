@@ -119,7 +119,7 @@ public class StationPlayer extends Thread {
     public void urlPlayer(URL url) {
         log.info("Playing: " + url);
         String check = url.toString();
-        if (check.contains("aac") || check.contains("https")) {
+        if (check.contains("aac") && check.contains("https")) {
             try {
                 AACPlayer.decodeAAC(url.openStream());
             } catch (IOException e) {
