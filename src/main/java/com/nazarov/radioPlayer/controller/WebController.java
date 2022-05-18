@@ -8,15 +8,12 @@ import com.nazarov.radioPlayer.osdependent.Shutdown;
 import com.nazarov.radioPlayer.playlist.GitCloner;
 import com.nazarov.radioPlayer.playlist.UrlMaker;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Component; // do not delete!
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import javax.servlet.http.HttpServlet;
-import javax.swing.*;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -65,7 +62,8 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
 
         } else if (action.equals("Shutdown")) {
             stationPlayer.mute();
-            Shutdown.go();
+            new Shutdown();
+            return bye();
 
         } else if (action.equals("Poweroff")) {
             new PowerOff(0);
@@ -79,35 +77,8 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
         return webRadioPlayer();
     }
 
-//    @RequestMapping(value = "/operations", method = RequestMethod.GET)
-//    public ModelAndView operations() {
-//
-//        ModelAndView mav = new ModelAndView("operations");
-//        return mav;
-//    }
-
-//    @RequestMapping(value = "/operations", method = RequestMethod.POST)
-//    public ModelAndView shutdownButtons(@RequestParam(value = "action", required = true) String action) {
-//
-//        if (action.equals("Shutdown")) {
-//            new LogoPlayer(4);
-//            new PowerOff(0);
-//            return bye();
-//        }
-//        if (action.equals("Sleep_Mode_30")) {
-//            new LogoPlayer(3);
-//            new PowerOff(30);
-//        }
-//        if (action.equals("Sleep_Mode_60")) {
-//            new LogoPlayer(3);
-//            new PowerOff(60);
-//        }
-//        return webRadioPlayer();
-//    }
-
     @RequestMapping(value = "/bye", method = RequestMethod.GET)
     public ModelAndView bye() {
-
         ModelAndView mav = new ModelAndView("bye");
         return mav;
     }

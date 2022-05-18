@@ -4,7 +4,7 @@ import com.nazarov.radioPlayer.audio.LogoPlayer;
 
 public class Shutdown {
 
-    public static void go() {
+    public Shutdown() {
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

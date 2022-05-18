@@ -94,6 +94,7 @@ public class RadioApplication  {
             System.exit(1);
         }
         GlobalScreen.addNativeKeyListener(new KeyController());
+        // Supress JNativeHook logging
         Logger logger = Logger.getLogger(GlobalScreen.class.getPackage().getName());
         logger.setLevel(Level.OFF);
         logger.setUseParentHandlers(false);
