@@ -118,30 +118,23 @@ public class StationPlayer extends Thread {
 
     public void urlPlayer(URL url) {
         log.info("Playing: " + url);
-        String check = url.toString();
-        if (check.contains("aac") && check.contains("https")) {
-            try {
-                AACPlayer.decodeAAC(url.openStream());
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
 
-        } else {
+        try {
+            AACPlayer.decodeAAC(url.openStream());
+        } catch (Exception e) {
+            log.info("Not AAC - switching to MP3");
             try {
                 AdvancedPlayer advancedPlayer = new AdvancedPlayer(url.openStream());
                 advancedPlayer.play();
 
-            } catch (JavaLayerException e) {
-                e.printStackTrace();
-            } catch (ConnectException | FileNotFoundException e) {
+            } catch (JavaLayerException | ConnectException | FileNotFoundException ex) {
+                ex.printStackTrace();
 
                 new LogoPlayer(5);
                 log.info("BAD URL: " + getPlaylist().split("/")[3] + " " + url);
                 e.printStackTrace();
 
-            } catch (IOException e) {
+            } catch (IOException ex) {
 
                 new LogoPlayer(5);
                 log.info("BAD URL: " + getPlaylist().split("/")[3] + " " + url);

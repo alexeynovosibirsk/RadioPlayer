@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>RadioPlayer</groupId>
     <artifactId>radio</artifactId>
-    <version>1.8</version>
+    <version>1.9</version>
     <name>radio</name>
     <description>Just i-radio player</description>
     <packaging>war</packaging>
@@ -58,19 +58,6 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
-        <!-- this is for log -->
-
-<!--        <dependency>-->
-<!--            <groupId>ch.qos.logback</groupId>-->
-<!--            <artifactId>logback-core</artifactId>-->
-<!--            <version>1.2.3</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.slf4j</groupId>-->
-<!--            <artifactId>slf4j-api</artifactId>-->
-<!--            <version>1.7.30</version>-->
-<!--        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
