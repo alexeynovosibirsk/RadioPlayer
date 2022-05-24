@@ -61,27 +61,14 @@ public class RadioApplication  {
 
        GitCloner.getInstance().go();
 
-       if (GitCloner.getInstance().isPlaylistsCloned() == true) {
+       if (GitCloner.getInstance().isPlaylistsCloned()) {
            readConfigs();
 
            new UrlMaker(playlistDirPath + genreOne + playlistExtension, 0); // For jsp ${url}
-
            log.info("WebRadio is ready!");
            new LogoPlayer(0);
-
-       } else {
-           File fakeFile = null;
-           try {
-               fakeFile = new File("/tmp/configs/easy.txt");
-               FileWriter fw = new FileWriter(fakeFile);
-               fw.write("http://error_no_connection_to_github/ error no connection to github");
-               fw.close();
-               fw.flush();
-           } catch (IOException e) {
-               log.error("Unable to write to fake file");
-           }
-           new UrlMaker(fakeFile.toString(), 0);
        }
+
         SpringApplication.run(RadioApplication.class, args);
 
        //JnativeHook:

@@ -8,7 +8,7 @@ import com.nazarov.radioPlayer.osdependent.Shutdown;
 import com.nazarov.radioPlayer.playlist.GitCloner;
 import com.nazarov.radioPlayer.playlist.UrlMaker;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component; // do not delete!
+import org.springframework.stereotype.Component; // DO NOT DELETE! - UI WON`T WORK WITHOUT Component
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -28,7 +28,7 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
     public ModelAndView webRadioPlayer() {
 
         ModelAndView mav = new ModelAndView("webRadioPlayer");
-        mav.addObject("version", "v 1.9");
+        mav.addObject("version", "v 1.9.1");
         mav.addObject("url", UrlMaker.getUrlForJsp());
         mav.addObject("info", UrlMaker.getInfoForJsp());
         mav.addObject("stationName", UrlMaker.getStationNameForJsp());
@@ -69,6 +69,11 @@ public class WebController extends HttpServlet implements WebMvcConfigurer {
             new PowerOff(0);
 
         } else {
+            //This is for the situation when wrplayer started without internet
+            if (! GitCloner.getInstance().isPlaylistsCloned()) {
+                GitCloner.getInstance().go();
+                RadioApplication.readConfigs();
+            }
             stationPlayer.setPlaylist(RadioApplication.playlistDirPath + action + RadioApplication.playlistExtension);
             stationPlayer.playRadio();
             stationPlayer.setIsMuted(false);

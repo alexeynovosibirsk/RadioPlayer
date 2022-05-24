@@ -1,5 +1,7 @@
 package com.nazarov.radioPlayer.audio;
 
+import com.nazarov.radioPlayer.RadioApplication;
+import com.nazarov.radioPlayer.playlist.GitCloner;
 import com.nazarov.radioPlayer.playlist.UrlMaker;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.advanced.AdvancedPlayer;

@@ -36,7 +36,7 @@ public class GitCloner {
             git.pull()
                     .call();
         } catch (GitAPIException e) {
-            e.printStackTrace();
+            log.info("Git is unavailable");
         }
     }
 
